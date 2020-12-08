@@ -1,12 +1,19 @@
+#  _____ ____
+# |  _  |    \
+# |     |  |  |
+# |__|__|____/
 #
-# ~/.bashrc
+# Alededorigo .bashrc File
+# Place this file into ~/.bashrc
+# https://github.com/alededorigo/dotfiles
+# https://gitlab.com/alededorigo/dotfiles
 #
 
-# if not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# 
-PS1="\[\e[1;36m\]\w \[\e[1;31m\]>\[\e[1;33m\]>\[\e[m\]\[\e[1;36m\]> \[\e[m\]"
+# Theme
+PS1="\[\e[1;36m\]\w \[\e[m\]\[\e[1;36m\]> \[\e[m\]"
+
 
 # Extract alias
 ex ()
@@ -51,7 +58,6 @@ alias vf="vifm"
 alias nano="vim"
 alias cp="cp -i"
 alias df="df -h"
-alias reboot="sudo reboot"
 
 # Grep output
 alias grep='grep --color=auto'
@@ -72,11 +78,9 @@ alias push="git push"
 # Alias for config
 alias hlconf="vim ~/.config/herbstluftwm/autostart"
 alias polyconf="vim ~/.config/polybar/config"
-alias piconf="vim /home/alepc/.config/picom/picom.conf"  
+alias piconf="vim /home/alepc/.config/picom/picom.conf"
 alias viconf="vim /home/alepc/.vimrc"
 alias bsconf="vim ~/.bashrc"
-alias zsconf="vim ~/.zshrc"
-alias hc="herbstclient"
+alias qonf="vim ~/.config/qtile/config.py"
 
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-
