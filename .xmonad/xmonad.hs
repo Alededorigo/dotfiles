@@ -1,13 +1,12 @@
--- _____ ____  
--- |  _  |    \ 
+-- _____ ____
+-- |  _  |    \
 -- |     |  |  |
--- |__|__|____/ 
---   
+-- |__|__|____/
+--
 -- Alededorigo Xmonad Config
 -- Place this file into ~/.xmonad/xmonad.hs
---
 -- https://github.com/alededorigo/dotfiles
--- https://gitlab.com/alededorigo/dotfiles        
+-- https://gitlab.com/alededorigo/dotfiles
 --
 
 -- IMPORTS --
@@ -289,7 +288,7 @@ defaults = def {
       -- hooks, layouts
         layoutHook         = myLayout,
         manageHook         = myManageHook,
-        
+
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
         startupHook        = myStartupHook
