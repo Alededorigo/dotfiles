@@ -1,4 +1,5 @@
 ## Alededorigo's dotfiles
+These are dotfiles for every software i use.
 
 ### Index:
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
