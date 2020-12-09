@@ -20,5 +20,5 @@
 | I3             | i3           | i3           | i3           |
 | Qtile          | qtile        | qtile        | qtile        |
 | Xmonad         |              | xmonad       | xmonad       |
-| Polybar        
+| Polybar         
 | Rofi           | rofi         |              | rofi         |
