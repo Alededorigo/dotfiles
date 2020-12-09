@@ -1,5 +1,6 @@
 ## Alededorigo's dotfiles
-These are dotfiles for every software i use.
+These are configuration files for every software i use.
+In every file there is its path. 
 
 ### Index:
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
