@@ -1,7 +1,7 @@
 ## Alededorigo's dotfiles
 
 ### Index:
-* Dependencies
+* [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
 * Window Managers config:
   * [Herbstluftwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftwm)
   * [I3](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3)
@@ -13,7 +13,7 @@
   * [Xterm](https://github.com/Alededorigo/dotfiles/tree/main/.Xresources)
   * [Rofi](https://github.com/Alededorigo/dotfiles/tree/main/AD.rasi) 
 
-### Dependencies:
+### Dependencies: *When blank you need to compile it from source
 | DEPENDENCY     | UBUNTU| FEDORA       | ARCH         |
 | :------------- | :----------: | -----------: | -----------: | 
 | Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
