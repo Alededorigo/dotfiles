@@ -1,6 +1,6 @@
 ## Alededorigo's dotfiles
 These are configuration files for every software i use.
-In every file there is its path. 
+In every file there is its path.
 
 ### Index:
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
@@ -13,16 +13,18 @@ In every file there is its path.
   * [Polybar](https://github.com/Alededorigo/dotfiles/tree/main/.config/polybar)
   * [Bash](https://github.com/Alededorigo/dotfiles/tree/main/.bashrc)
   * [Xterm](https://github.com/Alededorigo/dotfiles/tree/main/.Xresources)
-  * [Rofi](https://github.com/Alededorigo/dotfiles/tree/main/AD.rasi) 
+  * [Rofi](https://github.com/Alededorigo/dotfiles/tree/main/AD.rasi)
+  * [Qutebrowser](https://github.com/Alededorigo/dotfiles/tree/main/.config/qutebrowser/config.py)
 
-### Dependencies: 
+### Dependencies:
 *When blank you need to compile it from source
 
 | DEPENDENCY     | UBUNTU| FEDORA       | ARCH         |
-| :------------- | :----------: | -----------: | -----------: | 
+| :------------- | :----------: | -----------: | -----------: |
 | Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
 | I3             | i3           | i3           | i3           |
 | Qtile          | qtile        | qtile        | qtile        |
 | Xmonad         |              | xmonad       | xmonad       |
-| Polybar         
+| Polybar
 | Rofi           | rofi         |              | rofi         |
+| Qutebrowser    | [official page](qutebrowser.org/INSTALL.html#on_debian_ubuntu) | qutebrowser | qutebrowser |
