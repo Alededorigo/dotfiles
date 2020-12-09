@@ -19,6 +19,6 @@
 | Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
 | I3             | i3           | i3           | i3           |
 | Qtile          | qtile        | qtile        | qtile        |
-| Xmonad         | xmonadhaskell.wordpress.com | xmonad       | xmonad       |
+| Xmonad         |              | xmonad       | xmonad       |
 | Polybar        
 | Rofi           | rofi         |              | rofi         |
