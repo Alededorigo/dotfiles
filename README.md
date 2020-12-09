@@ -13,7 +13,9 @@
   * [Xterm](https://github.com/Alededorigo/dotfiles/tree/main/.Xresources)
   * [Rofi](https://github.com/Alededorigo/dotfiles/tree/main/AD.rasi) 
 
-### Dependencies: *When blank you need to compile it from source
+### Dependencies: 
+*When blank you need to compile it from source
+
 | DEPENDENCY     | UBUNTU| FEDORA       | ARCH         |
 | :------------- | :----------: | -----------: | -----------: | 
 | Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
