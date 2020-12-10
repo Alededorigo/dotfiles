@@ -34,7 +34,8 @@ In every file there is its path.
 ### Configs:
 
 #### Rofi
-The theme for rofi Is [AD.rasi](https://github.com/Alededorigo/dotfiles/free/main/AD.rasi) - Place that file into /use/share/Rofi/themes/AD.rasi
+The theme for rofi Is [AD.rasi](https://github.com/Alededorigo/dotfiles/free/main/AD.rasi). 
+Place that file into /use/share/Rofi/themes/AD.rasi.
 You can change the file name, but not the extension.
 For changing the theme add "theme" flag to your launch command.
 For example:
