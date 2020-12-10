@@ -15,6 +15,8 @@ In every file there is its path.
   * [Xterm](https://github.com/Alededorigo/dotfiles/tree/main/.Xresources)
   * [Rofi](https://github.com/Alededorigo/dotfiles/tree/main/AD.rasi)
   * [Qutebrowser](https://github.com/Alededorigo/dotfiles/tree/main/.config/qutebrowser/config.py)
+* Configs:
+  * [Rofi](https://github.com/Alededorigo/dotfiles#rofi)
 
 ### Dependencies:
 *When blank you need to compile it from source
@@ -28,3 +30,9 @@ In every file there is its path.
 | Polybar
 | Rofi           | rofi         |              | rofi         |
 | Qutebrowser    | [official page](qutebrowser.org/INSTALL.html#on_debian_ubuntu) | qutebrowser | qutebrowser |
+
+### Configs:
+
+#### Rofi
+The theme for rofi Is [AD.rasi](https://github.com/Alededorigo/dotfiles/free/main/AD.rasi) - Place that file into /use/share/Rofi/themes/AD.rasi
+You can change the file name, but not the extension.
