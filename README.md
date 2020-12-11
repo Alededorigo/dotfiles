@@ -44,7 +44,7 @@ For example:
 rofi -show run -theme AD
 ``` 
 
-### Polybar
+#### Polybar
 First create a directory named scripts in the .config/polybar
 ```sh
 mkdir ~/.config/polybar/scripts
