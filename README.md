@@ -34,15 +34,15 @@ In every file there is its path.
 
 ### Configs:
 
-#### Rofi
-The theme for rofi Is [AD.rasi](https://github.com/Alededorigo/dotfiles/free/main/AD.rasi). 
-Place that file into /use/share/Rofi/themes/AD.rasi.
-You can change the file name, but not the extension.
-For changing the theme add "theme" flag to your launch command.
-For example:
+#### Bspwm
+Bspwm needs 2 directories, for its config and the keybindings.
+First create a bspwm directory in .config.
+Create a sxhkd folder in .config.
 ```sh
-rofi -show run -theme AD
-``` 
+mkdir ~/.config/bspwm
+mkdir ~/.config/sxhkd
+```
+Clone [this](https://github.com/Alededorigo/dotfiles) repository and copy [bspwmrc](https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm/bspwmrc) into ~/.config/bspwm, and the same thing for [sxhkdrc](https://github.com/Alededorigo/dotfiles/tree/main/.config/sxhkd/sxhkdrc) (into ~/.config/sxhkd/sxhkdrc).
 
 #### Polybar
 First create a directory named scripts in the .config/polybar
@@ -57,3 +57,15 @@ chmod +x ~/.config/polybar/herbstluftwm.sh
 chmod +x ~/.config/polybar/scripts/env.sh
 chmod +x ~/.config/polybar/scripts/redshift.sh
 ``` 
+I use polybar for [bspwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm), [i3](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3), [herbstluftwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftw).
+
+#### Rofi
+The theme for rofi Is [AD.rasi](https://github.com/Alededorigo/dotfiles/free/main/AD.rasi). 
+Place that file into /use/share/Rofi/themes/AD.rasi.
+You can change the file name, but not the extension.
+For changing the theme add "theme" flag to your launch command.
+For example:
+```sh
+rofi -show run -theme AD
+``` 
+
