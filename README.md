@@ -18,6 +18,7 @@ In every file there is its path.
 * Additional configs:
   * [Rofi](https://github.com/Alededorigo/dotfiles#rofi)
   * [Polybar](https://github.com/Alededorigo/dotfiles#polybar)
+  * [Bspwm](https://github.com/Alededorigo/dotfiles#bspwm)
 
 ### Dependencies:
 *When blank you need to compile it from source
