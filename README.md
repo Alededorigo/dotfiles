@@ -28,6 +28,7 @@ Now i'm using Herbstluftwm and Polybar.
 | :------------- | :----------: | -----------: | -----------: |
 | Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
 | I3             | i3           | i3           | i3           |
+| Bspwm		 | bspwm        | bspwm        | bspwm 	      |
 | Qtile          | qtile        | qtile        | qtile        |
 | Xmonad         |              | xmonad       | xmonad       |
 | Polybar
