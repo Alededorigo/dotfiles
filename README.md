@@ -62,11 +62,12 @@ I use polybar for [bspwm](https://github.com/Alededorigo/dotfiles/tree/main/.con
 
 #### Rofi
 The theme for rofi Is [AD.rasi](https://github.com/Alededorigo/dotfiles/free/main/AD.rasi). 
-Place that file into /use/share/Rofi/themes/AD.rasi.
+Place that file into rofi themes folder.
 You can change the file name, but not the extension.
 For changing the theme add "theme" flag to your launch command.
 For example:
 ```sh
-rofi -show run -theme AD
+cp AD.rasi /usr/share/rofi/themes/<your file name>.rasi  # Replace "your file name" with you rile name
+rofi -show run -theme <your file name>
 ``` 
 
