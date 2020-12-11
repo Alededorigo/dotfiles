@@ -1,6 +1,7 @@
 ## Alededorigo's dotfiles
 These are configuration files for every software i use.
 In every file there is its path.
+Now i'm using Herbstluftwm and Polybar.
 
 ### Index:
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
