@@ -66,7 +66,7 @@ chmod +x ~/.config/polybar/scripts/redshift.sh
 I use polybar for [bspwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm), [i3](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3), [herbstluftwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftw).
 
 #### Rofi
-The theme for rofi Is [AD.rasi](https://github.com/Alededorigo/dotfiles/free/main/AD.rasi). 
+The theme i am using for rofi is [AD.rasi](https://github.com/Alededorigo/dotfiles/tree/main/AD.rasi). 
 Place that file into rofi themes folder.
 You can change the file name, but not the extension.
 For changing the theme add "theme" flag to your launch command.
