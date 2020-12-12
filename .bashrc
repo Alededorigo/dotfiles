@@ -13,7 +13,8 @@
 
 # Theme
 PS1="\[\e[1;36m\]\w \[\e[m\]\[\e[1;36m\]> \[\e[m\]"
-
+# This line is for the colors in bspwm-gruvbox. For using this uncomment it and delete the previous.
+# PS1="\[\e[1;33m\]\w \[\e[m\]\[\e[1;31m\]> \[\e[m\]"
 
 # Extract alias
 ex ()
