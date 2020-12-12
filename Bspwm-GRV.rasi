@@ -1,0 +1,60 @@
+// _____ ____  
+// |  _  |    \ 
+// |     |  |  |
+// |__|__|____/ 
+// 
+// Alededorigo Rofi theme for Gruvbox CS
+// Place this file into /usr/share/rofi/themes
+// https://github.com/alededorigo/dotfiles
+// https://gitlab.com/alededorigo/dotfiles
+//
+
+* {
+    bgcolor:                #282828;
+    fgcolor:                #bbc2cf;
+    accent:                 #458588;
+    font:                   "Inconsolata 9";
+}
+    
+#window {
+    location: south;
+    anchor: south;
+    padding: 0px;
+    width: 100%;
+    children: [ horibox ];
+}
+#horibox {
+    orientation: horizontal;
+    background-color: @bgcolor;
+    children: [ prompt, entry, listview ];
+}
+#prompt {
+    background-color: @bgcolor;
+    text-color:       @fgcolor;
+    font:             @font;
+    padding:          3px 7px;
+}
+#listview {
+    background-color: @bgcolor;
+    layout: horizontal;
+    spacing: 2px;
+    lines: 100;
+}
+#entry {
+    background-color: @bgcolor;
+    color: @fgcolor;
+    width: 10em;
+    padding: 4px 4px;
+    expand: false;
+}
+#element {
+    background-color: @bgcolor;
+    color: @fgcolor;
+    padding: 5px 10px;
+}
+#element selected {
+    background-color: @accent;
+    text-color:       @bgcolor; 
+}
+
+
