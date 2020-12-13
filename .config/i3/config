@@ -10,8 +10,8 @@
 #
 
 set $mod Mod4
-set $ter gnome-terminal
-font pango: Ubuntu Regular 12px
+set $ter alacritty
+font pango: Fira Code 11px
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
@@ -140,11 +140,20 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+bar {
+	status_command i3blocks
+	position top
+	colors {
+		background	#2E3440
+	        focused_workspace #88C0D0 #88C0D0 #2E3440
+		inactive_workspace #2E3440 #2E3440 #ECEFF4	
+	}
+}
+
 # Custom bindings
 bindsym $mod+Shift+e exit
 bindsym $mod+x exec i3lock
-bindsym $mod+d exec rofi -show run -lines 5 -padding 480 -theme "gruvbox-dark-hard" 
-bindsym $mod+t exec rofi -modi TODO:/home/alepc/.config/rofi/rofi-todo.sh -show TODO -lines 3 -padding 500 -theme "gruvbox-dark-hard" 
+bindsym $mod+d exec rofi -show run -lines 5 -padding 480 -theme "AD" 
 bindsym $mod+Return exec $ter
 bindsym $mod+Shift+q kill
 bindsym $mod+Ctrl+q focus parent,kill
@@ -159,7 +168,7 @@ for_window [class="firefox"] move to workspace $ws2
 for_window [class="TelegramDesktop"] move to workspace $ws2
 for_window [class="Code"] move to workspace $ws3
 
-exec_always --no-startup-id feh --bg-scale /home/alepc/Immagini/wallpaper.png
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always nitrogen --restore &
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
+
