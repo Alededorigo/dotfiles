@@ -10,8 +10,10 @@ Now i'm using Herbstluftwm and Polybar.
   * [I3](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3)
   * [Qtile](https://github.com/Alededorigo/dotfiles/tree/main/.config/qtile)
   * [Xmonad](https://github.com/Alededorigo/dotfiles/tree/main/.xmonad/xmonad.hs)
-* Other software config:
+* Bars:
   * [Polybar](https://github.com/Alededorigo/dotfiles/tree/main/.config/polybar)
+  * [I3blocks](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3blocks)
+* Other software config:
   * [Bash](https://github.com/Alededorigo/dotfiles/tree/main/.bashrc)
   * [Xterm](https://github.com/Alededorigo/dotfiles/tree/main/.Xresources)
   * [Rofi](https://github.com/Alededorigo/dotfiles/tree/main/AD.rasi)
@@ -28,6 +30,7 @@ Now i'm using Herbstluftwm and Polybar.
 | :------------- | :----------: | -----------: | -----------: |
 | Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
 | I3             | i3           | i3           | i3           |
+| I3blocks       | i3blocks     | i3blocks     | i3blocks     |	 	
 | Bspwm		 | bspwm        | bspwm        | bspwm 	      |
 | Qtile          | qtile        | qtile        | qtile        |
 | Xmonad         |              | xmonad       | xmonad       |
