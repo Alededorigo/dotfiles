@@ -4,7 +4,7 @@
 // |__|__|____/ 
 // 
 // Alededorigo Rofi theme for Dracula CS
-// Place this file into ~/.config/qtile/config.py
+// Place this file into /usr/share/rofi/themes
 // https://github.com/alededorigo/dotfiles
 // https://gitlab.com/alededorigo/dotfiles
 //

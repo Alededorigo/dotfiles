@@ -1,0 +1,47 @@
+// _____ ____  
+// |  _  |    \ 
+// |     |  |  |
+// |__|__|____/ 
+// 
+// Alededorigo Rofi theme dmenu style for Nord CS
+// Place this file into /usr/share/rofi/themes
+// https://github.com/alededorigo/dotfiles
+// https://gitlab.com/alededorigo/dotfiles
+//
+
+* {
+    background-color:      #2E3440;
+    text-color:            #ECEFF4;
+    font:            	   "Fira Code 12";
+}
+
+window {
+    anchor:     north;
+    location:   north;
+    width:      100%;
+    padding:    0px 4px;
+    children:   [ horibox ];
+}
+
+horibox {
+    orientation: horizontal;
+    children:   [ prompt, entry, listview ];
+}
+
+listview {
+    layout:     horizontal;
+    spacing:    5px;
+    lines:      100;
+}
+
+entry {
+    expand:     false;
+    width:      10em;
+}
+
+element {
+    padding: 0px 10px;
+}
+element selected {
+    background-color: #BF616A;
+}
