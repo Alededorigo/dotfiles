@@ -13,6 +13,7 @@ Now i'm using Herbstluftwm and Polybar.
 * Bars:
   * [Polybar](https://github.com/Alededorigo/dotfiles/tree/main/.config/polybar)
   * [I3blocks](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3blocks)
+  * [Yabar](https://github.com/Alededorigo/dotfiles/tree/main/.config/yabar/yabar.conf)
 * Other software config:
   * [Bash](https://github.com/Alededorigo/dotfiles/tree/main/.bashrc)
   * [Xterm](https://github.com/Alededorigo/dotfiles/tree/main/.Xresources)
@@ -30,13 +31,14 @@ Now i'm using Herbstluftwm and Polybar.
 | :------------- | :----------: | -----------: | -----------: |
 | Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
 | I3             | i3           | i3           | i3           |
-| I3blocks       | i3blocks     | i3blocks     | i3blocks     |	 	
+| I3blocks       | i3blocks     | i3blocks     | i3blocks     |	
 | Bspwm		 | bspwm        | bspwm        | bspwm 	      |
 | Qtile          | qtile        | qtile        | qtile        |
 | Xmonad         |              | xmonad       | xmonad       |
 | Polybar
 | Rofi           | rofi         |              | rofi         |
 | Qutebrowser    | [official page](qutebrowser.org/INSTALL.html#on_debian_ubuntu) | qutebrowser | qutebrowser |
+| Yabar		 | Need to build it					      |
 
 ### Configs:
 
