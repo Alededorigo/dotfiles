@@ -16,9 +16,8 @@ bspc monitor -d 1 2 3 4 5 6 7
 
 # --- AUTOSTART PROGRAMS --- #
 sxhkd &
-picom &
 nitrogen --restore &
-$HOME/.config/polybar/launch.sh
+yabar &
 
 # --- LAYOUT --- #
 bspc config border_width                  1
@@ -37,9 +36,9 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 # --- COLORS --- #
-bspc config normal_border_color		      "#d65d0e"
-bspc config active_border_color	              "#282828"
-bspc config focused_border_color	      "#d65d0e"
+bspc config normal_border_color		      "#585858"
+bspc config active_border_color	              "#585858"
+bspc config focused_border_color	      "#DC9656"
 
 # --- RULES --- #
 bspc rule -a Gimp desktop='^6' state=floating follow=on
