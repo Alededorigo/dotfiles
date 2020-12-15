@@ -1,5 +1,5 @@
 ## Alededorigo's dotfiles
-<a href="https://www.twitter.com/alededorigo">![twitter](https://img.shields.io/twitter/follow/alededorigo?color=1da1f2&style=for-the-badge)</a> <a href="https://github.com/Alededorigo/dotfiles">![size](https://img.shields.io/github/languages/code-size/alededorigo/dotfiles?color=1fbad6&label=size&style=for-the-badge)</a> <a href="https://github.com/Alededorigo/dotfiles/releases/tag/0.9">![release](https://img.shields.io/github/downloads/alededorigo/fetchd/0.9/total?color=e92c4c&label=latest%20RELEASE&style=for-the-badge)</a> <a href="https://github.com/Alededorigo/fetchd/issues">![issues](https://img.shields.io/github/issues/alededorigo/fetchd?color=c9510c&style=for-the-badge)
+<a href="https://www.twitter.com/alededorigo">![twitter](https://img.shields.io/twitter/follow/alededorigo?color=1da1f2&style=for-the-badge)</a> <a href="https://github.com/Alededorigo/dotfiles">![size](https://img.shields.io/github/languages/code-size/alededorigo/dotfiles?color=1fbad6&label=size&style=for-the-badge)</a> <a href="https://github.com/Alededorigo/fetchd/issues">![issues](https://img.shields.io/github/issues/alededorigo/fetchd?color=c9510c&style=for-the-badge)
 </a>
 These are configuration files for every software i use.
 In every file there is its path.
