@@ -11,11 +11,11 @@
 
 # terminal emulator
 super + Return
-	xterm
-
+	alacritty
+	
 # program launcher
 super + @space
-	rofi -show run -theme gruvbox-dark
+	rofi -show drun -theme Bspwm-GRV
 
 # make sxhkd reload its configuration files:
 super + Escape

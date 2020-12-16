@@ -10,6 +10,7 @@ Now i'm using Herbstluftwm and Polybar.
 * Window Managers config:
   * [Herbstluftwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftwm)
   * [I3](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3)
+  * [Spectrwm](https://github.com/Alededorigo/dotfiles/tree/main/.spectrwm.conf)
   * [Qtile](https://github.com/Alededorigo/dotfiles/tree/main/.config/qtile)
   * [Xmonad](https://github.com/Alededorigo/dotfiles/tree/main/.xmonad/xmonad.hs)
 * Bars:
@@ -34,6 +35,7 @@ Now i'm using Herbstluftwm and Polybar.
 | Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
 | I3             | i3           | i3           | i3           |
 | I3blocks       | i3blocks     | i3blocks     | i3blocks     |
+| Spectrwm       | spectrwm     | spectrwm     | spectrwm     |
 | Bspwm		     | bspwm        | bspwm        | bspwm 	      |
 | Qtile          | qtile        | qtile        | qtile        |
 | Xmonad         |              | xmonad       | xmonad       |
