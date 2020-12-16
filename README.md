@@ -29,11 +29,27 @@ Now i'm using Herbstluftwm and Polybar.
 ### Dependencies:
 *When blank you need to compile it from source
 
-| DEPENDENCY     | UBUNTU| FEDORA       | ARCH         |
+| DEPENDENCY     | UBUNTU       | FEDORA       | ARCH         |
 | :------------- | :----------: | -----------: | -----------: |
 | Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
 | I3             | i3           | i3           | i3           |
-| I3blocks       | i3blocks     | i3blocks     | i3blocks     |	
+| I3blocks       | i3blocks     | i3blocks     | i3blocks     |
+| Bspwm		     | bspwm        | bspwm        | bspwm 	      |
+| Qtile          | qtile        | qtile        | qtile        |
+| Xmonad         |              | xmonad       | xmonad       |
+| Polybar
+| Rofi           | rofi         |              | rofi         |
+| Qutebrowser    | [official page](qutebrowser.org/INSTALL.html#on_debian_ubuntu) | qutebrowser | qutebrowser |
+| Yabar		     | Need to build it					          |
+
+### Fonts:
+These are all fonts i used in my dotfiles.
+
+| FONT           | UBUNTU       | FEDORA       | ARCH         |
+| :------------- | :----------: | -----------: | -----------: |
+| Fira Code      |fonts-firacode|fira-code-fonts| ttf-fira-code|
+| IBM Plex       |              |ibm-plex-sans-font| ttf-ibm-plex|
+| I3blocks       | i3blocks     | i3blocks     | i3blocks     |
 | Bspwm		 | bspwm        | bspwm        | bspwm 	      |
 | Qtile          | qtile        | qtile        | qtile        |
 | Xmonad         |              | xmonad       | xmonad       |
@@ -41,6 +57,8 @@ Now i'm using Herbstluftwm and Polybar.
 | Rofi           | rofi         |              | rofi         |
 | Qutebrowser    | [official page](qutebrowser.org/INSTALL.html#on_debian_ubuntu) | qutebrowser | qutebrowser |
 | Yabar		 | Need to build it					      |
+
+
 
 ### Configs:
 
@@ -69,11 +87,11 @@ chmod +x ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/herbstluftwm.sh
 chmod +x ~/.config/polybar/scripts/env.sh
 chmod +x ~/.config/polybar/scripts/redshift.sh
-``` 
+```
 I use polybar for [bspwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm), [i3](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3), [herbstluftwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftw).
 
 #### Rofi
-The theme i am using for rofi is [AD-Dracula.rasi](https://github.com/Alededorigo/dotfiles/tree/main/.config/rofi/themes/AD-Dracula.rasi). 
+The theme i am using for rofi is [AD-Dracula.rasi](https://github.com/Alededorigo/dotfiles/tree/main/.config/rofi/themes/AD-Dracula.rasi).
 Place that file into rofi themes folder.
 You can change the file name, but not the extension.
 For changing the theme add "theme" flag to your launch command.
@@ -81,5 +99,5 @@ For example:
 ```sh
 cp AD.rasi /usr/share/rofi/themes/<your file name>.rasi  # Replace "your file name" with you rile name
 rofi -show run -theme <your file name>
-``` 
+```
 
