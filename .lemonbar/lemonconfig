@@ -1,47 +1,62 @@
 #!/usr/bin/bash
 
+#  _____ ____
+# |  _  |    \
+# |     |  |  |
+# |__|__|____/
+#
+# Alededorigo Lemonbar configuration script
+# Place this file into ~/.lemonbar/lemonconfig
+# You can change the directory path, but 
+# this file and launch have to be in the
+# same directory.
+# https://github.com/alededorigo/dotfiles
+# https://gitlab.com/alededorigo/dotfiles
+#
+
 trap 'Update' 5
 
-background="#2d2d2d"
+background="#282a36"
 
-Format() {
-    echo "%{+u}%{B$background} $1 %{B}%{-u}"
+Clock(){
+	TIME=$(date "+%H:%M")
+	echo -e -n " \uf017 %{F#ff5555}-- ${TIME} -- %{F#bbc2cf}" 
+}
+
+Cal() {
+    DATE=$(date "+%A, %d %m %Y ")
+    echo -e -n "\uf073 %{F#faef57}${DATE}"
+}
+
+ActiveWindow(){
+	len=$(echo -n "  -  $(xdotool getwindowfocus getwindowname)" | wc -m)
+	max_len=70
+	if [ "$len" -gt "$max_len" ];then
+		echo -n "  -  $(xdotool getwindowfocus getwindowname | cut -c 1-$max_len)..."
+	else
+		echo -n "  -  $(xdotool getwindowfocus getwindowname)"
+	fi
 }
 
 Workspaces() {
     desktops=$(bspc query -D --names)
     focused=$(bspc query -D --names -d focused)
 
-    for desktop in $desktops; do
+    for desktop in $desktops; do	
         desktop=$(echo "$desktop")
         nodes=$(bspc query -N -d $desktop)
 
         if [ ! -z "$nodes" ]; then
-            desktops=$(echo $desktops | sed "s/$desktop/%{F#ff0000}$desktop%{F-}/")
+            desktops=$(echo $desktops | sed "s/$desktop/%{F#0388fc}$desktop%{F#bbc2cf}/")
         fi
 
     done
-    desktops=$(echo $desktops | sed "s/$focused/%{B$background}%{+u}_$focused\_%{-u}%{B-}/")
+    desktops=$(echo $desktops | sed "s/$focused/%{B$background}%{F#0388fc}%{+u}_$focused\_%{-u}%{B-}/")
 
     echo $desktops | sed "s/_/ /g"
 }
 
-ActiveWindow() {
-    printf " $(xdotool getwindowfocus getwindowname)"
-}
-
-Clock() {
-    DATE=$("%d/%m/%y")
-    TIME=$("%I:%M:%S")
-
-    Format "$(DATE) $(TIME)"
-}
-
-Update() {
-    echo -e "%{l}$(Workspaces) $(ActiveWindow) %{r} $(Clock)"
-}
-
 while true; do
-    Update
-    wait
+	echo -e "%{l}$(Workspaces) $(ActiveWindow)" "%{r}$(Cal) $(Clock)"
+	sleep 0.1s
 done

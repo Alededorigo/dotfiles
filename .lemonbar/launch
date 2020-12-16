@@ -1,4 +1,19 @@
 #!/bin/bash
+
+#  _____ ____
+# |  _  |    \
+# |     |  |  |
+# |__|__|____/
+#
+# Alededorigo Lemonbar launch script
+# Place this file into ~/.lemonbar/launch
+# You can change the directory path, but 
+# this file and lemonconfig have to be in the
+# same directory.
+# https://github.com/alededorigo/dotfiles
+# https://gitlab.com/alededorigo/dotfiles
+#
+
 # Kill all instances of Lemonbar
 killall -q lemonbar
 killall -q lemonconfig
