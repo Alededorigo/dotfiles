@@ -1,0 +1,10 @@
+#!/bin/bash
+# Kill all instances of Lemonbar
+killall -q lemonbar
+killall -q lemonconfig
+
+bash lemonconfig | lemonbar -p -g 1366x20+0+0 -F "#bbc2cf" -B "#282a36" -U "#268bd2" -u 3 -o -4 -f "Source Code Pro"-10 -o -2 -f "Hack Nerd Font"-14 | $SHELL
+#                                 |
+#                                 |
+#                This is the width of your monitor.
+#                In this case it takes 100% width.
