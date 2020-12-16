@@ -7,6 +7,7 @@ Now i'm using Herbstluftwm and Polybar.
 
 ### Index:
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
+* [Fonts](https://github.com/Alededorigo/dotfiles#fonts)
 * Window Managers config:
   * [Herbstluftwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftwm)
   * [I3](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3)
@@ -51,15 +52,7 @@ These are all fonts i used in my dotfiles.
 | :------------- | :----------: | -----------: | -----------: |
 | Fira Code      |fonts-firacode|fira-code-fonts| ttf-fira-code|
 | IBM Plex       |              |ibm-plex-sans-font| ttf-ibm-plex|
-| I3blocks       | i3blocks     | i3blocks     | i3blocks     |
-| Bspwm		 | bspwm        | bspwm        | bspwm 	      |
-| Qtile          | qtile        | qtile        | qtile        |
-| Xmonad         |              | xmonad       | xmonad       |
-| Polybar
-| Rofi           | rofi         |              | rofi         |
-| Qutebrowser    | [official page](qutebrowser.org/INSTALL.html#on_debian_ubuntu) | qutebrowser | qutebrowser |
-| Yabar		 | Need to build it					      |
-
+| Source Code Pro| [Official page](https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font)     | adobe-source-code-pro-fonts | adobe-source-code-pro-fonts |
 
 
 ### Configs:
