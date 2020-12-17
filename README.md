@@ -20,6 +20,7 @@ Now i'm using Herbstluftwm and Polybar.
 * Bars:
   * [Polybar](https://github.com/Alededorigo/dotfiles/tree/main/.config/polybar)
   * [I3blocks](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3blocks)
+  * [Lemonbar](https://github.com/Alededorigo/dotfiles/tree/main/.lemonbar)
   * [Yabar](https://github.com/Alededorigo/dotfiles/tree/main/.config/yabar/yabar.conf)
 * Other software config:
   * [Bash](https://github.com/Alededorigo/dotfiles/tree/main/.bashrc)
@@ -41,6 +42,7 @@ Now i'm using Herbstluftwm and Polybar.
 | I3blocks       | i3blocks     | i3blocks     | i3blocks     |
 | Spectrwm       | spectrwm     | spectrwm     | spectrwm     |
 | Bspwm		     | bspwm        | bspwm        | bspwm 	      |
+| Lemonbar       | lemonbar     | lemonbar     | lemonbar     |
 | Qtile          | qtile        | qtile        | qtile        |
 | Xmonad         |              | xmonad       | xmonad       |
 | Polybar
