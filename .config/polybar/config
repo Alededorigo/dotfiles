@@ -24,10 +24,13 @@ pr = #bd93f9
 
 [bar/example]
 width = 100%
-height = 25
+height = 22
 
 background = ${colors.bg}
 foreground = ${colors.fg}
+
+border-size = 4
+border-color = ${colors.bg}
 
 line-size = 2
 line-color = #f00
@@ -38,13 +41,12 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Fira Code:size=10;2
+font-0 = Fira Code Mono:size=10;2
 font-1 = FontAwesome5Free:style=Solid:size=10;2
 font-2 = Font Awesome 5 Brans:pixelsize=10;2
 
-modules-left = power title hl
-modules-center =  
-modules-right = redshift alsa cpu memory battery date
+modules-left = hl title
+modules-right = alsa cpu memory battery date power
 
 tray-position = right
 tray-padding = 2
@@ -57,7 +59,7 @@ cursor-scroll = ns-resize
 type = internal/xwindow
 
 format = <label>
-format-foreground = ${colors.pr}
+format-foreground = ${colors.fg}
 
 ;------ DATE ------;
 
@@ -69,8 +71,10 @@ date = "%d  %m   %Y  "
 
 time = "%H:%M"
 
+format-padding = 2
+
 format-prefix-foreground = ${colors.fg}
-format-underline = ${colors.pr}
+format-background = ${colors.bg-alt}
 
 label = %time%
 
@@ -137,21 +141,23 @@ label-urgent-padding = 1
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " CPU "
-format-prefix-foreground = ${colors.fg-alt}
-format-underline = ${colors.az}
-label = "%percentage:2%% "
+format-padding = 2
+format-prefix = "CPU "
+format-prefix-foreground = ${colors.fg}
+label = "%percentage:2%%"
+format-background = ${colors.bg-alt}
 
 ;------ MEMORY ------;
 
 [module/memory]
 type = internal/memory
-format-padding = 0
-interval = 2 
+format-padding = 2
+interval = 2
 format-prefix = "RAM "
-format-prefix-foreground = ${colors.fg-alt}
-format-underline = ${colors.pr}
+format-prefix-foreground = ${colors.fg}
 label = "%percentage_used%%"
+format-background = ${colors.bg-alt}
+
 
 ;------ BATTERY ------;
 
@@ -161,14 +167,15 @@ type = internal/battery
 
 full-at = 99
 
+format-discharging-padding = 2
+
 battery = BAT1
 adapter = ACAD
 
 poll-interval = 5
 
 format-discharging-prefix = "BAT "
-format-discharging-prefix-foreground = ${colors.fg-alt}
-format-discharging-underline = ${colors.az}
+format-discharging-background = ${colors.bg-alt}
 
 time-format = %H:%M
 label-discharging = "%percentage%%"
@@ -183,28 +190,13 @@ type = internal/alsa
 label-muted = "VOL 0%"
 label-muted-foreground = ${colors.pr}
 
-label-volume = "%{F#555}VOL %{F#ECEFF4}%percentage%%"
+label-volume = "%{F#f8f8f2}VOL %{F#f8f8f2}%percentage%%"
 
-label-volume-underline = ${colors.pr}
-label-muted-underline = ${colors.pr}
+label-volume-padding = 2
+label-muted-padding = 2
 
-;bar-volume-width = 10
-;bar-volume-foreground-0 = #55aa55
-;bar-volume-foreground-1 = #55aa55
-;bar-volume-foreground-2 = #55aa55
-;bar-volume-foreground-3 = #55aa55
-;bar-volume-foreground-4 = #55aa55
-;bar-volume-foreground-5 = #f5a70a
-;bar-volume-foreground-6 = #ff5555
-;bar-volume-gradient = false
-;bar-volume-indicator = |
-;bar-volume-indicator-font = 2
-;bar-volume-fill = ─
-;bar-volume-fill-font = 2
-;bar-volume-empty = ─
-;bar-volume-empty-font = 2
-;bar-volume-empty-foreground = ${colors.fg-alt}
-
+label-volume-background = ${colors.bg-alt}
+label-muted-background = ${colors.bg-alt}
 
 ;------ POWER MENU ------;
 
@@ -212,26 +204,27 @@ label-muted-underline = ${colors.pr}
 type = custom/menu
 
 format-foreground = ${colors.fg}
-format-background = ${colors.bg}
+format-background = ${colors.bg-alt}
+format-padding = 2
 
-label-open = "   "
+label-open = "P"
 label-open-foreground = ${colors.az}
-label-close = "   cancel"
+label-close = "ESC  "
 label-close-foreground = ${colors.az}
-label-separator = " | "
+label-separator = "    "
 label-separator-foreground = ${colors.fg-alt}
 
 ; SUSPEND
-menu-0-0 = "suspend"
-menu-0-0-exec = systemctl suspend
+menu-0-0 = "SOS"
+menu-0-0-exec = "suspend"
 menu-0-0-foreground = ${colors.fg}
 ; REBOOT
-menu-0-1 = "reboot"
-menu-0-1-exec = systemctl reboot
+menu-0-1 = "REB"
+menu-0-1-exec = "sudo reboot"
 menu-0-1-foreground = ${colors.fg}
 ; SHUTDOWN
-menu-0-2 = "power off"
-menu-0-2-exec = systemctl poweroff
+menu-0-2 = "OFF"
+menu-0-2-exec = "sudo shutdown -h now"
 menu-0-2-foreground = ${colors.fg}
 
 
@@ -251,6 +244,7 @@ interval=0.5
 [module/hl]
 type = custom/script
 
+format-padding = 2
 exec-if = ps -C herbstluftwm >/dev/null 2>&1
 exec = MONITOR=HDMI-0 ~/.config/polybar/herbstluftwm.sh
 tail = true

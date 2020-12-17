@@ -27,12 +27,11 @@ Mod=Mod4
 hc keybind $Mod-Shift-c quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
-hc keybind $Mod-Return spawn "${TERMINAL:-xterm}" # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
 # Layout
 hc keybind $Mod-r remove
-hc keybind $Mod-s floating toggle
 hc keybind $Mod-f fullscreen toggle
-hc keybind $Mod-Shift-f set_attr clients.focus.floating toggle
+hc keybind $Mod-s set_attr clients.focus.floating toggle
 hc keybind $Mod-p pseudotile toggle
 hc keybind $Mod-space
 # Focus
@@ -74,8 +73,8 @@ hc keybind $Mod-Control-Up      resize up +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
 
 # --- TAGS --- #
-tag_names=( {1..9} )
-tag_keys=( {1..9} 0 )
+tag_names=( {A..F} )
+tag_keys=( {1..6} 0 )
 
 hc rename default "${tag_names[0]}" || true
 for i in "${!tag_names[@]}" ; do
@@ -108,11 +107,11 @@ hc set frame_border_active_color $ac
 hc set frame_border_normal_color $bg
 #hc set frame_bg_normal_color '#2E3440'
 #hc set frame_bg_active_color '#2E3440'
-hc set frame_border_width 0
+hc set frame_border_width 1
 hc set always_show_frame on
 hc set frame_bg_transparent on
 hc set frame_transparent_width 0
-hc set frame_gap 2
+hc set frame_gap 5
 hc set frame_padding 0
 hc set window_gap 0
 hc set frame_padding 0
@@ -124,11 +123,12 @@ hc attr theme.normal.color $bg
 hc attr theme.urgent.color $bg
 hc attr theme.inner_width 1
 hc attr theme.inner_color $bg
-hc attr theme.border_width 27
+hc attr theme.border_width 15
 hc attr theme.floating.border_width 4
 hc attr theme.floating.outer_width 1
-hc attr theme.floating.outer_color black
 hc attr theme.active.inner_color $bg
+hc attr theme.floating.outer_color $bg
+hc attr theme.floating.active.color $ac
 hc attr theme.active.outer_color $bg
 hc attr theme.background_color $bg
 
@@ -136,10 +136,11 @@ hc attr theme.background_color $bg
 ~/.config/polybar/launch.sh
 
 # --- ROFI --- #
-hc keybind $Mod-space spawn rofi -show drun -lines 10 -padding 480 -theme AD
+hc keybind $Mod-space spawn rofi -show drun -lines 10 -padding 480 -theme AD-Sidebar-Nord
 
 # --- WALLPAPER SET --- #
-nitroegen --restore &
+# feh --bg-fill ~/Downloads/img
+nitrogen --restore & 
 
 # --- RULES --- #
 hc unrule -F
