@@ -1,6 +1,9 @@
 ## Alededorigo's dotfiles
 <a href="https://www.twitter.com/alededorigo">![twitter](https://img.shields.io/twitter/follow/alededorigo?color=1da1f2&style=for-the-badge)</a> <a href="https://github.com/Alededorigo/dotfiles">![size](https://img.shields.io/github/languages/code-size/alededorigo/dotfiles?color=1fbad6&label=size&style=for-the-badge)</a> <a href="https://github.com/Alededorigo/dotfiles/issues">![issues](https://img.shields.io/github/issues/alededorigo/dotfiles?color=c9510c&style=for-the-badge)
 </a>
+
+<br>
+
 These are configuration files for every software i use.
 In every file there is its path.
 Now i'm using Herbstluftwm and Polybar.
