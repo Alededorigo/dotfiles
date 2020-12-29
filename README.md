@@ -26,6 +26,7 @@ Now i'm using Herbstluftwm and Polybar.
   * [Bash](https://github.com/Alededorigo/dotfiles/tree/main/.bashrc)
   * [Xterm](https://github.com/Alededorigo/dotfiles/tree/main/.Xresources)
   * [Rofi](https://github.com/Alededorigo/dotfiles/tree/main/AD.rasi)
+  * [DuckDuckGo](https://github.com/Alededorigo/dotfiles#duckduckgo)
   * [Qutebrowser](https://github.com/Alededorigo/dotfiles/tree/main/.config/qutebrowser/config.py)
 * Additional configs:
   * [Rofi](https://github.com/Alededorigo/dotfiles#rofi)
@@ -101,3 +102,5 @@ cp AD.rasi /usr/share/rofi/themes/<your file name>.rasi  # Replace "your file na
 rofi -show run -theme <your file name>
 ```
 
+#### DuckDuckGo
+Open [this](https://duckduckgo.com/?kae=t&ks=m&kw=s&ku=1&kt=Fira+Code&km=l&k7=171a1f&kj=171a1f&k9=53e2ae&kaa=985eff&k21=171a1f&k8=ffffff&kx=985eff) URL.
