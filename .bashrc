@@ -12,9 +12,7 @@
 [[ $- != *i* ]] && return
 
 # Theme
-PS1="\[\e[1;36m\]\w \[\e[m\]\[\e[1;36m\]> \[\e[m\]"
-# This line is for the colors in bspwm-gruvbox. For using this uncomment it and delete the previous.
-# PS1="\[\e[1;33m\]\w \[\e[m\]\[\e[1;31m\]> \[\e[m\]"
+PS1="\[\e[1;32m\]\w $ \[\e[m\]"
 
 # Extract alias
 ex ()
@@ -59,6 +57,9 @@ alias vf="vifm"
 alias nano="vim"
 alias cp="cp -i"
 alias df="df -h"
+alias fet.sh="sh ~/.scripts/fet.sh"
+alias cat="ccat"
+alias cmatrix="cmatrix -a -C magenta"
 
 # Grep output
 alias grep='grep --color=auto'
@@ -84,4 +85,9 @@ alias viconf="vim /home/alepc/.vimrc"
 alias bsconf="vim ~/.bashrc"
 alias qonf="vim ~/.config/qtile/config.py"
 
+# Alias for curl web apps
+alias weather="curl http://wttr.in/Belluno"
+alias myp="curl ifconfig.co"
+alias somenews="curl getnews.tech"
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias parrot="curl parrot.live"
