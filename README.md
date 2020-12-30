@@ -24,6 +24,7 @@ Now i'm using Herbstluftwm and Polybar.
   * [Yabar](https://github.com/Alededorigo/dotfiles/tree/main/.config/yabar/yabar.conf)
 * Other software config:
   * [Bash](https://github.com/Alededorigo/dotfiles/tree/main/.bashrc)
+  * [Dunst](https://github.com/Alededorigo/dotfiles/tree/main/.config/dunst/dunstrc)
   * [Xterm](https://github.com/Alededorigo/dotfiles/tree/main/.Xresources)
   * [Rofi](https://github.com/Alededorigo/dotfiles/tree/main/AD.rasi)
   * [DuckDuckGo](https://github.com/Alededorigo/dotfiles#duckduckgo)
