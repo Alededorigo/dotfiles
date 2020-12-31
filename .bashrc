@@ -76,6 +76,7 @@ alias adf="git add"
 alias status="git status"
 alias comm="git commit -m"
 alias push="git push"
+alias gitc="sh ~/.scripts/github.sh"
 
 # Alias for config
 alias hlconf="vim ~/.config/herbstluftwm/autostart"

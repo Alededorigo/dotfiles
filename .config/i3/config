@@ -3,8 +3,8 @@
 # |     |  |  |
 # |__|__|____/
 #
-# Alededorigo Herbstluftwm Configuration
-# Place this file into ~/.config/herbstluftwm/autostart
+# Alededorigo i3 Configuration
+# Place this file into ~/.config/i3/config
 # https://github.com/alededorigo/dotfiles
 # https://gitlab.com/alededorigo/dotfiles
 #
@@ -149,7 +149,7 @@ mode "$mode_gaps_outer" {
 
 # Custom bindings
 bindsym $mod+Shift+e exit
-bindsym $mod+x exec slock
+bindsym $mod+Shift+x exec slock
 bindsym $mod+space exec rofi -show run -lines 9 -padding 480 -theme "AD" 
 bindsym $mod+Return exec $ter
 bindsym $mod+Shift+q kill
