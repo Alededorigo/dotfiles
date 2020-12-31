@@ -79,8 +79,8 @@ alias push="git push"
 alias gitc="sh ~/.scripts/github.sh"
 
 # Alias for config
-alias hlconf="vim ~/.config/herbstluftwm/autostart"
-alias polyconf="vim ~/.config/polybar/config"
+alias honf="vim ~/.config/herbstluftwm/autostart"
+alias ponf="vim ~/.config/polybar/config"
 alias piconf="vim /home/alepc/.config/picom/picom.conf"
 alias viconf="vim /home/alepc/.vimrc"
 alias bsconf="vim ~/.bashrc"
