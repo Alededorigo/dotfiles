@@ -1,0 +1,32 @@
+#  _____ ____
+# |  _  |    \
+# |     |  |  |
+# |__|__|____/
+#
+# Alededorigo Zathura Configuration
+# Place this file into ~/.config/zathura/zathurarc
+# https://github.com/alededorigo/dotfiles
+# https://gitlab.com/alededorigo/dotfiles
+#
+
+# Window
+set statusbar-h-padding 50
+set statusbar-v-padding 10
+set highlight-transparency 0.7
+set page-padding 0 # This is the padding between pages. Set 0 to delete it.
+set window-title-basename true
+
+# Font
+set font Fira Code 10
+
+# Colors
+set default-fg "#ffffff"
+set default-bg "#171a1f"
+set inputbar-fg "#ffffff"
+set inputbar-bg "#171a1f"
+set statusbar-fg "#ffffff"
+set statusbar-bg "#171a1f"
+set completion-bg "#171a1f"
+set completion-fg "#ffffff"
+set completion-highlight-bg "#ca9dee"
+set highlight-active-color "#ca9dee"
