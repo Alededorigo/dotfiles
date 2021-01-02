@@ -8,20 +8,20 @@
     transparency = 0
     notification_height = 0
     separator_height = 1
-    padding = 5
-    horizontal_padding = 6
-    frame_width = 1
-    frame_color = "#ffffff"
+    padding = 13
+    horizontal_padding = 13
+    frame_width = 4
+    frame_color = "#999999"
     separator_color = auto
     sort = yes
     idle_threshold = 120
 
     # -- FONT -- #
-    font = Roboto Condensed 10
+    font = Envy Code R 10
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
-    alignment = center
+    alignment = left
     show_age_threshold = 60
     word_wrap = yes
     ellipsize = middle
@@ -92,21 +92,18 @@
 [urgency_low]
     background = "#171a1f"
     foreground = "#ffffff"
-    timeout = 5
-    icon = /home/ale/.config/dunst/icon.png
+    timeout = 7
 
 [urgency_normal]
     background = "#171a1f"
     foreground = "#ffffff"
-    timeout = 5
-    icon = /home/ale/.config/dunst/icon.png
+    timeout = 8
 
 [urgency_critical]
     background = "#171a1f"
     foreground = "#ffffff"
     frame_color = "#ff5555"
-    timeout = 5
-    icon = /home/ale/.config/dunst/icon.png
+    timeout = 9
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

@@ -41,10 +41,10 @@ ex ()
 }
 
 # Universal alias
-alias ls="exa -al --color=always --group-directories-first"
-alias lsa="exa -a --color=always --group-directories-first"
-alias ll="exa -l --color=always --group-directories-first"
-alias l.='exa -a | grep "^."'
+alias ls="ls -a --group-directories-first"
+alias lsa="ls -la --group-directories-first"
+alias ll="ls -l --group-directories-first"
+alias l.='ls -a | grep "^."'
 alias ..="cd .."
 alias .2="cd ../.."
 alias .3="cd ../../.."
@@ -60,6 +60,7 @@ alias df="df -h"
 alias fet.sh="sh ~/.scripts/fet.sh"
 alias cat="ccat"
 alias cmatrix="cmatrix -a -C magenta"
+alias wg="wordgrinder"
 
 # Grep output
 alias grep='grep --color=auto'

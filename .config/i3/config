@@ -10,7 +10,7 @@
 #
 
 # Use super as modifier
-set $mod Mod4 
+set $mod Mod4
 # Use Kitty as terminal
 set $ter kitty 
 font pango: Fira Code 11px
@@ -147,10 +147,18 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+# class                 border  backgr. text    indicator child_border
+client.focused          #aaaaaa #285577 #ffffff #aaaaaa   #999999
+client.focused_inactive #aaaaaa #5f676a #ffffff #aaaaaa   #333333
+client.unfocused        #333333 #222222 #888888 #292d2e   #333333
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
 # Custom bindings
 bindsym $mod+Shift+e exit
 bindsym $mod+Shift+x exec slock
 bindsym $mod+space exec rofi -show run -lines 9 -padding 480 -theme "AD" 
+bindsym $mod+Shift+a exec sh ~/.scripts/panel 
 bindsym $mod+Return exec $ter
 bindsym $mod+Shift+q kill
 bindsym $mod+Ctrl+q focus parent,kill
@@ -158,17 +166,20 @@ bindsym $mod+Ctrl+q focus parent,kill
 exec $ter
 exec telegram-desktop
 # Remove borders
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 4
 for_window [class="firefox"] move to workspace $ws2
 for_window [class="TelegramDesktop"] move to workspace $ws2
 for_window [class="Code"] move to workspace $ws3
+for_window [class="kitty"] floating enable
 # 
 exec_always ~/.config/dunst/launch.sh
 exec_always nm-applet &
-exec_always ~/.config/polybar/launch.sh
+# exec_always ~/.config/polybar/launch.sh
 exec_always picom &
 # exec_always nitrogen --restore &
-exec_always feh --bg-fill ~/Downloads/wall.png 
+exec_always feh --bg-fill ~/Pictures/c1.jpg
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-exec_always cbatticon
+exec cbatticon -i standard -l 20
+
+focus_follows_mouse no

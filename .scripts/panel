@@ -1,0 +1,8 @@
+#!bin/sh
+# Replace any panel to maximize space
+
+# Notify stats
+
+pkill dunst
+
+notify-send -i /usr/share/icon.svg -t 10000 "     ~" " Now ~ $(date +"%I:%M %P") \n Dat ~ $(date +"%d %b") \n Bat ~ $(cat /sys/class/power_supply/BAT0/capacity)% \n Cpu ~ $(top -bn1 | grep load | awk '{printf "%.2f\n", $(NF-2)}') \n Ram ~ $(free -m | awk 'NR==2{printf "%sM", $3,$2,$3*100/$2 }') \n Tag ~ $(i3-msg -t get_workspaces | jq '.[] | select(.focused).num') \n     ~  "
