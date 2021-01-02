@@ -1,4 +1,4 @@
-## Alededorigo's dotfiles
+![Alededorigo's dotfiles](https://res.cloudinary.com/dn3cdvdix/image/upload/v1609584148/dotfiles_mkcg0c.png)
 <a href="https://www.twitter.com/alededorigo">![twitter](https://img.shields.io/twitter/follow/alededorigo?color=1da1f2&style=for-the-badge)</a> <a href="https://github.com/Alededorigo/dotfiles">![size](https://img.shields.io/github/languages/code-size/alededorigo/dotfiles?color=1fbad6&label=size&style=for-the-badge)</a> <a href="https://github.com/Alededorigo/dotfiles/issues">![issues](https://img.shields.io/github/issues/alededorigo/dotfiles?color=c9510c&style=for-the-badge)
 </a>
 
@@ -7,6 +7,23 @@
 These are configuration files for every software i use.
 In every file there is its path.
 Now i'm using Herbstluftwm and Polybar.
+
+### Now i use:
+```sh
+      ale@ad
+      os ~ arch
+      sh ~ bash
+      wm ~ i3
+      dm ~ lightdm
+      fm ~ thunar/ranger
+    host ~ ad
+    kern ~ 5.4.0
+    pkgs ~ 2356
+    term ~ kitty
+    pnel ~ polybar/lemonbar
+  editor ~ doom emacs/vim
+launcher ~ rofi
+```
 
 ### Index:
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
