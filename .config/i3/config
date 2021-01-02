@@ -171,4 +171,4 @@ exec_always picom &
 exec_always feh --bg-fill ~/Downloads/wall.png 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-exec_always sh ~/.scripts/energysaver.sh
+exec_always cbatticon
