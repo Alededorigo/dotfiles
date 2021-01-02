@@ -167,7 +167,8 @@ exec_always ~/.config/dunst/launch.sh
 exec_always nm-applet &
 exec_always ~/.config/polybar/launch.sh
 exec_always picom &
-exec_always nitrogen --restore &
+# exec_always nitrogen --restore &
+exec_always feh --bg-fill ~/Downloads/wall.png 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-
+exec_always ~/.scripts/energysaver.sh

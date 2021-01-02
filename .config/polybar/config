@@ -10,8 +10,8 @@
 ;
 
 [colors]
-bg = #171a1f
-bg-alt = #31353b
+bg = #111217
+bg-alt = #111a1f
 fg = #fff
 fg-alt = #555
 yl = #F1FF52
