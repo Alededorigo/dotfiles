@@ -1,18 +1,60 @@
+@font-face {
+    font-family: 'kanji';
+    src: url('/fonts/kanji.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Source Code Pro', monospace;
 }
 
 body{
-    background-color: #44475a;
+    background-color: #171a1f;
     width: 100%;
-    height: 100vh;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#greetings{
+    font-family: 'kanji', monospace;
+    font-size: 40px;
+    color: #53E2AE;
+}
+
+.input_box{
+	border: none;
+	outline: none;
+	background: #171a1f;
+	padding: 13px;
+	color: #ffffff;
+	font-size: 17px;
+	transition: 0.4px all;
+	border-radius: 5px 5px 5px 5px;
+	width: 610px;
+	margin-bottom: 30px;
+}
+
+.left img{
+    width: 365px;
+    margin-right: 20px;
+    -webkit-filter: grayscale(60%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(83%) brightness(60%);
+}
+
+.column-container{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 
 .container{
-    width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,15 +62,24 @@ body{
 }
 
 .column{
-    background-color: #282a36;
     display: flex;
     flex-direction: column;
     padding: 15px 30px 15px 15px;
     font-size: 18px;
 }
 
+.column:nth-child(1){
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.column:nth-child(4){
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
 .column p{
-    color: #f8f8f2;
+    color: #ffffff;
     padding-bottom: 10px;
 }
 
@@ -36,6 +87,7 @@ body{
     text-decoration: none;
     display: inline-block;
     color: #44475a;
+    transition: .3s;
 }
 
 .column a.null{
@@ -43,21 +95,8 @@ body{
     pointer-events: none;
 }
 
-.column a.null::after{
-    display: none;
-}
-
-.column a.link::after{
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #44475a;
-    transition: width 0.3s;
-}
-
-.column a.link:hover::after{
-    width: 100%;
+.column a:hover{
+    color: #919191;
 }
 
 img{
