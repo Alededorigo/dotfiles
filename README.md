@@ -12,6 +12,7 @@ Now i'm using Herbstluftwm and Polybar.
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
 * [Fonts](https://github.com/Alededorigo/dotfiles#fonts)
 * Window Managers config:
+  * [Bspwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm)
   * [Herbstluftwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftwm)
   * [I3](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3)
   * [Spectrwm](https://github.com/Alededorigo/dotfiles/tree/main/.spectrwm.conf)
@@ -34,6 +35,9 @@ Now i'm using Herbstluftwm and Polybar.
   * [Polybar](https://github.com/Alededorigo/dotfiles#polybar)
   * [Bspwm](https://github.com/Alededorigo/dotfiles#bspwm)
 
+<br>
+<br>
+
 
 <details>
   <summary><strong>Dependencies</strong></summary>
@@ -43,19 +47,53 @@ Now i'm using Herbstluftwm and Polybar.
 
   | DEPENDENCY     | UBUNTU       | FEDORA       | ARCH         |
   | :------------- | :----------: | -----------: | -----------: |
+  | Bspwm          | bspwm        | bspwm        | bspwm        |
   | Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
   | I3             | i3           | i3           | i3           |
   | I3blocks       | i3blocks     | i3blocks     | i3blocks     |
   | Spectrwm       | spectrwm     | spectrwm     | spectrwm     |
-  | Bspwm		     | bspwm        | bspwm        | bspwm 	      |
+  | Bspwm		       | bspwm        | bspwm        | bspwm 	      |
   | Lemonbar       | lemonbar     | lemonbar     | lemonbar     |
   | Qtile          | qtile        | qtile        | qtile        |
   | Xmonad         |              | xmonad       | xmonad       |
-  | Polybar
+  | Polybar        |              |              | AUR          |   
   | Rofi           | rofi         |              | rofi         |
+  | Sxhkd          | sxhkd        | sxhkd        | sxhkd        |
   | Qutebrowser    | [official page](qutebrowser.org/INSTALL.html#on_debian_ubuntu) | qutebrowser | qutebrowser |
   | Yabar		     | Need to build it					          |
-</details>
+
+  <br>
+
+  ## Debian/Ubuntu
+  ```sh
+  sudo add-apt-repository ppa:kgilmer/speed-ricer
+  sudo apt-get update
+  sudo apt install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
+  ```
+
+  ### Compositor manager (Picom) 
+
+  ```sh
+  # After you added "speed-ricer" repository you can install picom using apt
+  sudo apt install picom
+  # If you prefer you can use compton as alternative
+  ```
+
+  <br>
+  
+  ## Fedora
+  ```sh
+  sudo dnf install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs 
+  ```
+
+  ## Arch
+  ```sh
+  sudo pacman -S i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
+  # Make sure yay is your AUR helper
+  yay -S polybar picom
+  ```
+  
+  </details>
 
 <br>
 <br>
