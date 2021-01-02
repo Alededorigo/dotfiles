@@ -34,33 +34,46 @@ Now i'm using Herbstluftwm and Polybar.
   * [Polybar](https://github.com/Alededorigo/dotfiles#polybar)
   * [Bspwm](https://github.com/Alededorigo/dotfiles#bspwm)
 
-### Dependencies:
-*When blank you need to compile it from source
 
-| DEPENDENCY     | UBUNTU       | FEDORA       | ARCH         |
-| :------------- | :----------: | -----------: | -----------: |
-| Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
-| I3             | i3           | i3           | i3           |
-| I3blocks       | i3blocks     | i3blocks     | i3blocks     |
-| Spectrwm       | spectrwm     | spectrwm     | spectrwm     |
-| Bspwm		     | bspwm        | bspwm        | bspwm 	      |
-| Lemonbar       | lemonbar     | lemonbar     | lemonbar     |
-| Qtile          | qtile        | qtile        | qtile        |
-| Xmonad         |              | xmonad       | xmonad       |
-| Polybar
-| Rofi           | rofi         |              | rofi         |
-| Qutebrowser    | [official page](qutebrowser.org/INSTALL.html#on_debian_ubuntu) | qutebrowser | qutebrowser |
-| Yabar		     | Need to build it					          |
+<details>
+  <summary><strong>Dependencies</strong></summary>
+  <br>
 
-### Fonts:
-These are all fonts i used in my dotfiles.
+  *When blank you need to compile it from source
 
-| FONT           | UBUNTU       | FEDORA       | ARCH         |
-| :------------- | :----------: | -----------: | -----------: |
-| Fira Code      |fonts-firacode|fira-code-fonts| ttf-fira-code|
-| IBM Plex       |              |ibm-plex-sans-font| ttf-ibm-plex|
-| Source Code Pro| [Official page](https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font)     | adobe-source-code-pro-fonts | adobe-source-code-pro-fonts |
+  | DEPENDENCY     | UBUNTU       | FEDORA       | ARCH         |
+  | :------------- | :----------: | -----------: | -----------: |
+  | Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
+  | I3             | i3           | i3           | i3           |
+  | I3blocks       | i3blocks     | i3blocks     | i3blocks     |
+  | Spectrwm       | spectrwm     | spectrwm     | spectrwm     |
+  | Bspwm		     | bspwm        | bspwm        | bspwm 	      |
+  | Lemonbar       | lemonbar     | lemonbar     | lemonbar     |
+  | Qtile          | qtile        | qtile        | qtile        |
+  | Xmonad         |              | xmonad       | xmonad       |
+  | Polybar
+  | Rofi           | rofi         |              | rofi         |
+  | Qutebrowser    | [official page](qutebrowser.org/INSTALL.html#on_debian_ubuntu) | qutebrowser | qutebrowser |
+  | Yabar		     | Need to build it					          |
+</details>
 
+<br>
+<br>
+
+<details>
+  <summary><strong>Fonts</strong></summary>
+  <br>
+  These are all fonts i used in my dotfiles.
+
+  | FONT           | UBUNTU       | FEDORA       | ARCH         |
+  | :------------- | :----------: | -----------: | -----------: |
+  | Fira Code      |fonts-firacode|fira-code-fonts| ttf-fira-code|
+  | IBM Plex       |              |ibm-plex-sans-font| ttf-ibm-plex|
+  | Source Code Pro| [Official page](https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font)     | adobe-source-code-pro-fonts | adobe-source-code-pro-fonts |
+</details>
+
+<br>
+<br>
 
 ### Configs:
 
