@@ -1,7 +1,7 @@
 syntax enable
 set nocompatible
 filetype off
-set relativenumber
+set nu
 set splitbelow
 set splitright
 set t_Co=256
