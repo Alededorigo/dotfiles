@@ -17,7 +17,7 @@
     idle_threshold = 120
 
     # -- FONT -- #
-    font = Envy Code R 10
+    font = Fira Code 10
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
@@ -90,17 +90,17 @@
 
 # -- COLORS -- #
 [urgency_low]
-    background = "#171a1f"
+    background = "#111217"
     foreground = "#ffffff"
     timeout = 7
 
 [urgency_normal]
-    background = "#171a1f"
+    background = "#111217"
     foreground = "#ffffff"
     timeout = 8
 
 [urgency_critical]
-    background = "#171a1f"
+    background = "#111217"
     foreground = "#ffffff"
     frame_color = "#ff5555"
     timeout = 9

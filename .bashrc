@@ -61,6 +61,7 @@ alias fet.sh="sh ~/.scripts/fet.sh"
 alias cat="ccat"
 alias cmatrix="cmatrix -a -C magenta"
 alias wg="wordgrinder"
+alias fm="ranger"
 
 # Grep output
 alias grep='grep --color=auto'
@@ -70,6 +71,7 @@ alias pacman="sudo pacman"
 alias pacsyu="sudo pacman -Syyu"
 alias pacsy="sudo pacman -Syy"
 alias orp='sudo pacman -Rns $(pacman -Qtdq)'
+alias pkg="sudo apt install"
 
 # Alias for git
 alias add="git add -u"
