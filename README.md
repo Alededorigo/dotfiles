@@ -20,7 +20,7 @@ Now i'm using Herbstluftwm and Polybar.
     kern ~ 5.4.0
     pkgs ~ 2356
     term ~ kitty
-    pnel ~ polybar/lemonbar
+   panel ~ polybar/lemonbar
   editor ~ doom emacs/vim
 launcher ~ rofi
 ```
