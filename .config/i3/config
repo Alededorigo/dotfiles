@@ -1,8 +1,7 @@
 #  _____ ____
 # |  _  |    \
-# |     |  |  |
-# |__|__|____/
-#
+# |     |  |  | 
+# |__|__|____/ 
 # Alededorigo i3 Configuration
 # Place this file into ~/.config/i3/config
 # https://github.com/alededorigo/dotfiles
@@ -157,12 +156,12 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # Custom bindings
 bindsym $mod+Shift+e exit
 bindsym $mod+Shift+p exec systemctl poweroff
-bindsym $mod+Shift+x exec slock
 bindsym $mod+space exec rofi -show run -lines 9 -padding 480 -theme "AD" 
 bindsym $mod+Shift+a exec sh ~/.scripts/panel 
 bindsym $mod+Return exec $ter
 bindsym $mod+Shift+q kill
 bindsym $mod+Ctrl+q focus parent,kill
+bindsym $mod+x exec ksnip
 # Exec at login
 exec $ter
 exec telegram-desktop

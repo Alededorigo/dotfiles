@@ -59,9 +59,10 @@ alias cp="cp -i"
 alias df="df -h"
 alias fet.sh="sh ~/.scripts/fet.sh"
 alias cat="ccat"
-alias cmatrix="cmatrix -a -C magenta"
+alias cmatrix="cmatrix"
 alias wg="wordgrinder"
 alias fm="ranger"
+alias note="cd ~/notes && ls -la"
 
 # Grep output
 alias grep='grep --color=auto'
