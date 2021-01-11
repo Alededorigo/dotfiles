@@ -171,6 +171,7 @@ for_window [class="firefox"] move to workspace $ws2
 for_window [class="TelegramDesktop"] move to workspace $ws2
 for_window [class="Code"] move to workspace $ws3
 for_window [class="kitty"] floating enable
+for_window [class="File-roller"] floating enable
 # 
 exec_always ~/.config/dunst/launch.sh
 exec_always nm-applet &
