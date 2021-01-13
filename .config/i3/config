@@ -46,6 +46,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+h split h
 bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
+# bindsym $mod+f exec bash ~/.scripts/fulls
 bindsym $mod+e layout toggle splitg
 bindsym $mod+s floating toggle 
 bindsym $mod+a focus parent
@@ -92,10 +93,10 @@ mode "resize" {
         bindsym ograve resize grow width 10 px or 10 ppt
 
         # normal bindings with arrow
-        bindsym Left resize shrink width 8 px or 8 ppt
-        bindsym Down resize grow height 8 px or 8 ppt
-        bindsym Up resize shrink height 8 px or 8 ppt
-        bindsym Right resize grow width 8 px or 8 ppt
+        bindsym Left resize shrink width 6 px or 6 ppt
+        bindsym Down resize grow height 6 px or 6 ppt
+        bindsym Up resize shrink height 6 px or 6 ppt
+        bindsym Right resize grow width 6 px or 6 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -155,7 +156,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 bindsym $mod+Shift+e exit
 bindsym $mod+Shift+p exec systemctl poweroff
 bindsym $mod+space exec rofi -show run -lines 9 -padding 480 -theme "AD" 
-bindsym $mod+Shift+a exec sh ~/.scripts/panel 
+bindsym $mod+w exec sh ~/.scripts/panel 
 bindsym $mod+Return exec $ter
 bindsym $mod+q kill
 bindsym $mod+Ctrl+q focus parent,kill
@@ -164,7 +165,7 @@ bindsym $mod+x exec ksnip
 exec $ter
 exec telegram-desktop
 # Remove borders
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 7
 for_window [class="firefox"] move to workspace $ws2
 for_window [class="TelegramDesktop"] move to workspace $ws2
 for_window [class="Code"] move to workspace $ws3
@@ -175,8 +176,9 @@ exec_always ~/.config/dunst/launch.sh
 exec_always nm-applet &
 # exec_always ~/.config/polybar/launch.sh
 exec_always picom &
+exec_always unclutter &
 # exec_always nitrogen --restore &
-exec_always feh --bg-fill ~/Pictures/c1.jpg
+exec_always feh --bg-fill ~/Pics/c1.jpg
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec cbatticon -i standard -l 20
