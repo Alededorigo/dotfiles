@@ -5,4 +5,4 @@
 
 pkill dunst
 
-notify-send -t 10000 "     ~" " Now ~ $(date +"%H:%M") \n Dat ~ $(date +"%d %b") \n Bat ~ $(cat /sys/class/power_supply/BAT0/capacity)% \n Cpu ~ $( top -bn1 | grep load | awk '{printf "%.2f", $(NF-2)}' | sed 's/,00/ /') \n Ram ~ $(free -m | awk 'NR==2{printf "%sM", $3,$2,$3*100/$2 }') \n Tag ~ $(i3-msg -t get_workspaces | jq '.[] | select(.focused).num') \n     ~  "
+notify-send -t 10000 "     ~" " Now ~ $(date +"%H:%M") \n Dat ~ $(date +"%d %b") \n Bat ~ $(cat /sys/class/power_supply/BAT0/capacity)% \n Cpu ~ $(bash ~/.scripts/temp) \n Ram ~ $(free -m | awk 'NR==2{printf "%sM", $3,$2,$3*100/$2 }') \n Tag ~ $(i3-msg -t get_workspaces | jq '.[] | select(.focused).num') \n     ~  "

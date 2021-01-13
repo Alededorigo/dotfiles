@@ -12,7 +12,7 @@
 [[ $- != *i* ]] && return
 
 # Theme
-PS1="\[\e[1;32m\]\w $ \[\e[m\]"
+PS1="\[\e[1;31m\]\w \[\e[m\]"
 
 # Extract alias
 ex ()

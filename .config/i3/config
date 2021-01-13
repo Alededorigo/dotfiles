@@ -46,8 +46,6 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+h split h
 bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
-bindsym $mod+Shift+s layout stacking
-bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle splitg
 bindsym $mod+s floating toggle 
 bindsym $mod+a focus parent
@@ -147,10 +145,10 @@ mode "$mode_gaps_outer" {
 }
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #aaaaaa #285577 #ffffff #aaaaaa   #999999
+client.focused          #aaaaaa #285577 #ffffff #aaaaaa   #333333
 client.focused_inactive #aaaaaa #5f676a #ffffff #aaaaaa   #333333
 client.unfocused        #333333 #222222 #888888 #292d2e   #333333
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.urgent           #ff5555 #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 # Custom bindings
@@ -159,14 +157,14 @@ bindsym $mod+Shift+p exec systemctl poweroff
 bindsym $mod+space exec rofi -show run -lines 9 -padding 480 -theme "AD" 
 bindsym $mod+Shift+a exec sh ~/.scripts/panel 
 bindsym $mod+Return exec $ter
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 bindsym $mod+Ctrl+q focus parent,kill
 bindsym $mod+x exec ksnip
 # Exec at login
 exec $ter
 exec telegram-desktop
 # Remove borders
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 5
 for_window [class="firefox"] move to workspace $ws2
 for_window [class="TelegramDesktop"] move to workspace $ws2
 for_window [class="Code"] move to workspace $ws3
