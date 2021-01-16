@@ -3,10 +3,7 @@
 # |     |  |  |
 # |__|__|____/
 #
-# Alededorigo .bashrc File
-# Place this file into ~/.bashrc
-# https://github.com/alededorigo/dotfiles
-# https://gitlab.com/alededorigo/dotfiles
+# ~/.bashrc
 #
 
 [[ $- != *i* ]] && return
@@ -48,18 +45,10 @@ alias l.='ls -a | grep "^."'
 alias ..="cd .."
 alias .2="cd ../.."
 alias .3="cd ../../.."
-alias .4="cd ../../../.."
-alias .5="cd ../../../../.."
-alias doas="doas --"
 alias vi="vim"
-alias n="nnn"
-alias vf="vifm"
-alias nano="vim"
+alias nano="micro"
 alias cp="cp -i"
-alias df="df -h"
 alias fet.sh="sh ~/.scripts/fet.sh"
-alias cat="ccat"
-alias cmatrix="cmatrix"
 alias wg="wordgrinder"
 alias fm="ranger"
 alias note="cd ~/notes && ls -la"
@@ -67,28 +56,9 @@ alias note="cd ~/notes && ls -la"
 # Grep output
 alias grep='grep --color=auto'
 
-# Alias for Packages
-alias pacman="sudo pacman"
-alias pacsyu="sudo pacman -Syyu"
-alias pacsy="sudo pacman -Syy"
-alias orp='sudo pacman -Rns $(pacman -Qtdq)'
-alias pkg="sudo apt install"
-
 # Alias for git
-alias add="git add -u"
-alias adf="git add"
-alias status="git status"
-alias comm="git commit -m"
-alias push="git push"
-alias gitc="sh ~/.scripts/github.sh"
-
-# Alias for config
-alias honf="vim ~/.config/herbstluftwm/autostart"
-alias ponf="vim ~/.config/polybar/config"
-alias piconf="vim /home/alepc/.config/picom/picom.conf"
-alias viconf="vim /home/alepc/.vimrc"
-alias bsconf="vim ~/.bashrc"
-alias qonf="vim ~/.config/qtile/config.py"
+alias g="git"
+alias gitc="bash ~/.scripts/github"
 
 # Alias for curl web apps
 alias weather="curl http://wttr.in/Belluno"
