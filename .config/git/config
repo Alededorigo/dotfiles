@@ -5,3 +5,6 @@
 	c     = "commit -m"
 	pp    = "pull"
 	p     = "push"
+[user]
+	email = alededorigo@gmali.com
+	name = alededorigo
