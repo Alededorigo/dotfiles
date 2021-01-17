@@ -57,8 +57,7 @@ alias note="cd ~/notes && ls -la"
 alias grep='grep --color=auto'
 
 # Alias for git
-alias g="git"
-alias gitc="bash ~/.scripts/github"
+alias gitc="bash ~/.scripts/github.sh"
 
 # Alias for curl web apps
 alias weather="curl http://wttr.in/Belluno"

@@ -1,17 +1,11 @@
-#  _____ ____
-# |  _  |    \
-# |     |  |  | 
-# |__|__|____/ 
-# Alededorigo i3 Configuration
-# Place this file into ~/.config/i3/config
-# https://github.com/alededorigo/dotfiles
-# https://gitlab.com/alededorigo/dotfiles
-#
+# ~/.config/i3/config
+# After any edit, reload the configuration with $mod+Shift+r
+#  						(see line 80) 
 
 # Use super as modifier
 set $mod Mod4
 # Use Kitty as terminal
-set $ter kitty 
+set $ter urxvtc 
 font pango: Fira Code 11px
 
 # Volume and brightness keybinds
@@ -157,7 +151,7 @@ bindsym $mod+Shift+e exit
 bindsym $mod+x exec bash ~/.scripts/screen
 bindsym $mod+Shift+p exec systemctl poweroff
 bindsym $mod+space exec rofi -show run -padding 480 -theme "dmenu" 
-bindsym $mod+w exec sh ~/.scripts/panel 
+bindsym $mod+w exec bash ~/.scripts/panel 
 bindsym $mod+Return exec $ter
 bindsym $mod+q kill
 bindsym $mod+Ctrl+q focus parent,kill
@@ -170,16 +164,17 @@ for_window [class="^.*"] border pixel 7
 for_window [class="firefox"] move to workspace $ws2
 for_window [class="TelegramDesktop"] move to workspace $ws2
 for_window [class="Code"] move to workspace $ws3
-for_window [class="kitty"] floating enable
+for_window [class="URxvt"] floating enable
 for_window [class="File-roller"] floating enable
 # 
-exec_always ~/.config/dunst/launch.sh
+exec_always dunst &
+exec_always urxvtd -q &
 exec_always nm-applet &
 # exec_always ~/.config/polybar/launch.sh
 exec_always picom &
 exec_always unclutter &
 # exec_always nitrogen --restore &
-exec_always feh --bg-fill ~/Pics/c1.jpg
+exec_always feh --bg-fill ~/Pictures/walls/leave2.jpg
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec cbatticon -i standard -l 20
