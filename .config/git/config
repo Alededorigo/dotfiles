@@ -1,0 +1,7 @@
+[alias]
+	a     = "add -u"
+	aa    = "add --all"
+	s     = "status"
+	c     = "commit -m"
+	pp    = "pull"
+	p     = "push"
