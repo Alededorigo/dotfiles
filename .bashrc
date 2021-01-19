@@ -45,7 +45,8 @@ alias cp="cp -i"
 alias fet.sh="sh ~/.scripts/fet.sh"
 alias wg="wordgrinder"
 alias fm="ranger"
-alias note="cd ~/notes && ls -la"
+alias note="source ~/.scripts/notes"
+alias youtube-dl="/usr/local/bin/youtube-dl"
 
 # Grep output
 alias grep='grep --color=auto'

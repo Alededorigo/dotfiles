@@ -5,7 +5,7 @@
 # Use super as modifier
 set $mod Mod4
 # Use Kitty as terminal
-set $ter urxvtc 
+set $ter kitty 
 font pango: Fira Code 11px
 
 # Volume and brightness keybinds
@@ -148,9 +148,10 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 # Custom bindings
 bindsym $mod+Shift+e exit
-bindsym $mod+x exec bash ~/.scripts/screen
+bindsym $mod+x exec flameshot gui
 bindsym $mod+Shift+p exec systemctl poweroff
 bindsym $mod+space exec rofi -show run -padding 480 -theme "dmenu" 
+bindsym $mod+Shift+space exec rofi -modi TODO:~/.scripts/todo.sh -show TODO -theme dmenu
 bindsym $mod+w exec bash ~/.scripts/panel 
 bindsym $mod+Return exec $ter
 bindsym $mod+q kill
@@ -160,15 +161,17 @@ bindsym $mod+Ctrl+q focus parent,kill
 exec $ter
 exec telegram-desktop
 # Remove borders
-for_window [class="^.*"] border pixel 7
-for_window [class="firefox"] move to workspace $ws2
+for_window [class="^.*"] border pixel 5
+for_window [class="Firefox"] move to workspace $ws2
+for_window [class="discord"] move to workspace $ws4
 for_window [class="TelegramDesktop"] move to workspace $ws2
 for_window [class="Code"] move to workspace $ws3
 for_window [class="URxvt"] floating enable
+for_window [class="kitty"] floating enable
 for_window [class="File-roller"] floating enable
 # 
 exec_always dunst &
-exec_always urxvtd -q &
+# exec_always urxvtd -q &
 exec_always nm-applet &
 # exec_always ~/.config/polybar/launch.sh
 exec_always picom &

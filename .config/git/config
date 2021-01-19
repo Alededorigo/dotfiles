@@ -1,3 +1,5 @@
+# ~/.config/git/config
+
 [alias]
 	a     = "add -u"
 	aa    = "add --all"
@@ -6,5 +8,5 @@
 	pp    = "pull"
 	p     = "push"
 [user]
-	email = alededorigo@gmali.com
-	name = alededorigo
+	email = -
+	name = -

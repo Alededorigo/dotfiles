@@ -1,3 +1,5 @@
+# ~/.config/dunst/dunstrc
+
 [global]
     # -- DISPLAY -- #
     monitor = 0
