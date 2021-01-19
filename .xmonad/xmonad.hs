@@ -1,13 +1,4 @@
--- _____ ____
--- |  _  |    \
--- |     |  |  |
--- |__|__|____/
---
--- Alededorigo Xmonad Config
--- Place this file into ~/.xmonad/xmonad.hs
--- https://github.com/alededorigo/dotfiles
--- https://gitlab.com/alededorigo/dotfiles
---
+-- ~/.xmonad/xmonad.hs
 
 -- IMPORTS --
 
