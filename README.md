@@ -13,7 +13,7 @@ Now i'm using Herbstluftwm and Polybar.
       ale@ad
       os ~ arch
       sh ~ bash
-      wm ~ i3
+      wm ~ xmonad
       dm ~ lightdm
       fm ~ thunar/ranger
     host ~ ad
@@ -73,7 +73,7 @@ launcher ~ rofi
   | Lemonbar       | lemonbar     | lemonbar     | lemonbar     |
   | Qtile          | qtile        | qtile        | qtile        |
   | Xmonad         |              | xmonad       | xmonad       |
-  | Polybar        |              |              | AUR          |   
+  | Polybar        |              |              | AUR          |
   | Rofi           | rofi         |              | rofi         |
   | Sxhkd          | sxhkd        | sxhkd        | sxhkd        |
   | Qutebrowser    | [official page](qutebrowser.org/INSTALL.html#on_debian_ubuntu) | qutebrowser | qutebrowser |
@@ -88,7 +88,7 @@ launcher ~ rofi
   sudo apt install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
   ```
 
-  ### Compositor manager (Picom) 
+  ### Compositor manager (Picom)
 
   ```sh
   # After you added "speed-ricer" repository you can install picom using apt
@@ -97,10 +97,10 @@ launcher ~ rofi
   ```
 
   <br>
-  
+
   ## Fedora
   ```sh
-  sudo dnf install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs 
+  sudo dnf install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
   ```
 
   ## Arch
@@ -109,7 +109,7 @@ launcher ~ rofi
   # Make sure yay is your AUR helper
   yay -S polybar picom
   ```
-  
+
   </details>
 
 <br>

@@ -6,6 +6,9 @@ import XMonad.Util.SpawnOnce
 import Data.Monoid
 import System.Exit
 
+import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks
+import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Layout.Spacing
 
 import qualified XMonad.StackSet as W
@@ -38,17 +41,30 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Terminal
     [ ((modm,               xK_Return), spawn $ XMonad.terminal conf)
 
+    -- Volume keys
+    , ((0                     , 0x1008FF11), spawn "amixer -q sset Master 2%-")
+
+    , ((0                     , 0x1008FF13), spawn "amixer -q sset Master 2%+")
+
+    , ((0                     , 0x1008FF12), spawn "amixer set Master toggle")
+
     -- Rofi with Dmenu theme
     , ((modm,               xK_space     ), spawn "rofi -show run -theme dmenu")
 
-    -- launch gmrun
+    -- Panel
     , ((modm,               xK_s     ), spawn "bash ~/.scripts/panel")
 
-    -- close focused window
+    -- Flameshot (for screenshots)
+    , ((modm,               xK_x     ), spawn "flameshot gui")
+
+    -- Poweroff (for Systemd)
+    , ((modm .|. shiftMask, xK_p     ), spawn "systemctl poweroff")
+
+    -- Kill
     , ((modm,               xK_q     ), kill)
 
-     -- Rotate through the available layout algorithms
-    , ((modm,               xK_f ), sendMessage NextLayout)
+    -- Change layout algorithm
+    , ((modm,               xK_t ), sendMessage NextLayout)
 
     --  Reset the layouts on the current workspace to default
     , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
@@ -83,8 +99,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Expand the master area
     , ((modm,               xK_l     ), sendMessage Expand)
 
-    -- Push window back into tiling
-    , ((modm,               xK_t     ), withFocused $ windows . W.sink)
+    -- Put windows from floating to tiling
+    , ((modm,               xK_f     ), withFocused $ windows . W.sink)
 
     -- Increment the number of windows in the master area
     , ((modm              , xK_comma ), sendMessage (IncMasterN 1))
@@ -98,10 +114,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --
     -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
-    -- Quit xmonad
-    , ((modm .|. shiftMask, xK_e     ), io (exitWith ExitSuccess))
+    -- Logout
+    , ((modm .|. shiftMask, xK_x     ), io (exitWith ExitSuccess))
 
-    -- Restart xmonad
+    -- Reload configuration
     , ((modm .|. shiftMask, xK_g     ), spawn "xmonad --recompile; xmonad --restart")
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
@@ -132,14 +148,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 --
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 
-    -- mod-button1, Set the window to floating mode and move by dragging
+    -- SX: Set the window to floating mode and move by dragging
     [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w
                                        >> windows W.shiftMaster))
-
-    -- mod-button2, Raise the window to the top of the stack
+    -- Wheel: Raise the window to the top of the stack
     , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))
 
-    -- mod-button3, Set the window to floating mode and resize by dragging
+    -- DX, Set the window to floating mode and resize by dragging
     , ((modm, button3), (\w -> focus w >> mouseResizeWindow w
                                        >> windows W.shiftMaster))
 
@@ -160,7 +175,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout = tiled ||| Mirror tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled = smartSpacing 13 $ Tall nmaster delta ratio
+     tiled = spacing 10 $ Tall nmaster delta ratio
 
      -- The default number of windows in the master pane
      nmaster = 1
@@ -189,6 +204,8 @@ myLayout = tiled ||| Mirror tiled ||| Full
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
+    , className =? "File-roller"    --> doFloat
+    , className =? "Thunar"         --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
