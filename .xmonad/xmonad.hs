@@ -243,7 +243,6 @@ myStartupHook = do
 	spawnOnce "unclutter"
 	spawnOnce "cbatticon -i standard -l 20"
 	spawnOnce "kitty"
-	spawnOnce "telegram-desktop"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
