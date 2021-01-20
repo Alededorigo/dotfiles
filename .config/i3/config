@@ -100,7 +100,7 @@ mode "resize" {
 #
 bindsym $mod+r mode "resize"
 # Gaps around windows
-gaps inner 10
+gaps inner 13
 gaps outer 0 
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -140,11 +140,10 @@ mode "$mode_gaps_outer" {
 }
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #aaaaaa #285577 #ffffff #aaaaaa   #333333
-client.focused_inactive #aaaaaa #5f676a #ffffff #aaaaaa   #333333
-client.unfocused        #333333 #222222 #888888 #292d2e   #333333
+client.focused          #20242a #20242a #ffffff #20242a   #20242a
+client.focused_inactive #20242a #20242a #ffffff #20242a   #20242a
+client.unfocused        #111217 #111217 #888888 #111217   #111217
 client.urgent           #ff5555 #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 # Custom bindings
 bindsym $mod+Shift+e exit
@@ -161,7 +160,7 @@ bindsym $mod+Ctrl+q focus parent,kill
 exec $ter
 exec telegram-desktop
 # Remove borders
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 3
 for_window [class="Firefox"] move to workspace $ws2
 for_window [class="discord"] move to workspace $ws4
 for_window [class="TelegramDesktop"] move to workspace $ws2

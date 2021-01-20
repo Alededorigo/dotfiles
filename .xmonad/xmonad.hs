@@ -1,75 +1,54 @@
--- ~/.xmonad/xmonad.hs
+-- ~/.xmonad/xmonad.hs --
 
 -- IMPORTS --
-
 import XMonad
+import XMonad.Util.SpawnOnce
 import Data.Monoid
 import System.Exit
-import XMonad.Util.Run
-import XMonad.Hooks.ManageDocks
-import XMonad.Util.SpawnOnce
-import XMonad
-import XMonad.Hooks.DynamicLog
-import XMonad.Layout.Gaps
+
+import XMonad.Layout.Spacing
+
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
-myTerminal      = "xterm"
+-- VARIABLES --
+myTerminal      = "kitty"
 
--- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = False
 
--- Whether clicking on a window to focus also passes the click to the window
 myClickJustFocuses :: Bool
 myClickJustFocuses = False
 
--- Width of the window border in pixels.
---
-myBorderWidth   = 2
+myBorderWidth   = 3
 
--- modMask lets you specify which modkey you want to use. The default
--- is mod1Mask ("left alt").  You may also consider using mod3Mask
--- ("right alt"), which does not conflict with emacs keybindings. The
--- "windows key" is usually mod4Mask.
---
 myModMask       = mod4Mask
 
--- The default number of workspaces (virtual screens) and their names.
--- By default we use numeric strings, but any string may be used as a
--- workspace name. The number of workspaces is determined by the length
--- of this list.
---
--- A tagging example:
---
--- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
---
-myWorkspaces    = ["1","2","3","4","5","6","7"]
+myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
--- Border colors for unfocused and focused windows, respectively.
---
-myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#ca9dee"
+myNormalBorderColor  = "#111217"
+myFocusedBorderColor = "#20242a"
 
-------------------------------------------------------------------------
--- Key bindings. Add, modify or remove key bindings here.
---
+--------------------------------------------
+--------------  KEYBINDINGS  ---------------
+--------------------------------------------
+
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
-    -- launch a terminal
-    [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
+    -- Terminal
+    [ ((modm,               xK_Return), spawn $ XMonad.terminal conf)
 
-    -- launch rofi
-    , ((modm,               xK_d     ), spawn "rofi -show run -theme dracula")
+    -- Rofi with Dmenu theme
+    , ((modm,               xK_space     ), spawn "rofi -show run -theme dmenu")
 
     -- launch gmrun
-    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
+    , ((modm,               xK_s     ), spawn "bash ~/.scripts/panel")
 
     -- close focused window
-    , ((modm .|. shiftMask, xK_q     ), kill)
+    , ((modm,               xK_q     ), kill)
 
      -- Rotate through the available layout algorithms
-    , ((modm,               xK_space ), sendMessage NextLayout)
+    , ((modm,               xK_f ), sendMessage NextLayout)
 
     --  Reset the layouts on the current workspace to default
     , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
@@ -90,7 +69,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_m     ), windows W.focusMaster  )
 
     -- Swap the focused window and the master window
-    , ((modm,               xK_Return), windows W.swapMaster)
+    , ((modm .|. shiftMask, xK_Return), windows W.swapMaster)
 
     -- Swap the focused window with the next window
     , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )
@@ -120,10 +99,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
     -- Quit xmonad
-    , ((modm .|. shiftMask, xK_c     ), io (exitWith ExitSuccess))
+    , ((modm .|. shiftMask, xK_e     ), io (exitWith ExitSuccess))
 
     -- Restart xmonad
-    , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
+    , ((modm .|. shiftMask, xK_g     ), spawn "xmonad --recompile; xmonad --restart")
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
@@ -178,10 +157,10 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
+myLayout = tiled ||| Mirror tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled   = Tall nmaster delta ratio
+     tiled = smartSpacing 13 $ Tall nmaster delta ratio
 
      -- The default number of windows in the master pane
      nmaster = 1
@@ -213,7 +192,6 @@ myManageHook = composeAll
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
-
 ------------------------------------------------------------------------
 -- Event handling
 
@@ -242,18 +220,20 @@ myLogHook = return ()
 --
 -- By default, do nothing.
 myStartupHook = do
-	spawnOnce "nitrogen --restore &"
-	spawnOnce "compton &"
+	spawnOnce "feh --bg-fill ~/Pictures/walls/leave2.jpg &"
+	spawnOnce "dunst &"
+	spawnOnce "picom"
+	spawnOnce "unclutter"
+	spawnOnce "cbatticon -i standard -l 20"
+	spawnOnce "kitty"
+	spawnOnce "telegram-desktop"
 
 ------------------------------------------------------------------------
--- Now run xmonad with all the d efaults we set up.
+-- Now run xmonad with all the defaults we set up.
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = do
-  xmproc <- spawnPipe "xmobar -x 0 /home/alepc/.config/xmobar/xmobarrc"
-  xmonad $ docks defaults
-  xmonad =<< xmobar def
+main = xmonad defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -279,7 +259,6 @@ defaults = def {
       -- hooks, layouts
         layoutHook         = myLayout,
         manageHook         = myManageHook,
-
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
         startupHook        = myStartupHook
