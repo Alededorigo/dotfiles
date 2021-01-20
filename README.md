@@ -13,7 +13,7 @@ Now i'm using Herbstluftwm and Polybar.
       ale@ad
       os ~ arch
       sh ~ bash
-      wm ~ xmonad
+      wm ~ i3-gaps/xmonad
       dm ~ lightdm
       fm ~ thunar/ranger
     host ~ ad
