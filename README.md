@@ -19,7 +19,6 @@ In every file there is its path.
     kern ~ 5.4.0
     pkgs ~ 2356
     term ~ kitty
-   panel ~ polybar/lemonbar
   editor ~ doom emacs/vim
 launcher ~ rofi
 ```
