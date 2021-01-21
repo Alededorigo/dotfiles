@@ -6,7 +6,6 @@
 
 These are configuration files for every software i use.
 In every file there is its path.
-Now i'm using Herbstluftwm and Polybar.
 
 ### Now i use:
 ```sh
