@@ -92,17 +92,17 @@
 
 # -- COLORS -- #
 [urgency_low]
-    background = "#171a1f"
+    background = "#111217"
     foreground = "#ffffff"
     timeout = 7
 
 [urgency_normal]
-    background = "#171a1f"
+    background = "#111217"
     foreground = "#ffffff"
     timeout = 8
 
 [urgency_critical]
-    background = "#171a1f"
+    background = "#111217"
     foreground = "#ffffff"
     frame_color = "#ff5555"
     timeout = 9
