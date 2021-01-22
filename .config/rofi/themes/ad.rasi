@@ -1,0 +1,47 @@
+/**
+ * ROFI Color theme
+ * User: Dedo
+ * Copyright: none
+ */
+* {
+    background-color:      #111217;
+    border-color:          #ffffff;
+    text-color:           #ffffff;
+    font:                  "Fira Code 10";
+}
+
+#window {
+    anchor:     north;
+    location:   north;
+    width:      100%;
+    padding:    10px;
+    children:   [ horibox ];
+}
+
+#horibox {
+    orientation: horizontal;
+    children:   [ prompt, entry, listview ];
+}
+
+#prompt{
+    margin: 0 15px;
+}
+
+#listview {
+    layout:     horizontal;
+    spacing:    5px;
+    lines:      100;
+}
+
+#entry {
+    expand:     false;
+    width:      10em;
+}
+
+#element {
+    color: #999999;
+    padding: 0px 2px;
+}
+#element selected {
+    color: #ffffff;
+}

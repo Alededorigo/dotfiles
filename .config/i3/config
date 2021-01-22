@@ -149,8 +149,8 @@ client.urgent           #ff5555 #900000 #ffffff #900000   #900000
 bindsym $mod+Shift+e exit
 bindsym $mod+x exec flameshot gui
 bindsym $mod+Shift+p exec systemctl poweroff
-bindsym $mod+space exec rofi -show run -padding 480 -theme "dmenu"
-bindsym $mod+Shift+space exec rofi -modi TODO:~/.scripts/todo.sh -show TODO -theme dmenu
+bindsym $mod+space exec rofi -show run -padding 480
+bindsym $mod+Shift+space exec rofi -modi TODO:~/.scripts/todo.sh -show TODO
 bindsym $mod+w exec bash ~/.scripts/panel
 bindsym $mod+Return exec $ter
 bindsym $mod+q kill
