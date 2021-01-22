@@ -46,10 +46,9 @@ launcher ~ rofi
   * [DuckDuckGo](https://github.com/Alededorigo/dotfiles#duckduckgo)
   * [Qutebrowser](https://github.com/Alededorigo/dotfiles/tree/main/.config/qutebrowser/config.py)
 * Additional configs:
-  * [Rofi](https://github.com/Alededorigo/dotfiles#rofi)
-  * [Polybar](https://github.com/Alededorigo/dotfiles#polybar)
-  * [Bspwm](https://github.com/Alededorigo/dotfiles#bspwm)
-* [Wallpapers](https://github.com/Alededorigo/dotfiles#wallpapers)
+  * [Polybar](#polybar)
+  * [Bspwm](#bspwm)
+* [Wallpapers](#wallpapers)
 
 <br>
 <br>
@@ -158,17 +157,6 @@ chmod +x ~/.config/polybar/scripts/env.sh
 chmod +x ~/.config/polybar/scripts/redshift.sh
 ```
 I use polybar for [bspwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm), [i3](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3), [herbstluftwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftw).
-
-#### Rofi
-The theme i am using for rofi is [AD-Dracula.rasi](https://github.com/Alededorigo/dotfiles/tree/main/.config/rofi/themes/AD-Dracula.rasi).
-Place that file into rofi themes folder.
-You can change the file name, but not the extension.
-For changing the theme add "theme" flag to your launch command.
-For example:
-```sh
-cp AD.rasi /usr/share/rofi/themes/<your file name>.rasi  # Replace "your file name" with you rile name
-rofi -show run -theme <your file name>
-```
 
 #### DuckDuckGo
 Open [this](https://duckduckgo.com/?kae=t&ks=m&kw=s&ku=1&kt=Fira+Code&km=l&k7=171a1f&kj=171a1f&k9=53e2ae&kaa=985eff&k21=171a1f&k8=ffffff&kx=985eff) URL.
