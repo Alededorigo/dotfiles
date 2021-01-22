@@ -175,7 +175,7 @@ exec_always nm-applet &
 exec_always picom &
 exec_always unclutter &
 # exec_always nitrogen --restore &
-exec_always feh --bg-fill ~/Pictures/walls/leave2.jpg
+exec_always feh --bg-fill ~/Pictures/walls/leave3.jpg
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec cbatticon -i standard -l 20
