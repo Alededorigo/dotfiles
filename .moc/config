@@ -26,7 +26,7 @@
 #
 # So, for example:
 #
-MusicDir = ~/Mus
+#     MusicDir = /music/${USER:-public}
 #     Fastdir1 = ${MusicDir}/mp3/rock
 #     Fastdir2 = ${MusicDir}/mp3/electronic
 #     Fastdir3 = ${MusicDir}/mp3/rap
@@ -63,7 +63,7 @@ MusicDir = ~/Mus
 # within which it was originally started.
 
 # Show file titles (title, author, album) instead of file names?
-ReadTags = yes
+#ReadTags = yes
 
 # In which directory do you store your music files?  If you specify it
 # you will be able to jump straight to this directory with the '-m'
@@ -118,7 +118,7 @@ ReadTags = yes
 #                     be doubled (i.e., '\\').  (See zshmisc
 #                     documentation for more information.)
 #
-FormatString = "%(n:%n :)%(a:%a - :)%(t:%t:)%(A: \(%A\):)"
+#FormatString = "%(n:%n :)%(a:%a - :)%(t:%t:)%(A: \(%A\):)"
 
 # Input and output buffer sizes (in kilobytes).
 #InputBuffer = 512                  # Minimum value is 32KB
