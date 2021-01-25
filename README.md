@@ -18,7 +18,7 @@ In every file there is its path.
     host ~ ad
     kern ~ 5.4.0
     pkgs ~ 2356
-    term ~ kitty
+    term ~ st, kitty
   editor ~ doom emacs/vim
 launcher ~ rofi
 ```
@@ -26,25 +26,63 @@ launcher ~ rofi
 ### Index:
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
 * [Fonts](https://github.com/Alededorigo/dotfiles#fonts)
-* Window Managers config:
-  * [Bspwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm)
-  * [Herbstluftwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftwm)
-  * [I3](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3)
-  * [Spectrwm](https://github.com/Alededorigo/dotfiles/tree/main/.spectrwm.conf)
-  * [Qtile](https://github.com/Alededorigo/dotfiles/tree/main/.config/qtile)
-  * [Xmonad](https://github.com/Alededorigo/dotfiles/tree/main/.xmonad/xmonad.hs)
-* Panels:
-  * [Polybar](https://github.com/Alededorigo/dotfiles/tree/main/.config/polybar)
-  * [I3blocks](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3blocks)
-  * [Lemonbar](https://github.com/Alededorigo/dotfiles/tree/main/.lemonbar)
-  * [Yabar](https://github.com/Alededorigo/dotfiles/tree/main/.config/yabar/yabar.conf)
-* Other software config:
-  * [Bash](https://github.com/Alededorigo/dotfiles/tree/main/.bashrc)
-  * [Dunst](https://github.com/Alededorigo/dotfiles/tree/main/.config/dunst/dunstrc)
-  * [Xterm](https://github.com/Alededorigo/dotfiles/tree/main/.Xresources)
-  * [Rofi](https://github.com/Alededorigo/dotfiles/tree/main/AD.rasi)
-  * [DuckDuckGo](https://github.com/Alededorigo/dotfiles#duckduckgo)
-  * [Qutebrowser](https://github.com/Alededorigo/dotfiles/tree/main/.config/qutebrowser/config.py)
+* <details open="">
+    <summary><strong>TUI Software:</strong></summary>
+    <ul>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/git">git</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/htop">htop</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.moc">moc</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/blob/main/.Xresources">xterm & urxvt</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/blob/main/.bashrc">bash</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/blob/main/.vimrc">vim</a>
+      </li>
+    </ul>
+  </details>
+* <details open="">
+    <summary><strong>GUI Software:</strong></summary>
+    <ul>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/dunst">dunst</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/zathura">zathura</a>
+      </li>
+    </ul>
+  </details>
+* <details open="">
+    <summary><strong>Window managers:</strong></summary>
+    <ul>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm">bspwm</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/sxhkd">sxhkd</a> (keybindings for bspwm)
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftwm">herbstluftwm</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/i3">i3</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/qtile">qtile</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/blob/main/.vimrc">vim</a>
+      </li>
+    </ul>
+  </details>
 * Additional configs:
   * [Polybar](#polybar)
   * [Bspwm](#bspwm)
