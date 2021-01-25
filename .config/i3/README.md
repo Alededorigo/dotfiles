@@ -1,6 +1,4 @@
-## I3 Setup with Nord theme
-![screenshot](https://res.cloudinary.com/dn3cdvdix/image/upload/v1607936101/screenshot_nwpvkb.png)
+## I3 setup without a panel
+![screenshot](https://preview.redd.it/vmpl8ft5hnc61.png?width=640&crop=smart&auto=webp&s=ea7920ef10dc06d65d8a0914355b79414127c171)
 
-I use i3 with i3blocks as panel, so see dotfiles also in [i3blocks](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3blocks).
-
-The color that i use are from [Nord Color Scheme](https://nordtheme.com)
+I use my own script to see system status like a panel.
