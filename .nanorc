@@ -1,0 +1,23 @@
+# -- SYNTAX Highlighting -- #
+# LAnguages files are stored in /usr/share/nano/<language>.nanorc
+# If you want just some specyfic languages, include them manually
+include "/usr/share/nano/*.nanorc"
+
+set tabsize 4
+set tabstospaces
+set linenumbers
+set casesensitive
+set smooth
+set mouse
+set softwrap
+set morespace
+set brackets "characters"
+set matchbrackets "characters"
+set nowrap
+set showcursor
+
+set numbercolor red
+set titlecolor white,black
+set keycolor red
+set statuscolor red,black
+set functioncolor white
