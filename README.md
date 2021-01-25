@@ -26,7 +26,7 @@ launcher ~ rofi
 ### Index:
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
 * [Fonts](https://github.com/Alededorigo/dotfiles#fonts)
-* <details open="">
+* <details>
     <summary><strong>TUI Software:</strong></summary>
     <ul>
       <li>
@@ -47,9 +47,12 @@ launcher ~ rofi
       <li>
         <a href="https://github.com/Alededorigo/dotfiles/blob/main/.vimrc">vim</a>
       </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/blob/main/.config/procps/toprc">top</a>
+      </li>
     </ul>
   </details>
-* <details open="">
+* <details >
     <summary><strong>GUI Software:</strong></summary>
     <ul>
       <li>
@@ -58,9 +61,15 @@ launcher ~ rofi
       <li>
         <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/zathura">zathura</a>
       </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/kitty">kitty</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/rofi">rofi</a>
+      </li>
     </ul>
   </details>
-* <details open="">
+* <details open>
     <summary><strong>Window managers:</strong></summary>
     <ul>
       <li>
@@ -79,41 +88,49 @@ launcher ~ rofi
         <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/qtile">qtile</a>
       </li>
       <li>
-        <a href="https://github.com/Alededorigo/dotfiles/blob/main/.vimrc">vim</a>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.xmonad">xmonad</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/blob/main/.spectrwm.conf">spectrwm</a>
       </li>
     </ul>
   </details>
-* Additional configs:
-  * [Polybar](#polybar)
-  * [Bspwm](#bspwm)
-* [Wallpapers](#wallpapers)
+* <details open>
+    <summary><strong>Panels:</strong></summary>
+    <ul>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/i3blocks">i3blocks</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/polybar">polybar</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/yabar">yabar</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.lemonbar">lemonbar</a>
+      </li>
+    </ul>
+  </details>
+* <details>
+    <summary><strong>Other:</strong></summary>
+    <ul>
+      <li>
+        <a href="#wallpapers">wallpapers</a>
+      </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.scripts">scripts</a>
+      </li>
+    </ul>
+  </details>
+
 
 <br>
 <br>
 
 
-<details>
+<details open>
   <summary><strong>Dependencies</strong></summary>
-  <br>
-
-  *When blank you need to compile it from source
-
-  | DEPENDENCY     | UBUNTU       | FEDORA       | ARCH         |
-  | :------------- | :----------: | -----------: | -----------: |
-  | Bspwm          | bspwm        | bspwm        | bspwm        |
-  | Herbstluftwm   | herbstluftwm | herbstluftwm | herbstluftwm |
-  | I3             | i3           | i3           | i3           |
-  | I3blocks       | i3blocks     | i3blocks     | i3blocks     |
-  | Spectrwm       | spectrwm     | spectrwm     | spectrwm     |
-  | Bspwm		       | bspwm        | bspwm        | bspwm 	      |
-  | Lemonbar       | lemonbar     | lemonbar     | lemonbar     |
-  | Qtile          | qtile        | qtile        | qtile        |
-  | Xmonad         |              | xmonad       | xmonad       |
-  | Polybar        |              |              | AUR          |
-  | Rofi           | rofi         |              | rofi         |
-  | Sxhkd          | sxhkd        | sxhkd        | sxhkd        |
-  | Qutebrowser    | [official page](qutebrowser.org/INSTALL.html#on_debian_ubuntu) | qutebrowser | qutebrowser |
-  | Yabar		     | Need to build it					          |
 
   <br>
 
@@ -121,15 +138,18 @@ launcher ~ rofi
   ```sh
   sudo add-apt-repository ppa:kgilmer/speed-ricer
   sudo apt-get update
-  sudo apt install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
+  sudo apt install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser vim nvim emacs
   ```
+
+  ### Bspwm & sxhkd
+  Compile it from source
 
   ### Compositor manager (Picom)
 
   ```sh
   # After you added "speed-ricer" repository you can install picom using apt
   sudo apt install picom
-  # If you prefer you can use compton as alternative
+  # If you prefer you can compile it from source
   ```
 
   <br>
@@ -186,7 +206,7 @@ First create a directory named scripts in the .config/polybar
 ```sh
 mkdir ~/.config/polybar/scripts
 ```
-For every polybar files you need to give it root permissions:
+For every polybar files you need to give it permissions:
 ```sh
 chmod +x ~/.config/polybar/config
 chmod +x ~/.config/polybar/launch.sh
@@ -194,7 +214,7 @@ chmod +x ~/.config/polybar/herbstluftwm.sh
 chmod +x ~/.config/polybar/scripts/env.sh
 chmod +x ~/.config/polybar/scripts/redshift.sh
 ```
-I use polybar for [bspwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm), [i3](https://github.com/Alededorigo/dotfiles/tree/main/.config/i3), [herbstluftwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftw).
+I use polybar for [bspwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm), [herbstluftwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftw).
 
 #### DuckDuckGo
 Open [this](https://duckduckgo.com/?kae=t&ks=m&kw=s&ku=1&kt=Fira+Code&km=l&k7=171a1f&kj=171a1f&k9=53e2ae&kaa=985eff&k21=171a1f&k8=ffffff&kx=985eff) URL.
