@@ -1,18 +1,6 @@
 #!/usr/bin/bash
 
-#  _____ ____
-# |  _  |    \
-# |     |  |  |
-# |__|__|____/
-#
-# Alededorigo Lemonbar configuration script
-# Place this file into ~/.lemonbar/lemonconfig
-# You can change the directory path, but 
-# this file and launch have to be in the
-# same directory.
-# https://github.com/alededorigo/dotfiles
-# https://gitlab.com/alededorigo/dotfiles
-#
+# ~/.lemonbar/lemonconfig
 
 trap 'Update' 5
 
@@ -20,7 +8,7 @@ background="#282a36"
 
 Clock(){
 	TIME=$(date "+%H:%M")
-	echo -e -n " \uf017 %{F#ff5555}-- ${TIME} -- %{F#bbc2cf}" 
+	echo -e -n " \uf017 %{F#ff5555}-- ${TIME} -- %{F#bbc2cf}"
 }
 
 Cal() {
@@ -42,7 +30,7 @@ Workspaces() {
     desktops=$(bspc query -D --names)
     focused=$(bspc query -D --names -d focused)
 
-    for desktop in $desktops; do	
+    for desktop in $desktops; do
         desktop=$(echo "$desktop")
         nodes=$(bspc query -N -d $desktop)
 

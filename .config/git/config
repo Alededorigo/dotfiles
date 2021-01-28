@@ -8,5 +8,5 @@
 	pp    = "pull"
 	p     = "push"
 [user]
-	email = -
-	name = -
+	email = your-email-here
+	name = your-name-here

@@ -5,7 +5,7 @@
 # Use super as modifier
 set $mod Mod4
 # Use Kitty as terminal
-set $ter st
+set $ter kitty
 font pango: Fira Code 11px
 
 # Volume and brightness keybinds
@@ -102,6 +102,8 @@ bindsym $mod+r mode "resize"
 # Gaps around windows
 gaps inner 13
 gaps outer 0
+# Rounded corners
+border_radius 6
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -149,7 +151,7 @@ client.urgent           #ee4f84 #900000 #ffffff #900000   #ee4f84
 bindsym $mod+Shift+e exit
 bindsym $mod+x exec flameshot gui
 bindsym $mod+Shift+p exec systemctl poweroff
-bindsym $mod+space exec rofi -show run -padding 480
+bindsym $mod+space exec rofi -show run
 bindsym $mod+Shift+space exec rofi -modi TODO:~/.scripts/todo.sh -show TODO
 bindsym $mod+w exec bash ~/.scripts/panel
 bindsym $mod+Return exec $ter
@@ -175,7 +177,7 @@ exec_always nm-applet &
 exec_always picom &
 exec_always unclutter &
 # exec_always nitrogen --restore &
-exec_always feh --bg-fill ~/Pictures/walls/leave3.jpg
+exec_always feh --bg-fill ~/Pictures/walls/leave2.jpg
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec cbatticon -i standard -l 20
