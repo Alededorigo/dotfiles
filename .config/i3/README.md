@@ -14,6 +14,8 @@
 | Super + f                    | Toggle fullscreen                  |
 | Super + x                    | Launch Flameshot (For screenshot)  |
 | Super + Space                | Launch Rofi to open apps           |
+| Super + Shift + e            | Exit i3                            |
+| Super + Shift + p            | Power off                          |
 
 
 <br>
