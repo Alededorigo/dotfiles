@@ -54,7 +54,7 @@ alias upd="bash ~/.scripts/update"
 alias grep='grep --color=auto'
 
 # Alias for git
-alias gitc="bash ~/.scripts/github.sh"
+alias gitc="source ~/.scripts/github.sh"
 
 # Alias for curl web apps
 alias weather="curl http://wttr.in/Belluno"
