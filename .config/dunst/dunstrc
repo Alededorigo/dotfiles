@@ -33,9 +33,8 @@
     show_indicators = yes
 
     # -- ICONS -- #
-    icon_position = left
-    max_icon_size = 35
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    # icon_position = left
+    # max_icon_size = 35
 
     # -- HISTORY -- #
     sticky_history = yes
