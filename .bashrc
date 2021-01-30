@@ -41,14 +41,10 @@ alias .2="cd ../.."
 alias .3="cd ../../.."
 alias vi="vim"
 alias cp="cp -i"
-alias fet.sh="sh ~/.scripts/fet.sh"
 alias wg="wordgrinder"
 alias fm="ranger"
-alias note="source ~/.scripts/notes"
-alias youtube-dl="/usr/local/bin/youtube-dl"
 alias rec="ffmpeg -s 1920x1080 -f x11grab -i :1"
-alias lum="xrandr --output eDP-1-1 --brightness"
-alias upd="bash ~/.scripts/update"
+alias lum="xrandr --output eDP-1 --brightness"
 
 # Grep output
 alias grep='grep --color=auto'

@@ -5,7 +5,7 @@
 # Use super as modifier
 set $mod Mod4
 # Use Kitty as terminal
-set $ter kitty
+set $ter st
 font pango: Fira Code 11px
 
 # Volume and brightness keybinds
