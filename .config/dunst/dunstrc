@@ -12,11 +12,13 @@
     separator_height = 1
     padding = 13
     horizontal_padding = 13
-    frame_width = 4
+    frame_width = 3
     frame_color = "#999999"
     separator_color = auto
     sort = yes
     idle_threshold = 120
+    corner_radius=15
+    icon_path = none
 
     # -- FONT -- #
     font = Fira Code 10
@@ -33,8 +35,8 @@
     show_indicators = yes
 
     # -- ICONS -- #
-    # icon_position = left
-    # max_icon_size = 35
+    icon_position = left
+    max_icon_size = 35
 
     # -- HISTORY -- #
     sticky_history = yes

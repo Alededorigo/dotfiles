@@ -45,6 +45,7 @@ alias wg="wordgrinder"
 alias fm="ranger"
 alias rec="ffmpeg -s 1920x1080 -f x11grab -i :1"
 alias lum="xrandr --output eDP-1 --brightness"
+alias note="cd ~/notes/ && exa -lah"
 
 # Grep output
 alias grep='grep --color=auto'
