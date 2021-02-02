@@ -3,7 +3,7 @@
 [[ $- != *i* ]] && return
 
 # Theme
-PS1="\[\e[1;31m\]\w \[\e[m\]"
+PS1="\[\e[1;31m\]\w \[\e[1;30m\]|>\[\e[m\] "
 
 # Extract alias
 ex ()
@@ -42,8 +42,8 @@ alias .3="cd ../../.."
 alias vi="vim"
 alias cp="cp -i"
 alias wg="wordgrinder"
-alias fm="ranger"
-alias rec="ffmpeg -s 1920x1080 -f x11grab -i :1"
+alias fm="vifm"
+alias rec="ffmpeg -s 1920x1080 -f x11grab -i :0"
 alias lum="xrandr --output eDP-1 --brightness"
 alias note="cd ~/notes/ && exa -lah"
 
