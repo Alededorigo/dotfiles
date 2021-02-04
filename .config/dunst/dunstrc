@@ -13,7 +13,7 @@
     padding = 13
     horizontal_padding = 13
     frame_width = 3
-    frame_color = "#ee4f84"
+    frame_color = "#897678"
     separator_color = auto
     sort = yes
     idle_threshold = 120
@@ -21,7 +21,7 @@
     icon_path = none
 
     # -- FONT -- #
-    font = Fira Code 10
+    font = Terminus 11
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
