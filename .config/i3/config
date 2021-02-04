@@ -142,8 +142,8 @@ mode "$mode_gaps_outer" {
 }
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #ee4f84 #ee4f84 #ffffff #ee4f84   #ee4f84
-client.focused_inactive #20242a #ee4f84 #ffffff #ee4f84   #20242a
+client.focused          #897678 #897678 #ffffff #897678   #897678
+client.focused_inactive #20242a #897678 #ffffff #897678   #20242a
 client.unfocused        #20242a #20242a #888888 #20242a   #20242a
 client.urgent           #ee4f84 #900000 #ffffff #900000   #ee4f84
 
@@ -176,8 +176,8 @@ exec_always nm-applet &
 # exec_always ~/.config/polybar/launch.sh
 exec_always picom &
 exec_always unclutter &
-# exec_always nitrogen --restore &
-exec_always feh --bg-fill ~/Pictures/walls/leave2.jpg
+exec_always nitrogen --restore &
+# exec_always feh --bg-fill ~/Pictures/walls/leave2.jpg
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec cbatticon -i standard -l 20
