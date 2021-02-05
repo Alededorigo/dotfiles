@@ -60,3 +60,4 @@ alias myp="curl ifconfig.co"
 alias somenews="curl getnews.tech"
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias parrot="curl parrot.live"
+source "$HOME/.cargo/env"

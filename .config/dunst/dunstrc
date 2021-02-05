@@ -21,7 +21,7 @@
     icon_path = none
 
     # -- FONT -- #
-    font = Terminus 11
+    font = Fira Code 12
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
