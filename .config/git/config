@@ -1,13 +1,15 @@
-# ~/.config/git/config
-
-[alias]
-	a     = "add -u"
-	aa    = "add --all"
-	s     = "status"
-	c     = "commit -m"
-    cc    = "clone"
-	pp    = "pull"
-	p     = "push"
-[user]
-	email = your-email-here
-	name = your-name-here
+ /home/ale/.config/git/config, 161 bytes
+ ---
+[0;31m 1 [0m# ~/.config/git/config
+[0;31m 2 [0m
+[0;31m 3 [0m[alias]
+[0;31m 4 [0ma     = "add -u"
+[0;31m 5 [0maa    = "add --all"
+[0;31m 6 [0ms     = "status"
+[0;31m 7 [0mc     = "commit -m"
+[0;31m 8 [0mcc    = "clone"
+[0;31m 9 [0mpp    = "pull"
+[0;31m10 [0mp     = "push"
+[0;31m11 [0m[user]
+[0;31m12 [0memail = your-email-here
+[0;31m13 [0mname = your-name-here

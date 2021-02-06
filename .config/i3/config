@@ -1,195 +1,198 @@
-# ~/.config/i3/config
-# After any edit, reload the configuration with $mod+Shift+r
-#  						(see line 80)
-
-# Use super as modifier
-set $mod Mod4
-# Use Kitty as terminal
-set $ter st
-font pango: Fira Code 11px
-
-# Volume and brightness keybinds
-bindsym XF86AudioRaiseVolume exec --no-startup-id bash ~/.scripts/volume.sh -u
-bindsym XF86AudioLowerVolume exec --no-startup-id bash ~/.scripts/volume.sh -d
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
-
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xrandr --output eDP-1 --brightness 1
-bindsym XF86MonBrightnessDown exec xrandr --output eDP-1 --brightness 0.5
-
-bindsym XF86TouchpadToggle exec ~/.scripts/touchpad.sh
-
-# Media player controls
-bindsym XF86AudioPlay exec mocp --toggle-pause
-bindsym XF86AudioPause exec mocp --toggle-pause
-bindsym XF86AudioNext exec mocp --next
-bindsym XF86AudioPrev exec mocp --previous
-
-floating_modifier $mod
-
-# Keybindings
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ograve focus right
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-#
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ograve move right
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-#
-bindsym $mod+h split h
-bindsym $mod+v split v
-bindsym $mod+f fullscreen toggle
-# bindsym $mod+f exec bash ~/.scripts/fulls
-bindsym $mod+e layout toggle splitg
-bindsym $mod+s floating toggle
-bindsym $mod+a focus parent
-# Set workspaces
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
-#
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-# Resize mode
-mode "resize" {
-	# bindings with letters, more spacing
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym ograve resize grow width 10 px or 10 ppt
-
-        # normal bindings with arrow
-        bindsym Left resize shrink width 1 px or 1 ppt
-        bindsym Down resize grow height 1 px or 1 ppt
-        bindsym Up resize shrink height 1 px or 1 ppt
-        bindsym Right resize grow width 1 px or 1 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-#
-bindsym $mod+r mode "resize"
-# Gaps around windows
-gaps inner 13
-gaps outer 0
-# Rounded corners
-# border_radius 6
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
-#
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-#
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-# class                 border  backgr. text    indicator child_border
-client.focused          #897678 #897678 #ffffff #897678   #897678
-client.focused_inactive #20242a #897678 #ffffff #897678   #20242a
-client.unfocused        #20242a #20242a #888888 #20242a   #20242a
-client.urgent           #ee4f84 #900000 #ffffff #900000   #ee4f84
-
-# Custom bindings
-bindsym $mod+Shift+e exit
-bindsym $mod+x exec flameshot gui
-bindsym $mod+Shift+p exec systemctl poweroff
-bindsym $mod+space exec rofi -show run
-bindsym $mod+Shift+space exec rofi -modi TODO:~/.scripts/todo.sh -show TODO
-bindsym $mod+w exec bash ~/.scripts/panel
-bindsym $mod+Return exec $ter
-bindsym $mod+q kill
-bindsym $mod+Ctrl+q focus parent,kill
-#bindsym $mod+x exec ksnip
-# Exec at login
-exec $ter
-exec telegram-desktop
-# Remove borders
-for_window [class="^.*"] border pixel 3
-for_window [class="Firefox"] move to workspace $ws2
-for_window [class="discord"] move to workspace $ws4
-for_window [class="TelegramDesktop"] move to workspace $ws2
-for_window [class="Code"] move to workspace $ws3
-for_window [class="URxvt"] floating enable
-for_window [class="File-roller"] floating enable
-#
-exec_always dunst &
-# exec_always urxvtd -q &
-# exec_always ~/.config/polybar/launch.sh
-exec_always picom &
-exec_always unclutter &
-exec_always nitrogen --restore &
-# exec_always feh --bg-fill ~/Pictures/walls/leave2.jpg
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-# exec --no-startup-id nm-applet
-exec cbatticon -i standard -l 20
-
-# Remove auto focus on windows
-focus_follows_mouse no
+ /home/ale/.config/i3/config, 5541 bytes
+ ---
+[0;31m 1 [0m# ~/.config/i3/config
+[0;31m 2 [0m# After any edit, reload the configuration with $mod+Shift+r
+[0;31m 3 [0m#  						(see line 80)
+[0;31m 4 [0m
+[0;31m 5 [0m# Use super as modifier
+[0;31m 6 [0mset $mod Mod4
+[0;31m 7 [0m# Use Kitty as terminal
+[0;31m 8 [0mset $ter st
+[0;31m 9 [0mfont pango: Fira Code 11px
+[0;31m10 [0m
+[0;31m11 [0m# Volume and brightness keybinds
+[0;31m12 [0mbindsym XF86AudioRaiseVolume exec --no-startup-id bash ~/.scripts/volume.sh -u
+[0;31m13 [0mbindsym XF86AudioLowerVolume exec --no-startup-id bash ~/.scripts/volume.sh -d
+[0;31m14 [0mbindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+[0;31m15 [0mbindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+[0;31m16 [0m
+[0;31m17 [0m# Sreen brightness controls
+[0;31m18 [0mbindsym XF86MonBrightnessUp exec xrandr --output eDP-1 --brightness 1
+[0;31m19 [0mbindsym XF86MonBrightnessDown exec xrandr --output eDP-1 --brightness 0.5
+[0;31m20 [0m
+[0;31m21 [0mbindsym XF86TouchpadToggle exec ~/.scripts/touchpad.sh
+[0;31m22 [0m
+[0;31m23 [0m# Media player controls
+[0;31m24 [0mbindsym XF86AudioPlay exec mocp --toggle-pause
+[0;31m25 [0mbindsym XF86AudioPause exec mocp --toggle-pause
+[0;31m26 [0mbindsym XF86AudioNext exec mocp --next
+[0;31m27 [0mbindsym XF86AudioPrev exec mocp --previous
+[0;31m28 [0m
+[0;31m29 [0mfloating_modifier $mod
+[0;31m30 [0m
+[0;31m31 [0m# Keybindings
+[0;31m32 [0mbindsym $mod+j focus left
+[0;31m33 [0mbindsym $mod+k focus down
+[0;31m34 [0mbindsym $mod+l focus up
+[0;31m35 [0mbindsym $mod+ograve focus right
+[0;31m36 [0mbindsym $mod+Left focus left
+[0;31m37 [0mbindsym $mod+Down focus down
+[0;31m38 [0mbindsym $mod+Up focus up
+[0;31m39 [0mbindsym $mod+Right focus right
+[0;31m40 [0m#
+[0;31m41 [0mbindsym $mod+Shift+j move left
+[0;31m42 [0mbindsym $mod+Shift+k move down
+[0;31m43 [0mbindsym $mod+Shift+l move up
+[0;31m44 [0mbindsym $mod+Shift+ograve move right
+[0;31m45 [0mbindsym $mod+Shift+Left move left
+[0;31m46 [0mbindsym $mod+Shift+Down move down
+[0;31m47 [0mbindsym $mod+Shift+Up move up
+[0;31m48 [0mbindsym $mod+Shift+Right move right
+[0;31m49 [0m#
+[0;31m50 [0mbindsym $mod+h split h
+[0;31m51 [0mbindsym $mod+v split v
+[0;31m52 [0mbindsym $mod+f fullscreen toggle
+[0;31m53 [0m# bindsym $mod+f exec bash ~/.scripts/fulls
+[0;31m54 [0mbindsym $mod+e layout toggle splitg
+[0;31m55 [0mbindsym $mod+s floating toggle
+[0;31m56 [0mbindsym $mod+a focus parent
+[0;31m57 [0m# Set workspaces
+[0;31m58 [0mset $ws1 "1"
+[0;31m59 [0mset $ws2 "2"
+[0;31m60 [0mset $ws3 "3"
+[0;31m61 [0mset $ws4 "4"
+[0;31m62 [0mset $ws5 "5"
+[0;31m63 [0mset $ws6 "6"
+[0;31m64 [0mset $ws7 "7"
+[0;31m65 [0mset $ws8 "8"
+[0;31m66 [0mset $ws9 "9"
+[0;31m67 [0mset $ws10 "10"
+[0;31m68 [0mbindsym $mod+1 workspace number $ws1
+[0;31m69 [0mbindsym $mod+2 workspace number $ws2
+[0;31m70 [0mbindsym $mod+3 workspace number $ws3
+[0;31m71 [0mbindsym $mod+4 workspace number $ws4
+[0;31m72 [0mbindsym $mod+5 workspace number $ws5
+[0;31m73 [0mbindsym $mod+6 workspace number $ws6
+[0;31m74 [0mbindsym $mod+7 workspace number $ws7
+[0;31m75 [0mbindsym $mod+8 workspace number $ws8
+[0;31m76 [0mbindsym $mod+9 workspace number $ws9
+[0;31m77 [0mbindsym $mod+0 workspace number $ws10
+[0;31m78 [0mbindsym $mod+Shift+1 move container to workspace number $ws1
+[0;31m79 [0mbindsym $mod+Shift+2 move container to workspace number $ws2
+[0;31m80 [0mbindsym $mod+Shift+3 move container to workspace number $ws3
+[0;31m81 [0mbindsym $mod+Shift+4 move container to workspace number $ws4
+[0;31m82 [0mbindsym $mod+Shift+5 move container to workspace number $ws5
+[0;31m83 [0mbindsym $mod+Shift+6 move container to workspace number $ws6
+[0;31m84 [0mbindsym $mod+Shift+7 move container to workspace number $ws7
+[0;31m85 [0mbindsym $mod+Shift+8 move container to workspace number $ws8
+[0;31m86 [0mbindsym $mod+Shift+9 move container to workspace number $ws9
+[0;31m87 [0mbindsym $mod+Shift+0 move container to workspace number $ws10
+[0;31m88 [0m#
+[0;31m89 [0mbindsym $mod+Shift+c reload
+[0;31m90 [0mbindsym $mod+Shift+r restart
+[0;31m91 [0m# Resize mode
+[0;31m92 [0mmode "resize" {
+[0;31m93 [0m# bindings with letters, more spacing
+[0;31m94 [0mbindsym j resize shrink width 10 px or 10 ppt
+[0;31m95 [0mbindsym k resize grow height 10 px or 10 ppt
+[0;31m96 [0mbindsym l resize shrink height 10 px or 10 ppt
+[0;31m97 [0mbindsym ograve resize grow width 10 px or 10 ppt
+[0;31m98 [0m
+[0;31m99 [0m# normal bindings with arrow
+[0;31m100 [0mbindsym Left resize shrink width 1 px or 1 ppt
+[0;31m101 [0mbindsym Down resize grow height 1 px or 1 ppt
+[0;31m102 [0mbindsym Up resize shrink height 1 px or 1 ppt
+[0;31m103 [0mbindsym Right resize grow width 1 px or 1 ppt
+[0;31m104 [0m
+[0;31m105 [0m# back to normal: Enter or Escape or $mod+r
+[0;31m106 [0mbindsym Return mode "default"
+[0;31m107 [0mbindsym Escape mode "default"
+[0;31m108 [0mbindsym $mod+r mode "default"
+[0;31m109 [0m}
+[0;31m110 [0m#
+[0;31m111 [0mbindsym $mod+r mode "resize"
+[0;31m112 [0m# Gaps around windows
+[0;31m113 [0mgaps inner 13
+[0;31m114 [0mgaps outer 0
+[0;31m115 [0m# Rounded corners
+[0;31m116 [0m# border_radius 6
+[0;31m117 [0mset $mode_gaps Gaps: (o) outer, (i) inner
+[0;31m118 [0mset $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+[0;31m119 [0mset $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+[0;31m120 [0mbindsym $mod+Shift+g mode "$mode_gaps"
+[0;31m121 [0m#
+[0;31m122 [0mmode "$mode_gaps" {
+[0;31m123 [0mbindsym o      mode "$mode_gaps_outer"
+[0;31m124 [0mbindsym i      mode "$mode_gaps_inner"
+[0;31m125 [0mbindsym Return mode "default"
+[0;31m126 [0mbindsym Escape mode "default"
+[0;31m127 [0m}
+[0;31m128 [0m#
+[0;31m129 [0mmode "$mode_gaps_inner" {
+[0;31m130 [0mbindsym plus  gaps inner current plus 5
+[0;31m131 [0mbindsym minus gaps inner current minus 5
+[0;31m132 [0mbindsym 0     gaps inner current set 0
+[0;31m133 [0m
+[0;31m134 [0mbindsym Shift+plus  gaps inner all plus 5
+[0;31m135 [0mbindsym Shift+minus gaps inner all minus 5
+[0;31m136 [0mbindsym Shift+0     gaps inner all set 0
+[0;31m137 [0m
+[0;31m138 [0mbindsym Return mode "default"
+[0;31m139 [0mbindsym Escape mode "default"
+[0;31m140 [0m}
+[0;31m141 [0mmode "$mode_gaps_outer" {
+[0;31m142 [0mbindsym plus  gaps outer current plus 5
+[0;31m143 [0mbindsym minus gaps outer current minus 5
+[0;31m144 [0mbindsym 0     gaps outer current set 0
+[0;31m145 [0m
+[0;31m146 [0mbindsym Shift+plus  gaps outer all plus 5
+[0;31m147 [0mbindsym Shift+minus gaps outer all minus 5
+[0;31m148 [0mbindsym Shift+0     gaps outer all set 0
+[0;31m149 [0m
+[0;31m150 [0mbindsym Return mode "default"
+[0;31m151 [0mbindsym Escape mode "default"
+[0;31m152 [0m}
+[0;31m153 [0m
+[0;31m154 [0m# class                 border  backgr. text    indicator child_border
+[0;31m155 [0mclient.focused          #897678 #897678 #ffffff #897678   #897678
+[0;31m156 [0mclient.focused_inactive #20242a #897678 #ffffff #897678   #20242a
+[0;31m157 [0mclient.unfocused        #20242a #20242a #888888 #20242a   #20242a
+[0;31m158 [0mclient.urgent           #ee4f84 #900000 #ffffff #900000   #ee4f84
+[0;31m159 [0m
+[0;31m160 [0m# Custom bindings
+[0;31m161 [0mbindsym $mod+Shift+e exit
+[0;31m162 [0mbindsym $mod+x exec flameshot gui
+[0;31m163 [0mbindsym $mod+Shift+p exec systemctl poweroff
+[0;31m164 [0mbindsym $mod+space exec rofi -show run
+[0;31m165 [0mbindsym $mod+Shift+space exec rofi -modi TODO:~/.scripts/todo.sh -show TODO
+[0;31m166 [0mbindsym $mod+w exec bash ~/.scripts/panel
+[0;31m167 [0mbindsym $mod+Return exec $ter
+[0;31m168 [0mbindsym $mod+q kill
+[0;31m169 [0mbindsym $mod+Ctrl+q focus parent,kill
+[0;31m170 [0m#bindsym $mod+x exec ksnip
+[0;31m171 [0m# Exec at login
+[0;31m172 [0mexec $ter
+[0;31m173 [0mexec telegram-desktop
+[0;31m174 [0m# Remove borders
+[0;31m175 [0mfor_window [class="^.*"] border pixel 3
+[0;31m176 [0mfor_window [class="Nitrogen"] floating enable
+[0;31m177 [0mfor_window [class="Firefox"] move to workspace $ws2
+[0;31m178 [0mfor_window [class="discord"] move to workspace $ws4
+[0;31m179 [0mfor_window [class="TelegramDesktop"] move to workspace $ws2
+[0;31m180 [0mfor_window [class="Code"] move to workspace $ws3
+[0;31m181 [0mfor_window [class="URxvt"] floating enable
+[0;31m182 [0mfor_window [class="File-roller"] floating enable
+[0;31m183 [0m#
+[0;31m184 [0mexec_always dunst &
+[0;31m185 [0m# exec_always urxvtd -q &
+[0;31m186 [0m# exec_always ~/.config/polybar/launch.sh
+[0;31m187 [0mexec_always picom &
+[0;31m188 [0mexec_always unclutter &
+[0;31m189 [0mexec_always nitrogen --restore &
+[0;31m190 [0m# exec_always feh --bg-fill ~/Pictures/walls/leave2.jpg
+[0;31m191 [0mexec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+[0;31m192 [0m# exec --no-startup-id nm-applet
+[0;31m193 [0mexec cbatticon -i standard -l 20
+[0;31m194 [0m
+[0;31m195 [0m# Remove auto focus on windows
+[0;31m196 [0mfocus_follows_mouse no

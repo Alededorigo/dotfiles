@@ -1,226 +1,228 @@
-# ~/.config/dunst/dunstrc
-
-[global]
-    # -- DISPLAY -- #
-    monitor = 0
-    follow = mouse
-    geometry = "0x0-30+30"
-    indicate_hidden = yes
-    shrink = no
-    transparency = 0
-    notification_height = 0
-    separator_height = 1
-    padding = 13
-    horizontal_padding = 13
-    frame_width = 3
-    frame_color = "#897678"
-    separator_color = auto
-    sort = yes
-    idle_threshold = 120
-    #corner_radius=10
-    icon_path = none
-
-    # -- FONT -- #
-    font = Fira Code 12
-    line_height = 0
-    markup = full
-    format = "<b>%s</b>\n%b"
-    alignment = left
-    show_age_threshold = 60
-    word_wrap = yes
-    ellipsize = middle
-    ignore_newline = no
-    stack_duplicates = true
-    hide_duplicate_count = false
-    show_indicators = yes
-
-    # -- ICONS -- #
-    icon_position = left
-    max_icon_size = 35
-
-    # -- HISTORY -- #
-    sticky_history = yes
-    history_length = 20
-
-    # -- MISC -- #
-    dmenu = /usr/bin/dmenu -p dunst:
-    # Insert here the path of your browser
-    browser = /usr/bin/firefox
-    always_run_script = true
-    title = Dunst
-    class = Dunst
-    startup_notification = false
-    verbosity = mesg
-    corner_radius = 0
-
-    # -- LEGACY -- #
-    force_xinerama = false
-
-    # -- MOUSE -- #
-    mouse_left_click = do_action
-    mouse_middle_click = close_all
-    mouse_right_click = close_current
-
-[experimental]
-    # Calculate the dpi to use on a per-monitor basis.
-    # If this setting is enabled the Xft.dpi value will be ignored and instead
-    # dunst will attempt to calculate an appropriate dpi value for each monitor
-    # using the resolution and physical size. This might be useful in setups
-    # where there are multiple screens with very different dpi values.
-    per_monitor_dpi = false
-
-[shortcuts]
-
-    # Shortcuts are specified as [modifier+][modifier+]...key
-    # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
-    # "mod3" and "mod4" (windows-key).
-    # Xev might be helpful to find names for keys.
-
-    # Close notification.
-    close = ctrl+space
-
-    # Close all notifications.
-    close_all = ctrl+shift+space
-
-    # Redisplay last message(s).
-    # On the US keyboard layout "grave" is normally above TAB and left
-    # of "1". Make sure this key actually exists on your keyboard layout,
-    # e.g. check output of 'xmodmap -pke'
-    history = ctrl+grave
-
-    # Context menu.
-    context = ctrl+shift+period
-
-# -- COLORS -- #
-[urgency_low]
-    background = "#111217"
-    foreground = "#ffffff"
-    timeout = 7
-
-[urgency_normal]
-    background = "#111217"
-    foreground = "#ffffff"
-    timeout = 8
-
-[urgency_critical]
-    background = "#111217"
-    foreground = "#ffffff"
-    frame_color = "#ff5555"
-    timeout = 9
-
-# Every section that isn't one of the above is interpreted as a rules to
-# override settings for certain messages.
-#
-# Messages can be matched by
-#    appname (discouraged, see desktop_entry)
-#    body
-#    category
-#    desktop_entry
-#    icon
-#    match_transient
-#    msg_urgency
-#    stack_tag
-#    summary
-#
-# and you can override the
-#    background
-#    foreground
-#    format
-#    frame_color
-#    fullscreen
-#    new_icon
-#    set_stack_tag
-#    set_transient
-#    timeout
-#    urgency
-#
-# Shell-like globbing will get expanded.
-#
-# Instead of the appname filter, it's recommended to use the desktop_entry filter.
-# GLib based applications export their desktop-entry name. In comparison to the appname,
-# the desktop-entry won't get localized.
-#
-# SCRIPTING
-# You can specify a script that gets run when the rule matches by
-# setting the "script" option.
-# The script will be called as follows:
-#   script appname summary body icon urgency
-# where urgency can be "LOW", "NORMAL" or "CRITICAL".
-#
-# NOTE: if you don't want a notification to be displayed, set the format
-# to "".
-# NOTE: It might be helpful to run dunst -print in a terminal in order
-# to find fitting options for rules.
-
-# Disable the transient hint so that idle_threshold cannot be bypassed from the
-# client
-#[transient_disable]
-#    match_transient = yes
-#    set_transient = no
-#
-# Make the handling of transient notifications more strict by making them not
-# be placed in history.
-#[transient_history_ignore]
-#    match_transient = yes
-#    history_ignore = yes
-
-# fullscreen values
-# show: show the notifications, regardless if there is a fullscreen window opened
-# delay: displays the new notification, if there is no fullscreen window active
-#        If the notification is already drawn, it won't get undrawn.
-# pushback: same as delay, but when switching into fullscreen, the notification will get
-#           withdrawn from screen again and will get delayed like a new notification
-#[fullscreen_delay_everything]
-#    fullscreen = delay
-#[fullscreen_show_critical]
-#    msg_urgency = critical
-#    fullscreen = show
-
-#[espeak]
-#    summary = "*"
-#    script = dunst_espeak.sh
-
-#[script-test]
-#    summary = "*script*"
-#    script = dunst_test.sh
-
-#[ignore]
-#    # This notification will not be displayed
-#    summary = "foobar"
-#    format = ""
-
-#[history-ignore]
-#    # This notification will not be saved in history
-#    summary = "foobar"
-#    history_ignore = yes
-
-#[skip-display]
-#    # This notification will not be displayed, but will be included in the history
-#    summary = "foobar"
-#    skip_display = yes
-
-#[signed_on]
-#    appname = Pidgin
-#    summary = "*signed on*"
-#    urgency = low
-#
-#[signed_off]
-#    appname = Pidgin
-#    summary = *signed off*
-#    urgency = low
-#
-#[says]
-#    appname = Pidgin
-#    summary = *says*
-#    urgency = critical
-#
-#[twitter]
-#    appname = Pidgin
-#    summary = *twitter.com*
-#    urgency = normal
-#
-#[stack-volumes]
-#    appname = "some_volume_notifiers"
-#    set_stack_tag = "volume"
-#
-# vim: ft=cfg
+ /home/ale/.config/dunst/dunstrc, 4571 bytes
+ ---
+[0;31m 1 [0m# ~/.config/dunst/dunstrc
+[0;31m 2 [0m
+[0;31m 3 [0m[global]
+[0;31m 4 [0m# -- DISPLAY -- #
+[0;31m 5 [0mmonitor = 0
+[0;31m 6 [0mfollow = mouse
+[0;31m 7 [0mgeometry = "0x0-30+30"
+[0;31m 8 [0mindicate_hidden = yes
+[0;31m 9 [0mshrink = no
+[0;31m10 [0mtransparency = 0
+[0;31m11 [0mnotification_height = 0
+[0;31m12 [0mseparator_height = 1
+[0;31m13 [0mpadding = 13
+[0;31m14 [0mhorizontal_padding = 13
+[0;31m15 [0mframe_width = 3
+[0;31m16 [0mframe_color = "#897678"
+[0;31m17 [0mseparator_color = auto
+[0;31m18 [0msort = yes
+[0;31m19 [0midle_threshold = 120
+[0;31m20 [0m#corner_radius=10
+[0;31m21 [0micon_path = none
+[0;31m22 [0m
+[0;31m23 [0m# -- FONT -- #
+[0;31m24 [0mfont = Fira Code 11
+[0;31m25 [0mline_height = 0
+[0;31m26 [0mmarkup = full
+[0;31m27 [0mformat = "<b>%s</b>n%b"
+[0;31m28 [0malignment = left
+[0;31m29 [0mshow_age_threshold = 60
+[0;31m30 [0mword_wrap = yes
+[0;31m31 [0mellipsize = middle
+[0;31m32 [0mignore_newline = no
+[0;31m33 [0mstack_duplicates = true
+[0;31m34 [0mhide_duplicate_count = false
+[0;31m35 [0mshow_indicators = yes
+[0;31m36 [0m
+[0;31m37 [0m# -- ICONS -- #
+[0;31m38 [0micon_position = left
+[0;31m39 [0mmax_icon_size = 35
+[0;31m40 [0m
+[0;31m41 [0m# -- HISTORY -- #
+[0;31m42 [0msticky_history = yes
+[0;31m43 [0mhistory_length = 20
+[0;31m44 [0m
+[0;31m45 [0m# -- MISC -- #
+[0;31m46 [0mdmenu = /usr/bin/dmenu -p dunst:
+[0;31m47 [0m# Insert here the path of your browser
+[0;31m48 [0mbrowser = /usr/bin/firefox
+[0;31m49 [0malways_run_script = true
+[0;31m50 [0mtitle = Dunst
+[0;31m51 [0mclass = Dunst
+[0;31m52 [0mstartup_notification = false
+[0;31m53 [0mverbosity = mesg
+[0;31m54 [0mcorner_radius = 0
+[0;31m55 [0m
+[0;31m56 [0m# -- LEGACY -- #
+[0;31m57 [0mforce_xinerama = false
+[0;31m58 [0m
+[0;31m59 [0m# -- MOUSE -- #
+[0;31m60 [0mmouse_left_click = do_action
+[0;31m61 [0mmouse_middle_click = close_all
+[0;31m62 [0mmouse_right_click = close_current
+[0;31m63 [0m
+[0;31m64 [0m[experimental]
+[0;31m65 [0m# Calculate the dpi to use on a per-monitor basis.
+[0;31m66 [0m# If this setting is enabled the Xft.dpi value will be ignored and instead
+[0;31m67 [0m# dunst will attempt to calculate an appropriate dpi value for each monitor
+[0;31m68 [0m# using the resolution and physical size. This might be useful in setups
+[0;31m69 [0m# where there are multiple screens with very different dpi values.
+[0;31m70 [0mper_monitor_dpi = false
+[0;31m71 [0m
+[0;31m72 [0m[shortcuts]
+[0;31m73 [0m
+[0;31m74 [0m# Shortcuts are specified as [modifier+][modifier+]...key
+[0;31m75 [0m# Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
+[0;31m76 [0m# "mod3" and "mod4" (windows-key).
+[0;31m77 [0m# Xev might be helpful to find names for keys.
+[0;31m78 [0m
+[0;31m79 [0m# Close notification.
+[0;31m80 [0mclose = ctrl+space
+[0;31m81 [0m
+[0;31m82 [0m# Close all notifications.
+[0;31m83 [0mclose_all = ctrl+shift+space
+[0;31m84 [0m
+[0;31m85 [0m# Redisplay last message(s).
+[0;31m86 [0m# On the US keyboard layout "grave" is normally above TAB and left
+[0;31m87 [0m# of "1". Make sure this key actually exists on your keyboard layout,
+[0;31m88 [0m# e.g. check output of 'xmodmap -pke'
+[0;31m89 [0mhistory = ctrl+grave
+[0;31m90 [0m
+[0;31m91 [0m# Context menu.
+[0;31m92 [0mcontext = ctrl+shift+period
+[0;31m93 [0m
+[0;31m94 [0m# -- COLORS -- #
+[0;31m95 [0m[urgency_low]
+[0;31m96 [0mbackground = "#111217"
+[0;31m97 [0mforeground = "#ffffff"
+[0;31m98 [0mtimeout = 7
+[0;31m99 [0m
+[0;31m100 [0m[urgency_normal]
+[0;31m101 [0mbackground = "#111217"
+[0;31m102 [0mforeground = "#ffffff"
+[0;31m103 [0mtimeout = 8
+[0;31m104 [0m
+[0;31m105 [0m[urgency_critical]
+[0;31m106 [0mbackground = "#111217"
+[0;31m107 [0mforeground = "#ffffff"
+[0;31m108 [0mframe_color = "#ff5555"
+[0;31m109 [0mtimeout = 9
+[0;31m110 [0m
+[0;31m111 [0m# Every section that isn't one of the above is interpreted as a rules to
+[0;31m112 [0m# override settings for certain messages.
+[0;31m113 [0m#
+[0;31m114 [0m# Messages can be matched by
+[0;31m115 [0m#    appname (discouraged, see desktop_entry)
+[0;31m116 [0m#    body
+[0;31m117 [0m#    category
+[0;31m118 [0m#    desktop_entry
+[0;31m119 [0m#    icon
+[0;31m120 [0m#    match_transient
+[0;31m121 [0m#    msg_urgency
+[0;31m122 [0m#    stack_tag
+[0;31m123 [0m#    summary
+[0;31m124 [0m#
+[0;31m125 [0m# and you can override the
+[0;31m126 [0m#    background
+[0;31m127 [0m#    foreground
+[0;31m128 [0m#    format
+[0;31m129 [0m#    frame_color
+[0;31m130 [0m#    fullscreen
+[0;31m131 [0m#    new_icon
+[0;31m132 [0m#    set_stack_tag
+[0;31m133 [0m#    set_transient
+[0;31m134 [0m#    timeout
+[0;31m135 [0m#    urgency
+[0;31m136 [0m#
+[0;31m137 [0m# Shell-like globbing will get expanded.
+[0;31m138 [0m#
+[0;31m139 [0m# Instead of the appname filter, it's recommended to use the desktop_entry filter.
+[0;31m140 [0m# GLib based applications export their desktop-entry name. In comparison to the appname,
+[0;31m141 [0m# the desktop-entry won't get localized.
+[0;31m142 [0m#
+[0;31m143 [0m# SCRIPTING
+[0;31m144 [0m# You can specify a script that gets run when the rule matches by
+[0;31m145 [0m# setting the "script" option.
+[0;31m146 [0m# The script will be called as follows:
+[0;31m147 [0m#   script appname summary body icon urgency
+[0;31m148 [0m# where urgency can be "LOW", "NORMAL" or "CRITICAL".
+[0;31m149 [0m#
+[0;31m150 [0m# NOTE: if you don't want a notification to be displayed, set the format
+[0;31m151 [0m# to "".
+[0;31m152 [0m# NOTE: It might be helpful to run dunst -print in a terminal in order
+[0;31m153 [0m# to find fitting options for rules.
+[0;31m154 [0m
+[0;31m155 [0m# Disable the transient hint so that idle_threshold cannot be bypassed from the
+[0;31m156 [0m# client
+[0;31m157 [0m#[transient_disable]
+[0;31m158 [0m#    match_transient = yes
+[0;31m159 [0m#    set_transient = no
+[0;31m160 [0m#
+[0;31m161 [0m# Make the handling of transient notifications more strict by making them not
+[0;31m162 [0m# be placed in history.
+[0;31m163 [0m#[transient_history_ignore]
+[0;31m164 [0m#    match_transient = yes
+[0;31m165 [0m#    history_ignore = yes
+[0;31m166 [0m
+[0;31m167 [0m# fullscreen values
+[0;31m168 [0m# show: show the notifications, regardless if there is a fullscreen window opened
+[0;31m169 [0m# delay: displays the new notification, if there is no fullscreen window active
+[0;31m170 [0m#        If the notification is already drawn, it won't get undrawn.
+[0;31m171 [0m# pushback: same as delay, but when switching into fullscreen, the notification will get
+[0;31m172 [0m#           withdrawn from screen again and will get delayed like a new notification
+[0;31m173 [0m#[fullscreen_delay_everything]
+[0;31m174 [0m#    fullscreen = delay
+[0;31m175 [0m#[fullscreen_show_critical]
+[0;31m176 [0m#    msg_urgency = critical
+[0;31m177 [0m#    fullscreen = show
+[0;31m178 [0m
+[0;31m179 [0m#[espeak]
+[0;31m180 [0m#    summary = "*"
+[0;31m181 [0m#    script = dunst_espeak.sh
+[0;31m182 [0m
+[0;31m183 [0m#[script-test]
+[0;31m184 [0m#    summary = "*script*"
+[0;31m185 [0m#    script = dunst_test.sh
+[0;31m186 [0m
+[0;31m187 [0m#[ignore]
+[0;31m188 [0m#    # This notification will not be displayed
+[0;31m189 [0m#    summary = "foobar"
+[0;31m190 [0m#    format = ""
+[0;31m191 [0m
+[0;31m192 [0m#[history-ignore]
+[0;31m193 [0m#    # This notification will not be saved in history
+[0;31m194 [0m#    summary = "foobar"
+[0;31m195 [0m#    history_ignore = yes
+[0;31m196 [0m
+[0;31m197 [0m#[skip-display]
+[0;31m198 [0m#    # This notification will not be displayed, but will be included in the history
+[0;31m199 [0m#    summary = "foobar"
+[0;31m200 [0m#    skip_display = yes
+[0;31m201 [0m
+[0;31m202 [0m#[signed_on]
+[0;31m203 [0m#    appname = Pidgin
+[0;31m204 [0m#    summary = "*signed on*"
+[0;31m205 [0m#    urgency = low
+[0;31m206 [0m#
+[0;31m207 [0m#[signed_off]
+[0;31m208 [0m#    appname = Pidgin
+[0;31m209 [0m#    summary = *signed off*
+[0;31m210 [0m#    urgency = low
+[0;31m211 [0m#
+[0;31m212 [0m#[says]
+[0;31m213 [0m#    appname = Pidgin
+[0;31m214 [0m#    summary = *says*
+[0;31m215 [0m#    urgency = critical
+[0;31m216 [0m#
+[0;31m217 [0m#[twitter]
+[0;31m218 [0m#    appname = Pidgin
+[0;31m219 [0m#    summary = *twitter.com*
+[0;31m220 [0m#    urgency = normal
+[0;31m221 [0m#
+[0;31m222 [0m#[stack-volumes]
+[0;31m223 [0m#    appname = "some_volume_notifiers"
+[0;31m224 [0m#    set_stack_tag = "volume"
+[0;31m225 [0m#
+[0;31m226 [0m# vim: ft=cfg
