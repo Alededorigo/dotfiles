@@ -154,8 +154,8 @@
 [0;31m152 [0m}
 [0;31m153 [0m
 [0;31m154 [0m# class                 border  backgr. text    indicator child_border
-[0;31m155 [0mclient.focused          #897678 #897678 #ffffff #897678   #897678
-[0;31m156 [0mclient.focused_inactive #20242a #897678 #ffffff #897678   #20242a
+[0;31m155 [0mclient.focused          #3a5059 #3a5059 #ffffff #3a5059   #3a5059
+[0;31m156 [0mclient.focused_inactive #20242a #3a5059 #ffffff #3a5059   #20242a
 [0;31m157 [0mclient.unfocused        #20242a #20242a #888888 #20242a   #20242a
 [0;31m158 [0mclient.urgent           #ee4f84 #900000 #ffffff #900000   #ee4f84
 [0;31m159 [0m

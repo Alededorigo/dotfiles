@@ -50,6 +50,9 @@ launcher ~ rofi
       <li>
         <a href="https://github.com/Alededorigo/dotfiles/blob/main/.config/procps/toprc">top</a>
       </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/blob/main/.config/ranger/">ranger</a>
+      </li>
     </ul>
   </details>
 * <details >
