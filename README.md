@@ -8,7 +8,7 @@ These are configuration files for every software i use.
 In every file there is its path.
 
 ### Now i use:
-```sh
+```
       ale@ad
       os ~ arch
       sh ~ bash
@@ -19,7 +19,7 @@ In every file there is its path.
     kern ~ 5.4.0
     pkgs ~ 2356
     term ~ st, kitty
-  editor ~ doom emacs/vim
+  editor ~ micro/vim
 launcher ~ rofi
 ```
 
