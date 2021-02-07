@@ -205,11 +205,11 @@ For bspwm i use a custom color scheme called [Gruvbox](https://github.com/morhet
 Simply sostitute the classic [config](https://github.com/alededorigo/dotfiles/tree/main/.config/polybar/config) with [bspwm-config](https://github.com/alededorigo/dotfiles/tree/main/.config/polybar/config-bspwm). Then rename that file in "config".
 
 #### Polybar
-First create a directory named scripts in the .config/polybar
+First create a directory named scripts in .config/polybar
 ```sh
 mkdir ~/.config/polybar/scripts
 ```
-For every polybar files you need to give it permissions:
+For every polybar file you need to give it permissions:
 ```sh
 chmod +x ~/.config/polybar/config
 chmod +x ~/.config/polybar/launch.sh
