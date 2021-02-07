@@ -8,7 +8,7 @@ These are configuration files for every software i use.
 In every file there is its path.
 
 ### Now i use:
-```
+```bash
       ale@ad
       os ~ arch
       sh ~ bash
