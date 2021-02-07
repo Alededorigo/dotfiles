@@ -161,8 +161,7 @@ client.urgent           #ee4f84 #900000 #ffffff #900000   #ee4f84
 bindsym $mod+Shift+e exit
 bindsym $mod+x exec flameshot gui
 bindsym $mod+Shift+p exec systemctl poweroff
-bindsym $mod+space exec rofi -show run
-bindsym $mod+Shift+space exec rofi -modi TODO:~/.scripts/todo.sh -show TODO
+bindsym $mod+space exec rofi -display-run "$" -show run -lines 5
 bindsym $mod+w exec bash ~/.scripts/panel
 bindsym $mod+Return exec $ter
 bindsym $mod+q kill
