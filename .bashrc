@@ -1,4 +1,4 @@
- /home/ale/.bashrc, 1279 bytes
+ /home/ale/.bashrc, 1280 bytes
  ---
 [0;31m 1 [0m# ~/.bashrc
 [0;31m 2 [0m
@@ -49,7 +49,7 @@
 [0;31m47 [0malias lum="xrandr --output eDP-1 --brightness"
 [0;31m48 [0malias note="cd ~/notes/ && exa -lah"
 [0;31m49 [0malias or="bash ~/.scripts/or"
-[0;31m50 [0malias cat="~/dev/cat/cat.sh"
+[0;31m50 [0m#alias cat="~/dev/cat/cat.sh"
 [0;31m51 [0m
 [0;31m52 [0m# Grep output
 [0;31m53 [0malias grep='grep --color=auto'
