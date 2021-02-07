@@ -181,16 +181,13 @@ for_window [class="Code"] move to workspace $ws3
 for_window [class="URxvt"] floating enable
 for_window [class="File-roller"] floating enable
 #
-exec_always dunst &
-# exec_always urxvtd -q &
-# exec_always ~/.config/polybar/launch.sh
-exec_always picom &
-exec_always unclutter &
-exec_always nitrogen --restore &
+exec_always /usr/bin/dunst &
+exec_always /usr/bin/picom &
+exec_always /usr/bin/unclutter &
+exec_always /usr/bin/nitrogen --restore &
 # exec_always feh --bg-fill ~/Pictures/walls/leave2.jpg
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-# exec --no-startup-id nm-applet
-exec cbatticon -i standard -l 20
+exec /usr/bin/cbatticon -i standard -l 20
 
 # Remove auto focus on windows
 focus_follows_mouse no
