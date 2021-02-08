@@ -164,7 +164,7 @@ bindsym $mod+Shift+p exec systemctl poweroff
 bindsym $mod+space exec rofi -display-run "$" -show run -lines 5
 bindsym $mod+w exec bash ~/.scripts/panel
 bindsym $mod+Return exec $ter
-bindsym $mod+q kill
+bindsym $mod+c kill
 bindsym $mod+Ctrl+q focus parent,kill
 #bindsym $mod+x exec ksnip
 # Exec at login

@@ -7,7 +7,7 @@
 | :-------------               | -----------:                       |
 | Super + [1...9]              | Change desktop                     | 
 | Super + Shift + [1...9]      | Move window in another desktop     | 
-| Super + q                    | Close window                       |
+| Super + c                    | Close window                       |
 | Super + w                    | Open panel script                  |
 | Super + Shift + r            | Reload i3 configuration            |
 | Super + s                    | Toggle tiling/floating             |
