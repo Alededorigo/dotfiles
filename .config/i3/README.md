@@ -3,10 +3,10 @@
 <br>
 
 ## Keybindings:
-| Key                          | Column 3                           |
+| Key                          | Action                             |
 | :-------------               | -----------:                       |
-| Super + [1...9]              | Change desktop                     | 
-| Super + Shift + [1...9]      | Move window in another desktop     | 
+| Super + [1...9]              | Change desktop                     |
+| Super + Shift + [1...9]      | Move window in another desktop     |
 | Super + c                    | Close window                       |
 | Super + w                    | Open panel script                  |
 | Super + Shift + r            | Reload i3 configuration            |
@@ -16,6 +16,16 @@
 | Super + Space                | Launch Rofi to open apps           |
 | Super + Shift + e            | Exit i3                            |
 | Super + Shift + p            | Power off                          |
+| Super + q                    | [Music Controls](#music-controls)  |
+
+## Music controls:
+| Key   | Action               |
+| :---- | :------------------- |
+| \<ESC\> | Back to default mode |
+| Enter | Back to default mode |
+| space | Toggle play/pause    |
+| n     | Next song            |
+| p     | Previous song        |
 
 
 <br>

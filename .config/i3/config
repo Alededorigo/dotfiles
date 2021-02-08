@@ -166,6 +166,7 @@ bindsym $mod+w exec bash ~/.scripts/panel
 bindsym $mod+Return exec $ter
 bindsym $mod+c kill
 bindsym $mod+Ctrl+q focus parent,kill
+bindsym $mod+q mode "$music_control"
 #bindsym $mod+x exec ksnip
 # Exec at login
 exec $ter
@@ -190,3 +191,11 @@ exec /usr/bin/cbatticon -i standard -l 20
 
 # Remove auto focus on windows
 focus_follows_mouse no
+
+mode "$music_control" {
+        bindsym n      exec "mocp --next" mode "default"
+        bindsym p      exec "mocp --previous" mode "default"
+        bindsym space  exec "mocp --toggle-pause" mode "default"
+        bindsym Enter  mode "default"
+        bindsym Escape mode "default"
+}
