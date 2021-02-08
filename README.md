@@ -193,6 +193,7 @@ In every file there is its path.
   | Fira Code      |fonts-firacode|fira-code-fonts| ttf-fira-code|
   | IBM Plex       |              |ibm-plex-sans-font| ttf-ibm-plex|
   | Source Code Pro| [Official page](https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font)     | adobe-source-code-pro-fonts | adobe-source-code-pro-fonts |
+  | Tamsyn         | [Official page](https://www.fial.com/~scott/tamsyn-font/)                                                                                                         |
 </details>
 
 <br>
