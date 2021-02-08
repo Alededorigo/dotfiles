@@ -1,5 +1,7 @@
 ![dotfiles](https://res.cloudinary.com/dn3cdvdix/image/upload/v1609584148/dotfiles_mkcg0c.png)
 
+![reposize](https://img.shields.io/github/repo-size/alededorigo/dotfiles?color=%2358d0f4&style=for-the-badge) ![licence](https://img.shields.io/github/license/alededorigo/dotfiles?color=%23cd58f4&style=for-the-badge) ![lastcommit](https://img.shields.io/github/last-commit/alededorigo/dotfiles?color=9ce590&style=for-the-badge)
+
 <br>
 
 These are configuration files for every software i use.
