@@ -152,7 +152,7 @@ In every file there is its path.
 
   <br>
 
-  ### <h1 align="center">Debian/Ubuntu</h1>
+  ###### <h2 align="center">Debian/Ubuntu</h2>
   ```sh
   sudo add-apt-repository ppa:kgilmer/speed-ricer
   sudo apt-get update
@@ -172,12 +172,12 @@ In every file there is its path.
 
   <br>
 
-  ### <h1 align="center">Fedora</h1>
+  ###### <h2 align="center">Fedora</h2>
   ```sh
   sudo dnf install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
   ```
 
-  ### <h1 align="center">Arch</h1>
+  ###### <h2 align="center">Arch</h2>
   ```sh
   sudo pacman -S i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
   # Make sure yay is your AUR helper
