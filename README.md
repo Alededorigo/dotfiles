@@ -69,6 +69,9 @@ launcher ~ rofi
         <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/kitty">kitty</a>
       </li>
       <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/thunar">thunar</a>
+      </li>
+      <li>
         <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/rofi">rofi</a>
       </li>
     </ul>

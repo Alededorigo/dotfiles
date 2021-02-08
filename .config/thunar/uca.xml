@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open TUI</name>
+	<unique-id>1611817125118600-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator<command>
+	<description>Open here the terminal</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+</actions>
