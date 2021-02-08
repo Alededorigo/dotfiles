@@ -14,7 +14,7 @@ In every file there is its path.
       dm ~ lightdm
       fm ~ thunar/ranger
     host ~ ad
-    kern ~ 5.4.0
+    kern ~ 5.4.89
     pkgs ~ 2356
     term ~ st, kitty
   editor ~ micro/vim
