@@ -7,23 +7,26 @@
 These are configuration files for every software i use.
 In every file there is its path.
 
-### Now i use:
-```bash
-      ale@ad
+<br>
+
+### <h1 align="center">Now i use</h1>
+
+<pre align="center">
+   ale@ad
       os ~ arch
       sh ~ bash
-      wm ~ i3-gaps/xmonad
-      dm ~ lightdm
-      fm ~ thunar/ranger
-    host ~ ad
-    kern ~ 5.4.89
+                wm ~ i3-gaps/xmonad
+         dm ~ lightdm
+               fm ~ thunar/ranger
+   host ~ ale
+      kern ~ 5.4.89
     pkgs ~ 2356
-    term ~ st, kitty
-  editor ~ micro/vim
+         term ~ st, kitty
+       editor ~ micro/vim
 launcher ~ rofi
-```
+</pre>
 
-### Index:
+### <h1 align="center">Index:</h1>
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
 * [Fonts](https://github.com/Alededorigo/dotfiles#fonts)
 * <details>
@@ -139,11 +142,11 @@ launcher ~ rofi
 
 
 <details open>
-  <summary><strong>Dependencies</strong></summary>
+  <summary><strong><h1 align="center">Dependencies</h1></strong></summary>
 
   <br>
 
-  ## Debian/Ubuntu
+  ### <h1 align="center">Debian/Ubuntu</h1>
   ```sh
   sudo add-apt-repository ppa:kgilmer/speed-ricer
   sudo apt-get update
@@ -163,12 +166,12 @@ launcher ~ rofi
 
   <br>
 
-  ## Fedora
+  ### <h1 align="center">Fedora</h1>
   ```sh
   sudo dnf install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
   ```
 
-  ## Arch
+  ### <h1 align="center">Arch</h1>
   ```sh
   sudo pacman -S i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
   # Make sure yay is your AUR helper
@@ -181,7 +184,7 @@ launcher ~ rofi
 <br>
 
 <details>
-  <summary><strong>Fonts</strong></summary>
+  <summary><strong><h1 align="center">Fonts</h1></strong></summary>
   <br>
   These are all fonts i used in my dotfiles.
 
@@ -195,7 +198,7 @@ launcher ~ rofi
 <br>
 <br>
 
-### Configs:
+### <h1 align="center">Configs</h1>
 
 #### Bspwm
 Bspwm needs 2 directories, for its config and the keybindings.

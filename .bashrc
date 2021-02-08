@@ -35,7 +35,6 @@ ex ()
 alias ls="ls -a --group-directories-first --color=auto"
 alias ll="ls -alF"
 alias l.='ls -a | grep "^."'
-alias less="less -R"
 alias ..="cd .."
 alias .2="cd ../.."
 alias .3="cd ../../.."
@@ -51,7 +50,6 @@ alias or="bash ~/.scripts/or"
 # Typing errors
 alias dc="cd"
 alias gti="git"
-alias ;s="ls"
 
 # Grep
 alias grep='grep --color=auto'
