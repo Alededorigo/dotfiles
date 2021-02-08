@@ -31,11 +31,11 @@ ex ()
   fi
 }
 
-# Universal alias
-alias ls="ls -a --group-directories-first"
-alias lsa="ls -la --group-directories-first"
-alias ll="ls -l --group-directories-first"
+# Misc
+alias ls="ls -a --group-directories-first --color=auto"
+alias ll="ls -alF"
 alias l.='ls -a | grep "^."'
+alias less="less -R"
 alias ..="cd .."
 alias .2="cd ../.."
 alias .3="cd ../../.."
@@ -47,18 +47,23 @@ alias rec="ffmpeg -s 1920x1080 -f x11grab -i :0"
 alias lum="xrandr --output eDP-1 --brightness"
 alias note="cd ~/notes/ && exa -lah"
 alias or="bash ~/.scripts/or"
-#alias cat="~/dev/cat/cat.sh"
 
-# Grep output
+# Typing errors
+alias dc="cd"
+alias gti="git"
+alias ;s="ls"
+
+# Grep
 alias grep='grep --color=auto'
 
-# Alias for git
+# Git
 alias gitc="source ~/.scripts/github.sh"
 
-# Alias for curl web apps
-alias weather="curl http://wttr.in/Belluno"
+# Curl web apps
+alias weather="curl http://wttr.in/your-city-here"
 alias myp="curl ifconfig.co"
 alias somenews="curl getnews.tech"
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias parrot="curl parrot.live"
+
 source "$HOME/.cargo/env"
