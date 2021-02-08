@@ -25,6 +25,12 @@ In every file there is its path.
    editor ~ micro/vim
  launcher ~ rofi
 ```
+<details >
+    <summary><strong><h1 align="center">Screenshots</h1></strong></summary>
+<img src="https://res.cloudinary.com/adwebsite/image/upload/v1612782415/dotfiles/screen1_yxrhl3.png">
+<img src="https://i.redd.it/vmpl8ft5hnc61.png">
+</details>
+
 
 ### <h1 align="center">Index:</h1>
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
