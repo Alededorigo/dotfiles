@@ -46,6 +46,7 @@ alias rec="ffmpeg -s 1920x1080 -f x11grab -i :0"
 alias lum="xrandr --output eDP-1 --brightness"
 alias note="cd ~/notes/ && exa -lah"
 alias or="bash ~/.scripts/or"
+alias xprop="xprop | grep CLASS"
 
 # Typing errors
 alias dc="cd"
