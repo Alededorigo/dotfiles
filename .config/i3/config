@@ -157,9 +157,10 @@ exec /usr/bin/cbatticon -i standard -l 20
 focus_follows_mouse no
 
 mode "$music_control" {
-        bindsym n      exec "mocp --next" mode "default"
-        bindsym p      exec "mocp --previous" mode "default"
-        bindsym space  exec "mocp --toggle-pause" mode "default"
+        bindsym n      exec "mocp --next"
+        bindsym p      exec "mocp --previous"
+        bindsym space  exec "mocp --toggle-pause"
+        bindsym q      mode "default"
         bindsym Enter  mode "default"
         bindsym Escape mode "default"
 }
