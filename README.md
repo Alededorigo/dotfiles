@@ -11,20 +11,20 @@ In every file there is its path.
 
 ### <h1 align="center">Now i use</h1>
 
-<pre align="center">
-   ale@ad
-      os ~ arch
-      sh ~ bash
-                wm ~ i3-gaps/xmonad
-         dm ~ lightdm
-               fm ~ thunar/ranger
-   host ~ ale
-      kern ~ 5.4.89
-    pkgs ~ 2356
-         term ~ st, kitty
-       editor ~ micro/vim
-launcher ~ rofi
-</pre>
+```sh
+       ale@ad
+       os ~ arch
+       sh ~ bash
+       wm ~ i3-gaps/xmonad
+       dm ~ lightdm
+       fm ~ thunar/ranger
+     host ~ ale
+     kern ~ 5.4.89
+     pkgs ~ 2356
+     term ~ st, kitty
+   editor ~ micro/vim
+ launcher ~ rofi
+```
 
 ### <h1 align="center">Index:</h1>
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
