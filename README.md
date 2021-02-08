@@ -11,20 +11,24 @@ In every file there is its path.
 
 ### <h1 align="center">Now i use</h1>
 
-```sh
-       ale@ad
-       os ~ arch
-       sh ~ bash
-       wm ~ i3-gaps/xmonad
-       dm ~ slim
-       fm ~ thunar/ranger
-     host ~ ale
-     kern ~ 5.4.89
-     pkgs ~ 2356
-     term ~ st, kitty
-   editor ~ micro/vim
- launcher ~ rofi
-```
+* OS: [Arch](https://archlinux.org/)
+
+* Shell: Bash
+
+* Window Manager: [i3wm](https://i3wm.org/)
+
+* Display Manager: Switching to SLiM
+
+* File manager: Thunar, Ranger
+
+* Terminal emulator: [st](https://st.suckless.org/)
+
+* Text editor: Vim
+
+* Launcher: Rofi
+
+* Notification daemon: Dunst
+
 <details >
     <summary><strong><h1 align="center">Screenshots</h1></strong></summary>
 <img src="https://res.cloudinary.com/adwebsite/image/upload/v1612782415/dotfiles/screen1_yxrhl3.png">
