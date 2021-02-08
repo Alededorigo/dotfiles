@@ -111,9 +111,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 # Gaps around windows
 gaps inner 13
-gaps outer 0
+gaps outer 11
 # Rounded corners
-# border_radius 6
+border_radius 0
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #3a5059 #3a5059 #ffffff #3a5059   #3a5059
@@ -136,7 +136,7 @@ bindsym $mod+q mode "$music_control"
 exec $ter
 exec telegram-desktop
 # Remove borders
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 1
 for_window [class="Nitrogen"] floating enable
 for_window [class="Firefox"] move to workspace $ws2
 for_window [class="discord"] move to workspace $ws4

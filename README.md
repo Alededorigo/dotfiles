@@ -16,7 +16,7 @@ In every file there is its path.
        os ~ arch
        sh ~ bash
        wm ~ i3-gaps/xmonad
-       dm ~ lightdm
+       dm ~ slim
        fm ~ thunar/ranger
      host ~ ale
      kern ~ 5.4.89
