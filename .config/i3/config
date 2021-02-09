@@ -134,7 +134,6 @@ bindsym $mod+q mode "$music_control"
 #bindsym $mod+x exec ksnip
 # Exec at login
 exec $ter
-exec telegram-desktop
 # Remove borders
 for_window [class="^.*"] border pixel 2
 for_window [class="Nitrogen"] floating enable
