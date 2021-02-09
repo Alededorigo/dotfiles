@@ -4,7 +4,7 @@
     # -- DISPLAY -- #
     monitor = 0
     follow = mouse
-    geometry = "0x0-30+30"
+    geometry = "0x0-23+23"
     indicate_hidden = yes
     shrink = no
     transparency = 0
