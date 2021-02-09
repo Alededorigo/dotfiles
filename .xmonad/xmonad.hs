@@ -14,8 +14,10 @@ import XMonad.Layout.Spacing
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
+import Graphics.X11.ExtraTypes.XF86
+
 -- VARIABLES --
-myTerminal      = "kitty"
+myTerminal      = "st"
 
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = False
@@ -23,7 +25,7 @@ myFocusFollowsMouse = False
 myClickJustFocuses :: Bool
 myClickJustFocuses = False
 
-myBorderWidth   = 3
+myBorderWidth   = 2
 
 myModMask       = mod4Mask
 
@@ -42,17 +44,26 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm,               xK_Return), spawn $ XMonad.terminal conf)
 
     -- Volume keys
-    , ((0                     , 0x1008FF11), spawn "amixer -q sset Master 2%-")
+    , ((0                     , 0x1008FF11), spawn "~/.scripts/volume.sh -d")
 
-    , ((0                     , 0x1008FF13), spawn "amixer -q sset Master 2%+")
+    , ((0                     , 0x1008FF13), spawn "~/.scripts/volume.sh -u")
 
     , ((0                     , 0x1008FF12), spawn "amixer set Master toggle")
 
+    -- Music keys
+    , ((0, xF86XK_AudioPlay), spawn "mocp --toggle-pause")
+
+    , ((0, xF86XK_AudioPlay), spawn "mocp --toggle-pause")
+
+    , ((0, xF86XK_AudioNext), spawn "mocp --next")
+
+    , ((0, xF86XK_AudioPrev), spawn "mocp --previous")
+
     -- Rofi with Dmenu theme
-    , ((modm,               xK_space     ), spawn "rofi -show run -theme dmenu")
+    , ((modm,               xK_space     ), spawn "~/.scripts/rofilaunch.sh")
 
     -- Panel
-    , ((modm,               xK_s     ), spawn "bash ~/.scripts/panel")
+    , ((modm,               xK_q     ), spawn "bash ~/.scripts/panel")
 
     -- Flameshot (for screenshots)
     , ((modm,               xK_x     ), spawn "flameshot gui")
@@ -61,7 +72,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_p     ), spawn "systemctl poweroff")
 
     -- Kill
-    , ((modm,               xK_q     ), kill)
+    , ((modm,               xK_c     ), kill)
 
     -- Change layout algorithm
     , ((modm,               xK_t ), sendMessage NextLayout)
@@ -175,7 +186,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout = tiled ||| Mirror tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled = spacing 10 $ Tall nmaster delta ratio
+     tiled = spacing 13 $ Tall nmaster delta ratio
 
      -- The default number of windows in the master pane
      nmaster = 1
@@ -205,7 +216,7 @@ myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
     , className =? "File-roller"    --> doFloat
-    , className =? "Thunar"         --> doFloat
+    , className =? "Nitrogen"       --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
