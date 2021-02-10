@@ -145,12 +145,16 @@ for_window [class="URxvt"] floating enable
 for_window [class="File-roller"] floating enable
 #
 exec_always /usr/bin/dunst &
-exec_always /usr/bin/picom &
+exec_always /usr/bin/picom --config ~/.config/picom.conf &
 exec_always /usr/bin/unclutter &
 exec_always /usr/bin/nitrogen --restore &
 # exec_always feh --bg-fill ~/Pictures/walls/leave2.jpg
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec /usr/bin/cbatticon -i standard -l 20
+exec --no-startup-id /usr/lib/gsd-xsettings
+exec_always --no-startup-id gnome-power-manager
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id gnome-flashback
 
 # Remove auto focus on windows
 focus_follows_mouse no
