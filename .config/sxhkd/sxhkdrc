@@ -1,25 +1,48 @@
-#  _____ ____
-# |  _  |    \
-# |     |  |  |
-# |__|__|____/
 #
-# Alededorigo Polybar Configuration
-# Place this file into ~/.config/polybar/config
-# https://github.com/alededorigo/dotfiles
-# https://gitlab.com/alededorigo/dotfiles
+# wm independent hotkeys
 #
 
 # terminal emulator
 super + Return
-	alacritty
-	
+	st
+
 # program launcher
 super + @space
-	rofi -show drun -theme Bspwm-GRV
+	rofi -display-run "$" -show run -lines 5
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+XF86AudioRaiseVolume
+    bash ~/.scripts/volume.sh -u
+
+XF86AudioLowerVolume
+    bash ~/.scripts/volume.sh -d
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioMicMute
+    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+XF86MonBrightnessUp
+    xrandr --output eDP-1 --brightness 1
+
+XF86MonBrightnessDown
+    xrandr --output eDP-1 --brightness 0.5
+
+XF86AudioPlay
+    mocp --toggle-pause
+
+XF86AudioPause
+    mocp --toggle-pause
+
+XF86AudioNext
+    mocp --next
+
+XF86AudioPrev
+    mocp --previous
 
 #
 # bspwm hotkeys
@@ -30,7 +53,7 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
+super + q
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
