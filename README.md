@@ -19,6 +19,8 @@ In every file there is its path.
 
 * Display Manager: Switching to SLiM
 
+* Browser with [Minimal-functional-fox theme](https://github.com/mut-ex/minimal-functional-fox) (and some customizations)
+
 * File manager: Thunar, Ranger
 
 * Terminal emulator: [st](https://st.suckless.org/)

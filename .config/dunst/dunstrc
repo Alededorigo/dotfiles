@@ -12,12 +12,12 @@
     separator_height = 1
     padding = 13
     horizontal_padding = 13
-    frame_width = 4
-    frame_color = "#ba8991"
+    frame_width = 2
+    frame_color = "#20242a"
     separator_color = auto
     sort = yes
     idle_threshold = 120
-    #corner_radius=10
+    corner_radius=9
     icon_path = none
 
     # -- FONT -- #
@@ -107,6 +107,9 @@
     foreground = "#ffffff"
     frame_color = "#ff5555"
     timeout = 9
+
+[log_notifs]
+    script = ~/.local/bin/dunst_logger.sh
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
