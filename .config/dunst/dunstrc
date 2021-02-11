@@ -4,7 +4,7 @@
     # -- DISPLAY -- #
     monitor = 0
     follow = mouse
-    geometry = "0x0-13+13"
+    geometry = "0x0-9+9"
     indicate_hidden = yes
     shrink = no
     transparency = 0
@@ -12,8 +12,8 @@
     separator_height = 1
     padding = 13
     horizontal_padding = 13
-    frame_width = 2
-    frame_color = "#20242a"
+    frame_width = 10
+    frame_color = "#20202a"
     separator_color = auto
     sort = yes
     idle_threshold = 120
@@ -93,17 +93,17 @@
 
 # -- COLORS -- #
 [urgency_low]
-    background = "#111217"
+    background = "#20202a"
     foreground = "#ffffff"
     timeout = 7
 
 [urgency_normal]
-    background = "#111217"
+    background = "#20202a"
     foreground = "#ffffff"
     timeout = 8
 
 [urgency_critical]
-    background = "#111217"
+    background = "#20202a"
     foreground = "#ffffff"
     frame_color = "#ff5555"
     timeout = 9

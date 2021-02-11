@@ -248,11 +248,12 @@ myLogHook = return ()
 --
 -- By default, do nothing.
 myStartupHook = do
-	spawnOnce "/usr/bin/feh --bg-fill ~/Pictures/walls/leave2.jpg &"
-	spawnOnce "/usr/bin/dunst &"
+	spawnOnce "/usr/bin/dunst"
+	spawnOnce "/usr/bin/nitrogen --restore"
 	spawnOnce "/usr/bin/picom"
 	spawnOnce "/usr/bin/unclutter"
 	spawnOnce "/usr/bin/cbatticon -i standard -l 20"
+	spawnOnce "/usr/bin/xsettingsd"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
