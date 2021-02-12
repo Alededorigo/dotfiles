@@ -91,6 +91,9 @@ In every file there is its path.
       <li>
         <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/rofi">rofi</a>
       </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/pcmanfm/default">pcmanfm</a>
+      </li>
     </ul>
   </details>
 * <details open>

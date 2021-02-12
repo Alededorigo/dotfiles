@@ -48,6 +48,7 @@ alias note="cd ~/notes/ && exa -lah"
 alias or="bash ~/.scripts/or"
 alias rc="ranger $HOME"
 alias xprop="xprop | grep CLASS"
+alias yay="paru"
 
 # Typing errors
 alias dc="cd"
