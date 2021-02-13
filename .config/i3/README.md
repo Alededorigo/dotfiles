@@ -15,7 +15,7 @@
 | Super + x                    | Launch Flameshot (For screenshot)  |
 | Super + Space                | Launch Rofi to open apps           |
 | Super + Shift + e            | Exit i3                            |
-| Super + Shift + p            | Power off                          |
+| Super + Shift + p            | Show rofi power scrpit             |
 | Super + q                    | [Music Controls](#music-controls)  |
 
 ## Music controls:

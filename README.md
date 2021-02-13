@@ -15,7 +15,7 @@ In every file there is its path.
 
 * Shell: Bash
 
-* Window Manager: [i3wm](https://i3wm.org/)
+* Window Manager: [Xmonad](https://xmonad.org/)
 
 * Display Manager: Switching to SLiM
 

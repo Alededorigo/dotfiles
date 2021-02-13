@@ -69,7 +69,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_x     ), spawn "flameshot gui")
 
     -- Poweroff (for Systemd)
-    , ((modm .|. shiftMask, xK_p     ), spawn "systemctl poweroff")
+    , ((modm .|. shiftMask, xK_p     ), spawn "rofi -show p -modi p:rofi-power-menu -width 20 -lines 5")
 
     -- Kill
     , ((modm,               xK_c     ), kill)

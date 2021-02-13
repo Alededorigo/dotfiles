@@ -124,7 +124,7 @@ client.urgent           #ee4f84 #900000 #ffffff #900000   #ee4f84
 # Custom bindings
 bindsym $mod+Shift+e exit
 bindsym $mod+x exec flameshot gui
-bindsym $mod+Shift+p exec systemctl poweroff
+bindsym $mod+Shift+p exec rofi -show p -modi p:rofi-power-menu -width 20 -lines 5
 bindsym $mod+space exec rofi -display-run "$" -show run -lines 5
 bindsym $mod+w exec bash ~/.scripts/panel
 bindsym $mod+Return exec $ter
@@ -133,6 +133,9 @@ bindsym $mod+Ctrl+q focus parent,kill
 bindsym $mod+q mode "$music_control"
 #bindsym $mod+x exec ksnip
 # Exec at login
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec /usr/bin/cbatticon -i standard -l 20
+exec_always /usr/bin/xsettingsd &
 exec $ter
 # Remove borders
 for_window [class="^.*"] border pixel 2
@@ -143,16 +146,13 @@ for_window [class="TelegramDesktop"] move to workspace $ws2
 for_window [class="Code"] move to workspace $ws3
 for_window [class="URxvt"] floating enable
 for_window [class="File-roller"] floating enable
-#
+# Exec always
 exec_always /usr/bin/dunst &
 exec_always /usr/bin/picom --config ~/.config/picom.conf &
 exec_always /usr/bin/unclutter &
 exec_always /usr/bin/nitrogen --restore &
 # exec_always feh --bg-fill ~/Pictures/walls/leave2.jpg
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec /usr/bin/cbatticon -i standard -l 20
-exec_always /usr/bin/xsettingsd &
-
+#
 # Remove auto focus on windows
 focus_follows_mouse no
 
