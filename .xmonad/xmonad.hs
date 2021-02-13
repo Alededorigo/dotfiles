@@ -1,4 +1,5 @@
 -- ~/.xmonad/xmonad.hs --
+-- After any edit, reload the configuration with Super+Shift+g
 
 -- IMPORTS --
 import XMonad
