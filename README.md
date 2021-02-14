@@ -38,7 +38,7 @@ In every file there is its path.
 </details>
 
 
-### <h1 align="center">Index</h1>
+### <h1 align="center">Table of Contents</h1>
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
 * [Fonts](https://github.com/Alededorigo/dotfiles#fonts)
 * <details>

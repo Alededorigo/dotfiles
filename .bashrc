@@ -68,4 +68,3 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 alias parrot="curl parrot.live"
 
 source "$HOME/.config/VARS"
-source "$HOME/.cargo/env"
