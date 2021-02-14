@@ -1,7 +1,7 @@
 -- ~/.xmonad/xmonad.hs --
 -- After any edit, reload the configuration with Super+Shift+g
 
--- IMPORTS --
+--------------  IMPORTS  ---------------
 import XMonad
 import XMonad.Util.SpawnOnce
 import Data.Monoid
@@ -17,7 +17,8 @@ import qualified Data.Map        as M
 
 import Graphics.X11.ExtraTypes.XF86
 
--- VARIABLES --
+--------------  VARIABLES  ---------------
+
 myTerminal      = "st"
 
 myFocusFollowsMouse :: Bool
@@ -33,11 +34,9 @@ myModMask       = mod4Mask
 myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
 myNormalBorderColor  = "#111217"
-myFocusedBorderColor = "#20242a"
+myFocusedBorderColor = "#ba8991"
 
---------------------------------------------
 --------------  KEYBINDINGS  ---------------
---------------------------------------------
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
@@ -59,6 +58,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0, xF86XK_AudioNext), spawn "mocp --next")
 
     , ((0, xF86XK_AudioPrev), spawn "mocp --previous")
+
+    -- Brightness keys
+
+    , ((0,                    xF86XK_MonBrightnessUp), spawn "brightnessctl s +5%")
+
+    , ((0,                    xF86XK_MonBrightnessDown), spawn "brightnessctl s 5-%")
 
     -- Rofi with Dmenu theme
     , ((modm,               xK_space     ), spawn "~/.scripts/rofilaunch.sh")
@@ -155,9 +160,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 
-------------------------------------------------------------------------
--- Mouse bindings: default actions bound to mouse events
---
+--------------  MOUSE BINDINGS  ---------------
+
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- SX: Set the window to floating mode and move by dragging
@@ -173,8 +177,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     -- you may also bind events to the mouse scroll wheel (button4 and button5)
     ]
 
-------------------------------------------------------------------------
--- Layouts:
+--------------  LAYOUTS BINDINGS  ---------------
 
 -- You can specify and transform your layouts by modifying these values.
 -- If you change layout bindings be sure to use 'mod-shift-space' after
@@ -198,8 +201,7 @@ myLayout = tiled ||| Mirror tiled ||| Full
      -- Percent of screen to increment by when resizing panes
      delta   = 3/100
 
-------------------------------------------------------------------------
--- Window rules:
+--------------  WINDOW RULES  ---------------
 
 -- Execute arbitrary actions and WindowSet manipulations when managing
 -- a new window. You can use this to, for example, always float a
@@ -221,8 +223,7 @@ myManageHook = composeAll
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
-------------------------------------------------------------------------
--- Event handling
+--------------  EVENTS  ---------------
 
 -- * EwmhDesktops users should change this to ewmhDesktopsEventHook
 --
@@ -232,16 +233,14 @@ myManageHook = composeAll
 --
 myEventHook = mempty
 
-------------------------------------------------------------------------
--- Status bars and logging
+--------------  LOGGING  ---------------
 
 -- Perform an arbitrary action on each internal state change or X event.
 -- See the 'XMonad.Hooks.DynamicLog' extension for examples.
 --
 myLogHook = return ()
 
-------------------------------------------------------------------------
--- Startup hook
+--------------  STARTUP HOOK  ---------------
 
 -- Perform an arbitrary action each time xmonad starts or is restarted
 -- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize
