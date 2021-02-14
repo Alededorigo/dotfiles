@@ -31,6 +31,14 @@ In every file there is its path.
 
 * Notification daemon: Dunst
 
+### <h1 align="center">Installing</h1>
+### Using the script:
+```bash
+bash -c "$(wget -qO - https://raw.githubusercontent.com/Alededorigo/dotfiles/main/setup.sh)"
+```
+### Manually:
+Follow dependencies and copy every file in its path.
+
 <details >
     <summary><strong><h1 align="center">Screenshots</h1></strong></summary>
 <img src="https://res.cloudinary.com/adwebsite/image/upload/v1612782415/dotfiles/screen1_yxrhl3.png">
