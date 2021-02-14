@@ -148,6 +148,9 @@ In every file there is its path.
       <li>
         <a href="https://github.com/Alededorigo/dotfiles/tree/main/.scripts">scripts</a>
       </li>
+      <li>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/picom.conf">picom</a>
+      </li>
     </ul>
   </details>
 
