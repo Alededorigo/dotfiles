@@ -237,6 +237,10 @@ optional() {
 
 optional
 
+echo "${green}===> TIPS <===$reset"
+echo "1 - Install st (https://st.suckless.org/)"
+echo "2 - Read your WM wiki"
+
 echo -e "$GREEN_BOLD===> ALL SET! <===$reset"
 
 rm -rf $HOME/dotfiles_cache/
