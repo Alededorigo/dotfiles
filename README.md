@@ -11,7 +11,7 @@ In every file there is its path.
 
 ### <h1 align="center">Now i use</h1>
 
-* OS: [Arch](https://archlinux.org/) ![arch](https://archlinux.org/favicon.ico)
+* OS: [Arch](https://archlinux.org/)
 
 * Shell: Bash
 
