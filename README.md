@@ -17,7 +17,7 @@ In every file there is its path.
 
 * Window Manager: [Xmonad](https://xmonad.org/)
 
-* Display Manager: Switching to SLiM
+* Display Manager: SLiM
 
 * Browser with [Minimal-functional-fox theme](https://github.com/mut-ex/minimal-functional-fox) (and some customizations)
 
