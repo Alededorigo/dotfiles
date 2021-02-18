@@ -15,8 +15,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xrandr --output eDP-1 --brightness 1
-bindsym XF86MonBrightnessDown exec xrandr --output eDP-1 --brightness 0.5
+bindsym XF86MonBrightnessUp exec brightnessctl s +5%
+bindsym XF86MonBrightnessDown exec brightnessctl s 5-%
 
 bindsym XF86TouchpadToggle exec ~/.scripts/touchpad.sh
 
