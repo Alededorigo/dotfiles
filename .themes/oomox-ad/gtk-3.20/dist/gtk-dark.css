@@ -86,7 +86,7 @@
 /* window manager colors */
 @define-color wm_bg_focused #111217;
 @define-color wm_bg_unfocused #111217;
-@define-color wm_border_focused #ba8991;
+@define-color wm_border_focused #7ab8c9;
 @define-color wm_border_unfocused #111217;
 @define-color wm_title_focused #ffffff;
 @define-color wm_title_unfocused mix(#ffffff,#111217,0.4);
@@ -7104,7 +7104,7 @@ decoration {
   background-image: none;
   border-radius: 0px 0px 0 0;
   border-width: 0;
-  box-shadow: 0 3px 9px 1px rgba(102, 102, 102, 0.7), 0 0 0 1px #ba8991;
+  box-shadow: 0 3px 9px 1px rgba(102, 102, 102, 0.7), 0 0 0 1px #7ab8c9;
   /* this is used for the resize cursor area */
   margin: 15px; }
   decoration:backdrop {
@@ -7115,7 +7115,7 @@ decoration {
   .popup decoration {
     box-shadow: none; }
   .ssd decoration {
-    box-shadow: 0 0 0 1px #ba8991; }
+    box-shadow: 0 0 0 1px #7ab8c9; }
     .ssd decoration:backdrop {
       box-shadow: 0 0 0 1px #111217; }
   .solid-csd decoration {
@@ -7726,7 +7726,7 @@ UnityDecoration {
   -UnityDecoration-title-fade: 35px;
   -UnityDecoration-title-alignment: 0; }
   UnityDecoration .top {
-    border: 1px solid #ba8991;
+    border: 1px solid #7ab8c9;
     border-bottom: 0;
     border-radius: 0px 0px 0 0;
     padding: 1px 8px 0;
