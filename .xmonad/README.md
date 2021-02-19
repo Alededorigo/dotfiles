@@ -11,7 +11,7 @@
 | Super + q                    | Open panel script                   |
 | Super + Shift + g            | Reload xmonad configuration         |
 | Super + t                    | Toggle layout                       |
-| Super + f                    | Put windows from floating to tiling |
+| Super + s                    | Put windows from floating to tiling |
 | Super + x                    | Launch Flameshot (For screenshot)   |
 | Super + Shift + x            | Exit Xmonad (logout)                |
 | Super + Space                | Launch Rofi to open apps            |

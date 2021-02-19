@@ -70,7 +70,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     , ((modm,               xK_c     ), kill)
     , ((modm,               xK_t ), sendMessage NextLayout)
-    , ((modm,               xK_f     ), withFocused $ windows . W.sink)
+    , ((modm,               xK_s     ), withFocused $ windows . W.sink)
     , ((modm .|. shiftMask, xK_x     ), io (exitWith ExitSuccess))
     , ((modm .|. shiftMask, xK_g     ), spawn "xmonad --recompile; xmonad --restart")
 
