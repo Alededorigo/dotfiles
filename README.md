@@ -38,9 +38,9 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/Alededorigo/dotfiles/mai
 ```
 
 ### With `rsync`
-> This will copy ALL the files in this repo to your home. 
+<blockquote> This will copy ALL the files in this repo to your home. 
 
-> Be careful.
+Be careful. </blockquote>
 
 ```bash
 git clone https://github.com/owl4ce/dotfiles && cd dotfiles
