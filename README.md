@@ -32,10 +32,22 @@ In every file there is its path.
 * Notification daemon: Dunst
 
 ### <h1 align="center">Installing</h1>
-### Using the script:
+### Using the minimal script:
 ```bash
 bash -c "$(wget -qO - https://raw.githubusercontent.com/Alededorigo/dotfiles/main/setup.sh)"
 ```
+
+### With `rsync`
+> This will copy ALL the files in this repo to your home. 
+
+> Be careful.
+
+```bash
+git clone https://github.com/owl4ce/dotfiles && cd dotfiles
+# Exclude .git directory.
+rsync -axvHPAX --exclude '.git*' .* ~/
+```
+
 ### Manually:
 Follow dependencies and copy every file in its path.
 
@@ -111,7 +123,7 @@ Follow dependencies and copy every file in its path.
         <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm">bspwm</a>
       </li>
       <li>
-        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/sxhkd">sxhkd</a> (keybindings for bspwm)
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/sxhkd">sxhkd</a> <kbd>keybindings for bspwm<kbd>
       </li>
       <li>
         <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftwm">herbstluftwm</a>
@@ -161,6 +173,7 @@ Follow dependencies and copy every file in its path.
       </li>
     </ul>
   </details>
+* [Configurations](#configs)
 
 
 <br>
@@ -226,6 +239,19 @@ Follow dependencies and copy every file in its path.
 <br>
 
 ### <h1 align="center">Configs</h1>
+
+#### SLiM
+You need to exec your WM in your `~/.xinitrc`.
+```bash
+[...]
+exec xmonad
+```
+If you use a different WM:
+* `exec i3`
+* `exec bspwm`
+* `exec herbstluftwm`
+* `exec spectrwm`
+* `exec qtile`
 
 #### Bspwm
 Bspwm needs 2 directories, for its config and the keybindings.
