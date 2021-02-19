@@ -123,7 +123,7 @@ Follow dependencies and copy every file in its path.
         <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm">bspwm</a>
       </li>
       <li>
-        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/sxhkd">sxhkd</a> <kbd>keybindings for bspwm<kbd>
+        <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/sxhkd">sxhkd</a> <kbd>keybindings for bspwm</kbd>
       </li>
       <li>
         <a href="https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftwm">herbstluftwm</a>
