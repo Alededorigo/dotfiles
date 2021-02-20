@@ -189,18 +189,23 @@ Follow dependencies and copy every file in its path.
   ```sh
   sudo add-apt-repository ppa:kgilmer/speed-ricer
   sudo apt-get update
-  sudo apt install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser vim nvim emacs
+  sudo apt install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser vim nvim emacs nitrogen
   ```
 
   ### Bspwm & sxhkd
   Compile it from source
 
   ### Compositor manager (Picom)
-
+  > Dependencies
   ```sh
-  # After you added "speed-ricer" repository you can install picom using apt
-  sudo apt install picom
-  # If you prefer you can compile it from source
+  sudo apt install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libpcre3-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
+  ```
+  > Compiling
+  ```sh
+  git clone https://github.com/yshui/picom
+  git submodule update --init --recursive
+  meson --buildtype=release . build
+  ninja -C build
   ```
 
   <br>
@@ -208,6 +213,19 @@ Follow dependencies and copy every file in its path.
   ###### <h2 align="center">Fedora</h2>
   ```sh
   sudo dnf install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
+  ```
+
+  ### Compositor manager (Picom)
+  > Dependencies
+  ```sh
+  sudo dnf install dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel mesa-libGL-devel meson pcre-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel
+  ```
+  > Compiling
+  ```sh
+  git clone https://github.com/yshui/picom
+  git submodule update --init --recursive
+  meson --buildtype=release . build
+  ninja -C build
   ```
 
   ###### <h2 align="center">Arch</h2>
