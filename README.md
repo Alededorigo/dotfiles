@@ -9,7 +9,7 @@ In every file there is its path.
 
 <br>
 
-### <h1 align="center">Now i use</h1>
+### <h1 align="left">Table of Contents</h1>
 
 * OS: [Arch](https://archlinux.org/)
 
@@ -31,14 +31,22 @@ In every file there is its path.
 
 * Notification daemon: Dunst
 
-### <h1 align="center">Installing</h1>
+<br>
+
+### <h1 align="left">Installing</h1>
 ### Using the minimal script:
+<blockquote>
+This script will install dependencies and fonts.
+</blockquote>
+
 ```bash
 bash -c "$(wget -qO - https://raw.githubusercontent.com/Alededorigo/dotfiles/main/setup.sh)"
 ```
 
 ### With `rsync`
 <blockquote> This will copy ALL the files in this repo to your home. 
+
+First install all the [dependencies](#dependencies)
 
 Be careful. </blockquote>
 
@@ -47,9 +55,6 @@ git clone https://github.com/owl4ce/dotfiles && cd dotfiles
 # Exclude .git directory.
 rsync -axvHPAX --exclude '.git*' .* ~/
 ```
-
-### Manually:
-Follow dependencies and copy every file in its path.
 
 <details >
     <summary><strong><h1 align="center">Screenshots</h1></strong></summary>
@@ -179,72 +184,65 @@ Follow dependencies and copy every file in its path.
 <br>
 <br>
 
+# Dependencies
+###### <h2 align="center">Debian/Ubuntu</h2>
+```sh
+sudo apt-get update
+sudo apt install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser vim nvim emacs nitrogen
+```
 
-<details open>
-  <summary><strong><h1 align="center">Dependencies</h1></strong></summary>
+### [Bspwm](https://github.com/baskerville/bspwm/) & sxhkd
+> Dependencies
+```sh
+sudo apt install libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev
+```
+> Compiling
+```sh
+git clone https://github.com/baskerville/bspwm.git
+git clone https://github.com/baskerville/sxhkd.git
+cd bspwm && make && sudo make install
+cd ../sxhkd && make && sudo make install2
+```
 
-  <br>
+### Compositor manager (Picom)
+> Dependencies
+```sh
+sudo apt install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libpcre3-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
+```
+> Compiling
+```sh
+git clone https://github.com/yshui/picom
+git submodule update --init --recursive
+meson --buildtype=release . build
+ninja -C build
+```
 
-  ###### <h2 align="center">Debian/Ubuntu</h2>
-  ```sh
-  sudo apt-get update
-  sudo apt install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser vim nvim emacs nitrogen
-  ```
+<br>
 
-  ### [Bspwm](https://github.com/baskerville/bspwm/) & sxhkd
-  > Dependencies
-  ```sh
-  sudo apt install libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev
-  ```
-  > Compiling
-  ```sh
-  git clone https://github.com/baskerville/bspwm.git
-  git clone https://github.com/baskerville/sxhkd.git
-  cd bspwm && make && sudo make install
-  cd ../sxhkd && make && sudo make install2
-  ```
+###### <h2 align="center">Fedora</h2>
+```sh
+sudo dnf install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
+```
 
-  ### Compositor manager (Picom)
-  > Dependencies
-  ```sh
-  sudo apt install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libpcre3-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
-  ```
-  > Compiling
-  ```sh
-  git clone https://github.com/yshui/picom
-  git submodule update --init --recursive
-  meson --buildtype=release . build
-  ninja -C build
-  ```
+### Compositor manager (Picom)
+> Dependencies
+```sh
+sudo dnf install dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel mesa-libGL-devel meson pcre-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel
+```
+> Compiling
+```sh
+git clone https://github.com/yshui/picom
+git submodule update --init --recursive
+meson --buildtype=release . build
+ninja -C build
+```
 
-  <br>
-
-  ###### <h2 align="center">Fedora</h2>
-  ```sh
-  sudo dnf install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
-  ```
-
-  ### Compositor manager (Picom)
-  > Dependencies
-  ```sh
-  sudo dnf install dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel mesa-libGL-devel meson pcre-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel
-  ```
-  > Compiling
-  ```sh
-  git clone https://github.com/yshui/picom
-  git submodule update --init --recursive
-  meson --buildtype=release . build
-  ninja -C build
-  ```
-
-  ###### <h2 align="center">Arch</h2>
-  ```sh
-  sudo pacman -S i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
-  # Make sure yay is your AUR helper
-  yay -S polybar picom
-  ```
-
-  </details>
+###### <h2 align="center">Arch</h2>
+```sh
+sudo pacman -S i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
+# Make sure yay is your AUR helper
+yay -S polybar picom
+```
 
 <br>
 <br>

@@ -1,0 +1,49 @@
+* {
+  background-color: #111217;
+  border-color: #20242a;
+  text-color: #8ca0aa;
+  spacing: 0;
+  width: 512px;
+}
+
+inputbar {
+  border: 0 0 1px 0;
+  border-radius: 0 0 0 7px;
+  children: [prompt,entry];
+}
+
+prompt {
+  padding: 10px;
+  border: 0 2px 0 0;
+  border-radius: 10px;
+  background: #20242a;
+  color: #7ba5b5;
+}
+
+textbox {
+  background-color: #2e343f;
+  border: 0 0 1px 0;
+  border-color: #282C33;
+  padding: 8px 16px;
+}
+
+entry {
+  padding: 10px;
+}
+
+listview {
+  cycle: false;
+  margin: 0 0 -1px 0;
+  scrollbar: false;
+}
+
+element {
+  padding: 15px 10px;
+}
+
+element selected {
+  border-radius: 7px;
+  background-color: #20242a;
+  text-decoration: none;
+  color: #7ba5b5;
+}
