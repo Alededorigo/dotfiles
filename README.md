@@ -187,13 +187,22 @@ Follow dependencies and copy every file in its path.
 
   ###### <h2 align="center">Debian/Ubuntu</h2>
   ```sh
-  sudo add-apt-repository ppa:kgilmer/speed-ricer
   sudo apt-get update
   sudo apt install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser vim nvim emacs nitrogen
   ```
 
-  ### Bspwm & sxhkd
-  Compile it from source
+  ### [Bspwm](https://github.com/baskerville/bspwm/) & sxhkd
+  > Dependencies
+  ```sh
+  sudo apt install libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev
+  ```
+  > Compiling
+  ```sh
+  git clone https://github.com/baskerville/bspwm.git
+  git clone https://github.com/baskerville/sxhkd.git
+  cd bspwm && make && sudo make install
+  cd ../sxhkd && make && sudo make install2
+  ```
 
   ### Compositor manager (Picom)
   > Dependencies
