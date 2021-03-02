@@ -5,14 +5,20 @@
 # --- WORKSPACES --- #
 bspc monitor -d 1 2 3 4 5 6 7
 
-# --- AUTOSTART PROGRAMS --- #
+# --- AUTOSTART --- #
 sxhkd &
 nitrogen --restore &
-yabar &
+if ! pgrep cbatticon; then
+    /usr/bin/cbatticon -i standard -l 20
+fi
+unclutter &
+bash .config/polybar/launch.sh &
+setxkbmap -layout us &
+xsettingsd &
 
 # --- LAYOUT --- #
 bspc config border_width                  2
-bspc config window_gap                    4
+bspc config window_gap                    12
 bspc config split_ratio                   0.60
 bspc config single_monocle                false
 bspc config click_to_focus                true
@@ -27,11 +33,10 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 # --- COLORS --- #
-bspc config normal_border_color		      "#585858"
-bspc config active_border_color	              "#585858"
-bspc config focused_border_color	      "#ca9dee"
+bspc config normal_border_color		      "#20242a"
+bspc config active_border_color	              "#20242a"
+bspc config focused_border_color	      "#ba8991"
 
 # --- RULES --- #
 bspc rule -a Gimp desktop='^6' state=floating follow=on
 bspc rule -a qutebrowser desktop='^2'
-
