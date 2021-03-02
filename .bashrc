@@ -61,7 +61,7 @@ alias grep='grep --color=auto'
 alias gitc="source ~/.scripts/github.sh"
 
 # Curl web apps
-alias weather="curl http://wttr.in/Agordo"
+alias weather="curl http://wttr.in/city"
 alias myp="curl ifconfig.co"
 alias somenews="curl getnews.tech"
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
