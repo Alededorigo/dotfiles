@@ -4,24 +4,24 @@
     # -- DISPLAY -- #
     monitor = 0
     follow = mouse
-    geometry = "0x0-9+9"
+    geometry = "0x0-5+60"
     indicate_hidden = yes
     shrink = no
     transparency = 0
     notification_height = 0
     separator_height = 1
+    separator_color = "#ba8991"
     padding = 13
     horizontal_padding = 13
-    frame_width = 10
-    frame_color = "#20202a"
+    frame_width = 4
+    frame_color = "#20242a"
     separator_color = auto
     sort = yes
     idle_threshold = 120
-    corner_radius=9
     icon_path = none
 
     # -- FONT -- #
-    font = Fira Code 11
+    font = Hasklig 11
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
@@ -93,17 +93,17 @@
 
 # -- COLORS -- #
 [urgency_low]
-    background = "#20202a"
+    background = "#111217"
     foreground = "#ffffff"
     timeout = 7
 
 [urgency_normal]
-    background = "#20202a"
+    background = "#111217"
     foreground = "#ffffff"
     timeout = 8
 
 [urgency_critical]
-    background = "#20202a"
+    background = "#111217"
     foreground = "#ffffff"
     frame_color = "#ff5555"
     timeout = 9

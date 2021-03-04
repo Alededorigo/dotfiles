@@ -5,7 +5,7 @@
 	aa    = "add --all"
 	s     = "status"
 	c     = "commit -m"
-    cc    = "clone"
+        cc    = "clone"
 	pp    = "pull"
 	p     = "push"
 [user]

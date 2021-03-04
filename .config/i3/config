@@ -5,7 +5,7 @@
 # Use super as modifier
 set $mod Mod4
 # Use Kitty as terminal
-set $ter st
+set $ter gnome-terminal
 font pango: Fira Code 11px
 
 # Volume and brightness keybinds
@@ -110,8 +110,8 @@ mode "resize" {
 #
 bindsym $mod+r mode "resize"
 # Gaps around windows
-gaps inner 13
-gaps outer 11
+gaps inner 10
+gaps outer 14
 # Rounded corners
 border_radius 0
 
@@ -126,11 +126,10 @@ bindsym $mod+Shift+e exit
 bindsym $mod+x exec flameshot gui
 bindsym $mod+Shift+p exec rofi -show p -modi p:rofi-power-menu -width 20 -lines 5
 bindsym $mod+space exec rofi -display-run "$" -show run -lines 5
-bindsym $mod+w exec bash ~/.scripts/panel
+#bindsym $mod+w exec bash ~/.scripts/panel
 bindsym $mod+Return exec $ter
 bindsym $mod+c kill
 bindsym $mod+Ctrl+q focus parent,kill
-bindsym $mod+q mode "$music_control"
 #bindsym $mod+x exec ksnip
 # Exec at login
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -138,29 +137,24 @@ exec /usr/bin/cbatticon -i standard -l 20
 exec_always /usr/bin/xsettingsd &
 exec $ter
 # Remove borders
+
+for_window [class=".*"] title_format "<span font='Tewi 18'> </span>"
 for_window [class="^.*"] border pixel 2
 for_window [class="Nitrogen"] floating enable
 for_window [class="Firefox"] move to workspace $ws2
 for_window [class="discord"] move to workspace $ws4
 for_window [class="TelegramDesktop"] move to workspace $ws2
+for_window [class="TelegramDesktop"] floating disable
+for_window [class="Firefox"] floating disable
 for_window [class="Code"] move to workspace $ws3
 for_window [class="URxvt"] floating enable
 for_window [class="File-roller"] floating enable
 # Exec always
+exec_always ~/.config/polybar/launch.sh
 exec_always /usr/bin/dunst &
-exec_always /usr/bin/picom --config ~/.config/picom.conf &
 exec_always /usr/bin/unclutter &
 exec_always /usr/bin/nitrogen --restore &
 # exec_always feh --bg-fill ~/Pictures/walls/leave2.jpg
 #
 # Remove auto focus on windows
 focus_follows_mouse no
-
-mode "$music_control" {
-        bindsym n      exec "mocp --next"
-        bindsym p      exec "mocp --previous"
-        bindsym space  exec "mocp --toggle-pause"
-        bindsym q      mode "default"
-        bindsym Enter  mode "default"
-        bindsym Escape mode "default"
-}

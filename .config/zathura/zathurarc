@@ -2,41 +2,54 @@
 
 # Window
 set window-title-home-tilde true
-set window-height 700
-set window-width 1000
 set statusbar-h-padding 50
 set statusbar-v-padding 10
-set highlight-transparency 0.7
 set page-padding 0 # This is the padding between pages. Set 0 to delete it.
-set window-title-basename true
+set font mplus Nerd Fonts Mono 10
 
-# Font
-set font Fira Code 10
-
-# Style
+# Status
 set n-completion-items 10
+set completion-bg           "#111217"
+set completion-fg           "#ba8991"
+set completion-group-bg     "#111217"
+set completion-group-fg     "#ffffff"
+set completion-highlight-bg "#ba8991"
+set completion-highlight-fg "#111217"
 
-set completion-bg #111217
-set completion-fg #ba8991
-set completion-group-bg #111217
-set completion-group-fg #ffffff
-set completion-highlight-bg #ba8991
-set completion-highlight-fg #111217
+# Noti
+set notification-error-bg   "#ff5555"
+set notification-error-fg   "#111217"
+set notification-warning-bg "#111217"
+set notification-warning-fg "#ffffff"
+set notification-bg         "#111217"
+set notification-fg         "#ffffff"
 
-set default-fg #ffffff
-set default-bg #111217
+# Index
+set index-bg                "#111217"
+set index-fg                "#ffffff"
+set index-active-bg         "#111217"
+set index-active-fg         "#ffffff"
 
-set inputbar-bg #111217
-set inputbar-fg #ffffff
+# Default
+set default-fg              "#ffffff"
+set default-bg              "#111217"
 
-set show-v-scrollbar false
-
-set statusbar-bg #111217
-set statusbar-fg #ffffff
+# Input & status
+set inputbar-bg             "#111217"
+set inputbar-fg             "#ffffff"
+set statusbar-bg            "#ba8991"
+set statusbar-fg            "#111217"
 set statusbar-home-tilde true
 
-set highlight-color #111217
-set highlight-active-color #ba8991
-set highlight-transparency 0.4
+# Render & highlight
+set render-loading-bg       "#111217"
+set render-loading-fg       "#ffffff"
+set render-loading          true
+set highlight-color         "#111217"
+set highlight-active-color  "#ba8991"
+set highlight-transparency  0.4
 
+# Recolor PDF
 set recolor true
+set recolor-darkcolor       "#ffffff"
+set recolor-lightcolor      "#111217"

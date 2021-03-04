@@ -3,7 +3,7 @@
 [[ $- != *i* ]] && return
 
 # Theme
-PS1="\[\e[1;31m\]\w \[\e[m\]"
+PS1="\[\e[1;31m\]\w\[\e[1;36m\] 六 \[\e[m\]"
 
 # Extract alias
 ex ()
@@ -33,22 +33,26 @@ ex ()
 
 # Misc
 alias ls="ls -a --group-directories-first --color=auto"
-alias ll="ls -alF"
+alias ll="ls -algF --group-directories-first --color=auto"
 alias l.='ls -a | grep "^."'
 alias ..="cd .."
 alias .2="cd ../.."
 alias .3="cd ../../.."
-alias vi="vim"
+alias vi="nvim"
 alias cp="cp -i"
 alias wg="wordgrinder"
 alias fm="vifm"
-alias rec="ffmpeg -s 1920x1080 -f x11grab -i :0"
+alias rec="ffmpeg -s 1920x1080 -f x11grab -i :1"
 alias lum="xrandr --output eDP-1 --brightness"
 alias note="cd ~/notes/ && exa -lah"
 alias or="bash ~/.scripts/or"
 alias rc="ranger $HOME"
 alias xprop="xprop | grep CLASS"
-alias yay="paru"
+alias yt="ytfzf -t"
+export MANPAGER="sh -c 'bat -l man -p'"
+
+# Replacements
+alias cat="bat"
 
 # Typing errors
 alias dc="cd"
@@ -61,7 +65,7 @@ alias grep='grep --color=auto'
 alias gitc="source ~/.scripts/github.sh"
 
 # Curl web apps
-alias weather="curl http://wttr.in/city"
+alias weather="curl http://wttr.in/your-city-here"
 alias myp="curl ifconfig.co"
 alias somenews="curl getnews.tech"
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
