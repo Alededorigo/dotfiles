@@ -7,8 +7,12 @@ super + Return
 	st
 
 # program launcher
-super + @space
-	rofi -display-run "$" -show run -lines 5
+#super + @space
+super + p
+    ~/.scripts/rofilaunch.sh
+
+super + space
+    rofi -modi TODO:~/.config/rofi/scripts/todo.sh -show TODO -lines 5
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -26,12 +30,6 @@ XF86AudioMute
 XF86AudioMicMute
     pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-XF86MonBrightnessUp
-    xrandr --output eDP-1 --brightness 1
-
-XF86MonBrightnessDown
-    xrandr --output eDP-1 --brightness 0.5
-
 XF86AudioPlay
     mocp --toggle-pause
 
@@ -43,6 +41,18 @@ XF86AudioNext
 
 XF86AudioPrev
     mocp --previous
+
+XF86MonBrightnessUp
+    brightnessctl s +2%
+
+XF86MonBrightnessDown
+    brightnessctl s 2-%
+
+super + x
+    flameshot gui
+
+super + shift + l
+    slock
 
 #
 # bspwm hotkeys
