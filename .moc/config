@@ -488,7 +488,7 @@ Theme = ad_theme
 #             you will have to use the TAB key to make the playlist
 #             visible.)
 #
-# Example:    Layout1 = playlist(0,0,100%,10):directory(0,10,100%,FILL)
+Layout1 = playlist(0,0,100%,12):directory(0,10,100%,FILL)
 #
 #             The screen is split into two parts: playlist at the top
 #             and the directory menu at the bottom.  Playlist will
