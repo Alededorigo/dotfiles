@@ -1,0 +1,226 @@
+; ~/.config/polybar/config.ini
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[colors]
+bg = #111217
+bga = #20242a
+bgaa = #2e333a
+ac = #ba8991
+
+[bar/example]
+width = 1899
+height = 35
+
+offset-x = 11
+offset-y = 10
+
+fixed-center = true
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+line-size = 3
+line-color = #f00
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 0
+
+border-size = 2
+border-color = ${colors.bga}
+
+font-0 = mplus Nerd Font Mono:size=10;2
+font-1 = Font Awesome:style=icons:antialias=true:size=10;2
+font-2 = mplus Nerd Font:style=Regular:size=10;2
+font-3 = icomoon\-feather:size=10;1
+
+modules-left = launcher bspwm
+modules-right = alsa cpu memory battery date off
+
+; I don't like the systray. Remove comments if you do.
+; tray-position = center
+; tray-padding = 2
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+; ===============================
+; Launcher
+[module/launcher]
+type = custom/text
+content = 十
+
+content-background = ${colors.bg}
+content-foreground = #ffffff
+content-padding = 2
+
+click-left = ~/.scripts/rofilaunch.sh &
+click-right = ~/.local/bin/networkmanager_dmenu
+
+[module/off]
+type = custom/text
+content = 出
+
+content-background = ${colors.bga}
+content-foreground = #ffffff
+content-padding = 2
+
+click-left = rofi -show p -modi p:rofi-power-menu -width 20 -lines 5 &
+
+;------ BSPWM -----;
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+
+inline-mode = false
+
+
+enable-click = true
+
+enable-scroll = true
+
+reverse-scroll = true
+
+fuzzy-match = false
+
+ws-icon-0 = 1;一
+ws-icon-1 = 2;二
+ws-icon-2 = 3;三
+ws-icon-3 = 4;四
+ws-icon-4 = 5;五
+ws-icon-5 = 6;六
+ws-icon-6 = 7;七
+ws-icon-default = 十:w
+
+
+format = <label-state> <label-mode>
+format-background = ${colors.ac}
+;format-underline = #111217
+;format-overline = #111217
+
+label-monitor = %name%
+
+label-dimmed-foreground = #555
+label-dimmed-padding = 2
+label-dimmed-focused-background = #f00
+
+label-focused = %icon%
+label-focused-padding = 2
+label-focused-foreground = #ffffff
+label-focused-background = ${colors.bga}
+label-focused-border-color = #20242a
+
+label-occupied = %icon%
+label-occupied-padding = 2
+label-occupied-foreground = #ffffff
+label-occupied-background = ${colors.bg}
+
+label-urgent = %icon%
+label-urgent-padding = 2
+label-urgent-foreground = #ffffff
+label-urgent-background = ${colors.bg}
+
+label-empty = %icon%
+label-empty-padding = 2
+label-empty-foreground = #ffffff
+label-empty-background = ${colors.bg}
+
+; The following labels will be used to indicate the layout/mode
+; for the focused workspace. Requires <label-mode>
+;
+; Available tokens:
+;   None
+;label-monocle = 
+;label-tiled = 
+;label-fullscreen = 
+;label-floating = 
+;label-pseudotiled = P
+;label-locked = 
+;label-locked-foreground = #bd2c40
+;label-sticky = 
+;label-sticky-foreground = #fba922
+;label-private = 
+;label-private-foreground = #bd2c40
+
+; Separator in between workspaces
+;;label-separator = |
+;;label-separator-padding = 2
+;;label-separator-foreground = #ffb52a
+
+
+;------ DATE ------;
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = "%d  %m   %Y"
+
+time = "%H:%M"
+
+format-foreground = #ffffff
+format-background = ${colors.bg}
+format-padding = 2
+
+label = %time%
+
+
+;------ BATTERY ------;
+
+
+[module/battery]
+type = internal/battery
+
+full-at = 99
+battery = BAT0
+adapter = ADP1
+poll-interval = 5
+
+format-charging = <animation-charging> <label-charging>
+format-charging-background = ${color.shade5}
+format-charging-padding = 2
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-background = ${color.shade5}
+format-discharging-padding = 2
+
+format-full = <label-full>
+format-full-prefix = " "
+format-full-background = ${color.shade5}
+format-full-padding = 2
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+
+animation-charging-framerate = 750
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
