@@ -1,0 +1,43 @@
+*{
+    font-family: 'Fira Mono', monospace;
+    font-size: 20px;
+}
+
+body{
+    background: #111217;
+    display: grid;
+    place-items: center;
+    height: 98vh;
+}
+
+.row{
+    width: auto;
+    border: 4px solid #20242a;
+    display: flex;
+    padding: 20px;
+}
+
+.row .column{
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+}
+
+.row .column #title{
+    color: #ba8991;
+}
+
+.row .column a{
+    color: #8ca0aa;
+    text-decoration: none;
+    border: 2px solid #111217;
+    padding: 10px 10px;
+    outline: none;
+}
+
+.row .column a:hover{
+    background: #20242a;
+    border: 2px solid #20242a;
+    color: #ba8991;
+    text-decoration: underline;
+}
