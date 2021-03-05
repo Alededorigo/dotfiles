@@ -49,7 +49,7 @@ XF86MonBrightnessDown
     brightnessctl s 2-%
 
 super + x
-    flameshot gui
+    bash ~/.config/rofi/scripts/screenshot.sh
 
 super + shift + l
     slock
