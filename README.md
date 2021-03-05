@@ -15,17 +15,17 @@ In every file there is its path.
 
 * Shell: Bash
 
-* Window Manager: [Xmonad](https://xmonad.org/)
+* Window Manager: Bspwm
 
 * Display Manager: SLiM
 
-* Browser with [Minimal-functional-fox theme](https://github.com/mut-ex/minimal-functional-fox) (and some customizations)
+* Browser: Firefox with [Minimal-functional-fox theme](https://github.com/mut-ex/minimal-functional-fox) (and some customizations)
 
-* File manager: Thunar, Ranger
+* File manager: Ranger
 
 * Terminal emulator: [st](https://st.suckless.org/)
 
-* Text editor: Vim
+* Text editor: (n)vim
 
 * Launcher: Rofi
 
