@@ -9,8 +9,6 @@ In every file there is its path.
 
 <br>
 
-### <h1 align="left">Table of Contents</h1>
-
 * OS: [Arch](https://archlinux.org/)
 
 * Shell: Bash
