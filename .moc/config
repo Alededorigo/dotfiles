@@ -26,7 +26,7 @@
 #
 # So, for example:
 #
-#     MusicDir = /music/${USER:-public}
+MusicDir = ~/Music
 #     Fastdir1 = ${MusicDir}/mp3/rock
 #     Fastdir2 = ${MusicDir}/mp3/electronic
 #     Fastdir3 = ${MusicDir}/mp3/rap
@@ -488,14 +488,14 @@ Theme = ad_theme
 #             you will have to use the TAB key to make the playlist
 #             visible.)
 #
-Layout1 = playlist(0,0,100%,12):directory(0,10,100%,FILL)
+# Layout1 = directory(0,10,100%,FILL)
 #
 #             The screen is split into two parts: playlist at the top
 #             and the directory menu at the bottom.  Playlist will
 #             occupy 10 lines and the directory menu the rest.
 #
 #Layout1 = directory(0,0,50%,100%):playlist(50%,0,FILL,100%)
-#Layout2 = directory(0,0,100%,100%):playlist(0,0,100%,100%)
+Layout1 = directory(0,0,100%,100%):playlist(0,0,100%,100%)
 #Layout3 = ""
 
 # When the song changes, should the menu be scrolled so that the currently
