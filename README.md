@@ -189,7 +189,7 @@ sudo apt-get update
 sudo apt install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser vim nvim emacs nitrogen
 ```
 
-### `[Bspwm](https://github.com/baskerville/bspwm/)` & `sxhkd`
+### [`Bspwm`](https://github.com/baskerville/bspwm/) & `sxhkd`
 > Dependencies
 ```sh
 sudo apt install libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev
