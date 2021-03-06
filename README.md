@@ -199,7 +199,7 @@ sudo apt install libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb
 git clone https://github.com/baskerville/bspwm.git
 git clone https://github.com/baskerville/sxhkd.git
 cd bspwm && make && sudo make install
-cd ../sxhkd && make && sudo make install2
+cd ../sxhkd && make && sudo make install
 ```
 
 ### Compositor manager (Picom)
