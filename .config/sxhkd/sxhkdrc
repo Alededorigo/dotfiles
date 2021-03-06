@@ -48,7 +48,7 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     brightnessctl s 2-%
 
-super + x
+super + Print
     bash ~/.config/rofi/scripts/screenshot.sh
 
 super + shift + l
