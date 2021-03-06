@@ -48,8 +48,11 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     brightnessctl s 2-%
 
-super + Print
+Print
     bash ~/.config/rofi/scripts/screenshot.sh
+
+super + F12
+    ~/.local/bin/networkmanager_dmenu
 
 super + shift + l
     slock
