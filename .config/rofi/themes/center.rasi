@@ -22,7 +22,7 @@ prompt {
   border: 0 2px 0 0;
   //border-radius: 10px;
   background: #20242a;
-  color: #ba8991;
+  color: #79a6a8;
 }
 
 textbox {

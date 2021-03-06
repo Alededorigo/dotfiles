@@ -2,8 +2,19 @@
 
 [[ $- != *i* ]] && return
 
+# Colors:
+
+# 0 - black
+# 1 - red
+# 2 - green
+# 3 - yellow
+# 4 - blue
+# 5 - purple
+# 6 - cyan
+# 7 - white
+
 # Theme
-PS1="\[\e[1;31m\]\w\[\e[1;36m\] 六 \[\e[m\]"
+PS1="\[\e[1;36m\]\w\[\e[1;32m\] 六 \[\e[m\]"
 
 # Extract alias
 ex ()
