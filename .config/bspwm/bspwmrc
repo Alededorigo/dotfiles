@@ -6,13 +6,14 @@
 bspc monitor -d 1 2 3 4 5 6 7
 
 # --- AUTOSTART --- #
-sxhkd &
-nitrogen --restore &
+/usr/local/bin/sxhkd &
+/usr/bin/nitrogen --restore &
 ~/.scripts/while.sh &
-unclutter &
-bash .config/polybar/launch.sh &
-setxkbmap -layout us &
-xsettingsd &
+/usr/bin/unclutter &
+~/.config/polybar/launch.sh &
+/usr/bin/setxkbmap -layout us &
+/usr/bin/xsettingsd &
+/usr/bin/dunst &
 
 # --- LAYOUT --- #
 bspc config border_width                  2

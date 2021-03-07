@@ -60,6 +60,7 @@ alias or="bash ~/.scripts/or"
 alias rc="ranger $HOME"
 alias xprop="xprop | grep CLASS"
 alias yt="ytfzf -t"
+alias sudo="doas"
 export MANPAGER="sh -c 'bat -l man -p'"
 
 # Replacements
