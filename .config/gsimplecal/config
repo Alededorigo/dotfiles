@@ -1,0 +1,4 @@
+mark_today = 1
+show_week_numbers = 0
+close_on_unfocus = 1
+force_lang = en_US.utf8
