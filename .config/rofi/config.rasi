@@ -3,7 +3,7 @@
 configuration {
     modi: "window,去:~/.config/rofi/scripts/todo.sh";
     show-icons: false;
-    font: "mplus Nerd Font Mono 12";
+    font: "mplus Nerd Font Mono 13";
     hide-scrollbar: true;
     theme: "center";
     display-window: "手";
