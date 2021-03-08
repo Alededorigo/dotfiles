@@ -62,9 +62,9 @@ rsync -axvHPAX --exclude '.git*' .* ~/
 
 # Color scheme
 | COLOR            | HEX       |
-| :-------------   | :-------: |
+| :-------------   | :-------- |
 | Black/background | #111217   |
-| White/foreground | #ffffff   |
+| White/foreground | #ffffff      |
 | Red/accent       | #ba8991   |
 | Green            | #80bf7a   |
 | Yellow           | #e0c84e   |
