@@ -61,16 +61,16 @@ rsync -axvHPAX --exclude '.git*' .* ~/
 </details>
 
 # Color scheme
-| COLOR            | HEX       |
-| :-------------   | :-------: |
-| Black/background | #111217   |
-| White/foreground | #ffffff   |
-| Red/accent       | #ba8991   |
-| Green            | #80bf7a   |
-| Yellow           | #e0c84e   |
-| Blue             | #79a6a8   |
-| Magenta          | #9c96bc   |
-| Grey             | #20242a   |
+| COLOR            | HEX       | PREVIEW  |
+| :-------------   | :-------- | -------: |
+| Black/background | <p style="background: #111217">#111217</p>   | |
+| White/foreground | #ffffff      | |
+| Red/accent       | <p style="background: #111217">#ba8991</p>   | |
+| Green            | #80bf7a   | |
+| Yellow           | #e0c84e   | |
+| Blue             | #79a6a8   | |
+| Magenta          | #9c96bc   | |
+| Grey             | #20242a   | |
 
 ### <h1 align="center">Table of Contents</h1>
 * [Dependencies](https://github.com/Alededorigo/dotfiles#dependencies)
