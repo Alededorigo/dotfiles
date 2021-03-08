@@ -289,21 +289,6 @@ Clone [this](https://github.com/Alededorigo/dotfiles) repository and copy [bspwm
 For bspwm i use a custom color scheme called [Gruvbox](https://github.com/morhetz/gruvbox), so i changed some colors on the polybar config.
 Simply sostitute the classic [config](https://github.com/alededorigo/dotfiles/tree/main/.config/polybar/config) with [bspwm-config](https://github.com/alededorigo/dotfiles/tree/main/.config/polybar/config-bspwm). Then rename that file in "config".
 
-#### Polybar
-First create a directory named scripts in .config/polybar
-```sh
-mkdir ~/.config/polybar/scripts
-```
-For every polybar file you need to give it permissions:
-```sh
-chmod +x ~/.config/polybar/config
-chmod +x ~/.config/polybar/launch.sh
-chmod +x ~/.config/polybar/herbstluftwm.sh
-chmod +x ~/.config/polybar/scripts/env.sh
-chmod +x ~/.config/polybar/scripts/redshift.sh
-```
-I use polybar for [bspwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/bspwm), [herbstluftwm](https://github.com/Alededorigo/dotfiles/tree/main/.config/herbstluftw).
-
 #### DuckDuckGo
 Open [this](https://duckduckgo.com/?kae=t&ks=m&kw=s&ku=1&kt=Fira+Code&km=l&k7=171a1f&kj=171a1f&k9=53e2ae&kaa=985eff&k21=171a1f&k8=ffffff&kx=985eff) URL.
 
