@@ -1,0 +1,39 @@
+// ~/.config/rofi/themes/scr.rasi
+
+* {
+  font: "Comfortaa 23";
+}
+
+#window {
+  width: 205px;
+  height: 87px;
+  border: 4px;
+  border-color: #20242a;
+  location: center;
+
+  children: [ horibox ];
+}
+
+* {
+  background-color: #111217;
+  text-color: #ffffff;
+}
+
+#horibox {
+  children: [ listview ];
+}
+
+#listview {
+  layout: horizontal;
+  lines: 3;
+}
+
+#element {
+  background-color: #111217;
+  padding: 21px 19px 22px 21px;
+}
+
+#element.selected {
+  background-color: #20242a;
+  color: #ba8991;
+}

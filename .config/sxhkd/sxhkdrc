@@ -1,69 +1,65 @@
-#
-# wm independent hotkeys
-#
+# ~/.config/sxhkd/sxhkdrc
 
-# terminal emulator
+# Terminal (st)
 super + Return
 	st
 
-# program launcher
-#super + @space
+# Trigger rofi launch script
 super + p
     ~/.scripts/rofilaunch.sh
 
-# make sxhkd reload its configuration files:
+# Make sxhkd reload its configuration file
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# Volume and media keys
+
 XF86AudioRaiseVolume
     bash ~/.scripts/volume.sh -u
-
 XF86AudioLowerVolume
     bash ~/.scripts/volume.sh -d
 
 XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle
-
 XF86AudioMicMute
     pactl set-source-mute @DEFAULT_SOURCE@ toggle
-
 XF86AudioPlay
     mocp --toggle-pause
-
 XF86AudioPause
     mocp --toggle-pause
-
 XF86AudioNext
     mocp --next
-
 XF86AudioPrev
     mocp --previous
 
+# Brightness keys
+
 XF86MonBrightnessUp
     brightnessctl s +2%
-
 XF86MonBrightnessDown
     brightnessctl s 2-%
 
+# Screenshot script
 Print
     bash ~/.config/rofi/scripts/screenshot.sh
 
+# Network script
 super + F12
     ~/.local/bin/networkmanager_dmenu
 
+# Lock screen
 super + shift + l
     slock
 
-#
-# bspwm hotkeys
-#
 
-# quit/restart bspwm
+# Bspwwm
+
+# Quit or Reload
 super + alt + {q,r}
 	bspc {quit,wm -r}
 
-# close and kill
-super + q
+# Close software
+super + c
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -103,7 +99,7 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
+super + {_,shift + }q
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
