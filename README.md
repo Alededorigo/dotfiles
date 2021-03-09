@@ -52,7 +52,7 @@ Be careful. </blockquote>
 git clone https://github.com/alededorigo/dotfiles
 cd dotfiles
 # Exclude .git directory.
-rsync -axvHPAX --exclude '.git*' .* ~/
+rsync -axvHPAX --exclude={'.git*','LICENCE','README.md'} .* ~/
 ```
 
 <details >
