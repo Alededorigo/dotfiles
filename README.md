@@ -49,7 +49,8 @@ First install all the [dependencies](#dependencies)
 Be careful. </blockquote>
 
 ```bash
-git clone https://github.com/alededorigo/dotfiles && cd dotfiles
+git clone https://github.com/alededorigo/dotfiles
+cd dotfiles
 # Exclude .git directory.
 rsync -axvHPAX --exclude '.git*' .* ~/
 ```
