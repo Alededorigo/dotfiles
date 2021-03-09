@@ -35,9 +35,9 @@ XF86AudioPrev
 # Brightness keys
 
 XF86MonBrightnessUp
-    brightnessctl s +2%
+    ~/.scripts/brightness.sh -u
 XF86MonBrightnessDown
-    brightnessctl s 2-%
+    ~/.scripts/brightness.sh -d
 
 # Screenshot script
 Print
