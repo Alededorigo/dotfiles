@@ -9,11 +9,11 @@ In every file there is its path.
 
 <br>
 
-* OS: [Arch](https://archlinux.org/)
+* OS: [Artix](https://artixlinux.org/)
 
 * Shell: Bash
 
-* Window Manager: Bspwm
+* Window Manager: Herbstluftwm
 
 * Display Manager: SLiM
 
