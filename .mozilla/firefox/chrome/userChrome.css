@@ -8,20 +8,20 @@
   --mff-sidebar-color: #e0fbfc;
   --mff-tab-border-radius: 0px;
   --mff-tab-color: #fefefa;
-  --mff-tab-font-family: "Fira Code", monospace;
+  --mff-tab-font-family: "mplus Nerd Font Mono", monospace;
   --mff-tab-font-size: 11pt;
   --mff-tab-font-weight: 400;
   --mff-tab-height: 32px;
   --mff-tab-pinned-bg: #70c1b3;
-  --mff-tab-selected-bg: #7ba5b5;
+  --mff-tab-selected-bg: #20242a;
   --mff-tab-soundplaying-bg: #9c89b8;
   --mff-urlbar-color: #ffffff;
   --mff-urlbar-focused-color: #e0fbfc;
-  --mff-urlbar-font-family: "Fira", monospace;
+  --mff-urlbar-font-family: "mplus Nerd Font Mono", monospace;
   --mff-urlbar-font-size: 12pt;
   --mff-urlbar-font-weight: 700;
   --mff-urlbar-results-color: #e0fbfc;
-  --mff-urlbar-results-font-family: "Fira Code", monospace;
+  --mff-urlbar-results-font-family: "mplus Nerd Font Mono", monospace;
   --mff-urlbar-results-font-size: 12pt;
   --mff-urlbar-results-font-weight: 700;
   --mff-urlbar-results-url-color: #ffffff;
@@ -52,7 +52,6 @@
 
 .tab-background[selected="true"] {
   background: var(--mff-tab-selected-bg) !important;
-  border-radius: 5px;
 }
 
 .tab-background:not[visuallyselected] {
