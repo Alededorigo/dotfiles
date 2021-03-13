@@ -1,0 +1,20 @@
+#!/bin/bash
+
+hc() {
+    herbstclient "$@"
+}
+
+case $1 in
+    -d)
+        hc split bottom 0.6
+        hc set window_gap 0
+    ;;
+    -u)
+        hc split right 0.5
+        hc set window_gap 0
+    ;;
+    -r)
+        hc remove
+        hc set window_gap 15
+    ;;
+esac
