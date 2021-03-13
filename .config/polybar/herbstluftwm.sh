@@ -1,42 +1,41 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-hash herbstclient xrandr
+herbstclient --idle "tag_*" 2>/dev/null | {
 
-print_tags() {
-	for tag in $(herbstclient tag_status "$1"); do
-		name=${tag#?}
-		state=${tag%$name}
-		case "$state" in
-		'#')
-			printf '%%{F#88c0d0} %s %%{F#eceff4}' "$name"
-			;;
-		'+')
-			printf '%%{F#eceff4}' "$name"
-			;;
-		'!')
-			printf '%%{R} %s! %%{R}' "$name"
-			;;
-		'.')
-			printf '%%{F#555555} %s %%{F-}' "$name"
-			;;
-		*)
-			printf ' %s ' "$name"
-		esac
-	done
-	printf '\n'
-}
+    while true; do
+        IFS=$'\t' read -ra tags <<< "$(herbstclient tag_status)"
+        {
+            for i in "${tags[@]}" ; do
+                case ${i:0:1} in
+                    '#')
+                            # Focus
+			    echo "%{F#ffffff}%{B#20242a} "
+                        ;;
+                    ':')
+                            # Not empty
+			    echo "%{F#ffffff} "
+                        ;;
+                    '!')
+                            # Urgent
+			    echo "%{F#ffffff} "
+                        ;;
+                    '-')
+                            # Focus on another monitor
+			    echo "%{F#ffffff} "
+                        ;;
+                    *)
+                        # Empty
+                        echo "%{F#ffffff} "
+                        ;;
+                esac
+                
+                echo " ${i:1} %{A -u -o F- B-}"
+            done
 
-geom_regex='[[:digit:]]\+x[[:digit:]]\++[[:digit:]]\++[[:digit:]]\+'
-geom=$(xrandr --query | grep "^$MONITOR" | grep -o "$geom_regex")
-monitor=$(herbstclient list_monitors | grep "$geom" | cut -d: -f1)
+        } | tr -d "\n"
 
-print_tags "$monitor"
+    echo
 
-IFS="$(printf '\t')" herbstclient --idle | while read -r hook args; do
-	case "$hook" in
-	tag*)
-		print_tags "$monitor"
-		;;
-	esac
+    read -r || break
 done
-
+} 2>/dev/null
