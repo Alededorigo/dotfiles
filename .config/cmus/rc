@@ -1,0 +1,33 @@
+# Work with alsa
+set output_plugin=alsa
+set dsp.alsa.device=default
+set mixer.alsa.device=default
+set mixer.alsa.channel=Master
+
+# Disable `mpris`
+set mpris=false
+
+# Colors 
+set color_cmdline_bg=0
+set color_cmdline_fg=7
+set color_error=1
+set color_info=7
+set color_separator=6
+set color_statusline_bg=0
+set color_statusline_fg=7
+set color_titleline_bg=0
+set color_titleline_fg=7
+set color_win_bg=0
+set color_win_cur=6
+set color_win_cur_sel_bg=0
+set color_win_cur_sel_fg=2
+set color_win_dir=0
+set color_win_fg=7
+set color_win_inactive_cur_sel_bg=0
+set color_win_inactive_cur_sel_fg=2
+set color_win_inactive_sel_bg=0
+set color_win_inactive_sel_fg=2
+set color_win_sel_bg=0
+set color_win_sel_fg=2
+set color_win_title_bg=0
+set color_win_title_fg=7
