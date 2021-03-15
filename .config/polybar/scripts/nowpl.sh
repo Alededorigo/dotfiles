@@ -4,7 +4,7 @@ SONG=$(mocp -i | grep [Ff]ile | sed "s/[Ff]ile: \/home\/$USER\/Music\///" | sed 
 
 case $SONG in
     "")
-        echo "Nothinh playing"
+        echo "Nothing playing"
     ;;
     *)
         echo $SONG
