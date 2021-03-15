@@ -13,7 +13,7 @@ In every file there is its path.
 
 * Shell: Bash
 
-* Window Manager: Herbstluftwm
+* Window Manager: Bspwm
 
 * Display Manager: SLiM
 
@@ -65,7 +65,7 @@ rsync -axvHPAX --exclude={'.git*','LICENCE','README.md'} .* ~/
 | COLOR            | HEX       |
 | :-------------   | :-------- |
 | Black/background | #111217   |
-| White/foreground | #ffffff      |
+| White/foreground | #ffffff   |
 | Red/accent       | #ba8991   |
 | Green            | #80bf7a   |
 | Yellow           | #e0c84e   |
