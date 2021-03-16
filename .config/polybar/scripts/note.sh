@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NOTE=$(cat ~/.config/rofi/scripts/todos | head -n 1)
+source ~/.config/VARS
 
 case $NOTE in
     "")
