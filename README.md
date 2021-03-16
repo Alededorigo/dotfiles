@@ -80,7 +80,7 @@ rsync -axvHPAX --exclude={'.git*','LICENCE','README.md'} .* ~/
 ###### <h2 align="center">Debian/Ubuntu</h2>
 ```sh
 sudo apt-get update
-sudo apt install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser vim nvim emacs nitrogen
+sudo apt install i3 rofi dmenu i3status kitty herbstluftwm xmonad xmonad-contrib i3blocks dunst rxvt-unicode qutebrowser vim neovim emacs nitrogen moc firefox zsh git htop mpv pcmanfm slock thunar zathura
 ```
 
 ### [`Bspwm`](https://github.com/baskerville/bspwm/) & `sxhkd`
@@ -131,9 +131,9 @@ ninja -C build
 
 ###### <h2 align="center">Arch</h2>
 ```sh
-sudo pacman -S i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar yabar dunst xterm qutebrowser bspwm vim nvim emacs
+sudo pacman -S rofi dmenu i3status kitty herbstluftwm xmonad xmonad-contrib i3blocks dunst rxvt-unicode qutebrowser vim neovim emacs nitrogen moc firefox zsh git htop mpv pcmanfm slock thunar zathura zathura-pdf-poppler
 # Make sure yay is your AUR helper
-yay -S polybar picom
+yay -S polybar picom i3-gaps-rounded-git
 ```
 
 <br>

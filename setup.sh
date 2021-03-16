@@ -34,9 +34,9 @@ clone() {
 # clone
 
 echo -e "Choose your distribution"
-echo -e "$blue(1) - Arch (Make sure Yay is your AUR helper)"
-echo -e "$red(2) - Debian/Ubuntu"
-echo -e "$GREEN(3) - Fedora/CentOS$reset"
+echo -e "$blue[${white}1$blue]$reset - Arch (Make sure Yay is your AUR helper)"
+echo -e "$blue[${white}2$blue]$reset - Debian/Ubuntu"
+echo -e "$blue[${white}3$blue]$reset - Fedora/CentOS"
 printf "\nYour answer > "
 read -r OS
 echo -e "\n"
@@ -45,7 +45,7 @@ case $OS in
     "1")
         echo -e ""
         echo -e "$GREEN==> Installing dependencies$reset\n"
-        sudo pacman -S rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmonad-contrib xmobar i3blocks lemonbar dunst xterm qutebrowser bspwm vim neovim emacs
+        sudo pacman -S rofi dmenu i3status kitty herbstluftwm xmonad xmonad-contrib i3blocks dunst rxvt-unicode qutebrowser vim neovim emacs nitrogen moc firefox zsh git htop mpv pcmanfm slock thunar zathura zathura-pdf-poppler
         echo -e ""
         echo -e "$GREEN==>  Installing fonts$reset\n"
         sudo pacman -S ttf-fira-code ttf-ibm-plex adobe-source-code-pro-fonts
@@ -58,24 +58,36 @@ case $OS in
 
     "2")
         echo -e ""
-        echo -e "$GREEN==> Adding speed ricer repository$reset\n"
-        sudo add-apt-repository ppa:kgilmer/speed-ricer
-        echo -e ""
         echo -e "$GREEN==> Updating system$reset\n"
         sudo apt-get update
         echo -e ""
         echo -e "$GREEN==> Installing dependencies$reset\n"
-        sudo apt install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar dunst xterm qutebrowser vim neovim emacs
+        sudo apt install i3 rofi dmenu i3status kitty herbstluftwm xmonad xmonad-contrib i3blocks dunst rxvt-unicode qutebrowser vim neovim emacs nitrogen moc firefox zsh git htop mpv pcmanfm slock thunar zathura
         echo -e ""
         echo -e "$GREEN==> Installing picom$reset\n"
-        sudo apt install picom
+        sudo apt install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libpcre3-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
+
+        git clone https://github.com/yshui/picom $HOME/dotfiles_cache/picom && cd $HOME/dotfiles_cache/picom
+        git submodule update --init --recursive
+        meson --buildtype=release . build
+        ninja -C build
+
         echo -e ""
+        echo -e "$GREEN==> Installing bspwm$reset\n"
+        sudo apt install libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev
+
+        cd $HOME/dotfiles_cache/
+        git clone https://github.com/baskerville/bspwm.git $HOME/dotfiles_cache/bspwm
+        git clone https://github.com/baskerville/sxhkd.git $HOME/dotfiles_cache/sxhkd
+        cd bspwm && make && sudo make install
+        cd ../sxhkd && make && sudo make install
+
         echo -e "$GREEN_BOLD==> Done$reset"
     ;;
 
     "3")
         echo -e ""
-        echo -e "$GREENInstalling dependencies$reset\n"
+        echo -e "$GREEN==> Installing dependencies$reset\n"
         sudo dnf install i3-gaps rofi dmenu i3status kitty herbstluftwm spectrwm xmonad xmobar i3blocks lemonbar dunst xterm qutebrowser bspwm vim neovim emacs
         echo -e ""
         echo -e "$GREEN_BOLD==> Done$reset"
