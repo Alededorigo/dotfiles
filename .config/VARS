@@ -13,6 +13,10 @@ MUS_DIR="$HOME/Music/"
 
 BG_COL="#111217"
 FG_COL="#ffffff"
-AC_COL="#7ab8c9"
+AC_COL="#ba8991"
 
-GIT_SCRIPT="$SCRIPTS/github.sh"
+SCRIPTS="$HOME/.scripts"
+GIT_SCRIPT="$SCRIPTS/git"
+
+TODO_FILE=~/.config/rofi/scripts/todos
+NOTE=$(cat $TODO_FILE | tail -n 1)

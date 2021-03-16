@@ -59,8 +59,6 @@ alias note="cd ~/notes/ && exa -lah"
 alias or="bash ~/.scripts/or"
 alias rc="ranger $HOME"
 alias yt="ytfzf -t"
-alias sudo="doas"
-export MANPAGER="sh -c 'bat -l man -p'"
 
 # Replacements
 alias cat="bat"
@@ -82,4 +80,4 @@ alias somenews="curl getnews.tech"
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias parrot="curl parrot.live"
 
-source "$HOME/.config/VARS"
+source $HOME/.config/VARS

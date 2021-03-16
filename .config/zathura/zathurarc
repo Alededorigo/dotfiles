@@ -9,47 +9,47 @@ set font mplus Nerd Fonts Mono 10
 
 # Status
 set n-completion-items 10
-set completion-bg           "#111217"
+set completion-bg           "#0e0e0e"
 set completion-fg           "#ba8991"
-set completion-group-bg     "#111217"
+set completion-group-bg     "#0e0e0e"
 set completion-group-fg     "#ffffff"
 set completion-highlight-bg "#ba8991"
-set completion-highlight-fg "#111217"
+set completion-highlight-fg "#0e0e0e"
 
 # Noti
 set notification-error-bg   "#ff5555"
-set notification-error-fg   "#111217"
-set notification-warning-bg "#111217"
+set notification-error-fg   "#0e0e0e"
+set notification-warning-bg "#0e0e0e"
 set notification-warning-fg "#ffffff"
-set notification-bg         "#111217"
+set notification-bg         "#0e0e0e"
 set notification-fg         "#ffffff"
 
 # Index
-set index-bg                "#111217"
+set index-bg                "#0e0e0e"
 set index-fg                "#ffffff"
-set index-active-bg         "#111217"
+set index-active-bg         "#0e0e0e"
 set index-active-fg         "#ffffff"
 
 # Default
 set default-fg              "#ffffff"
-set default-bg              "#111217"
+set default-bg              "#0e0e0e"
 
 # Input & status
-set inputbar-bg             "#111217"
+set inputbar-bg             "#0e0e0e"
 set inputbar-fg             "#ffffff"
 set statusbar-bg            "#ba8991"
-set statusbar-fg            "#111217"
+set statusbar-fg            "#0e0e0e"
 set statusbar-home-tilde true
 
 # Render & highlight
-set render-loading-bg       "#111217"
+set render-loading-bg       "#0e0e0e"
 set render-loading-fg       "#ffffff"
 set render-loading          true
-set highlight-color         "#111217"
+set highlight-color         "#0e0e0e"
 set highlight-active-color  "#ba8991"
 set highlight-transparency  0.4
 
 # Recolor PDF
 set recolor true
 set recolor-darkcolor       "#ffffff"
-set recolor-lightcolor      "#111217"
+set recolor-lightcolor      "#0e0e0e"
