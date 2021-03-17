@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-rofi_command="rofi -lines 3 -theme apps"
+rofi_command="rofi -lines 3 -theme off"
 
 # Options
 power="Power off"
