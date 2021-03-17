@@ -15,7 +15,7 @@ case $chosen in
     $screen)    
         maim ~/Pics/Shots/$(date +%d-%m-%y-%H:%M).png
         notify-send -i ~/.icons/noti/wall.png "Screenshot" "Saved to ~/Pics/Shots/$(date +%d-%m-%y_%H:%M).png"
-        meh ~/Pics/Shots/$(date +%d-%m-%y-%H:%M).png
+        sxiv ~/Pics/Shots/$(date +%d-%m-%y-%H:%M).png
     ;;
     $area)      
         maim -sqo --nodecorations=1 --color=186,137,145,255 | xclip -selection clipboard -t image/png

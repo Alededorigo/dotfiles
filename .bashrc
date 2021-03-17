@@ -43,8 +43,8 @@ ex ()
 }
 
 # Misc
-alias ls="ls -a --group-directories-first --color=auto"
-alias ll="ls -algF --group-directories-first --color=auto"
+alias ls="ls --group-directories-first --color=auto"
+alias ll="ls -algFh --group-directories-first --color=auto"
 alias l.='ls -a | grep "^."'
 alias ..="cd .."
 alias .2="cd ../.."
