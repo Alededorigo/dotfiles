@@ -88,7 +88,7 @@ case $OS in
     "3")
         echo -e ""
         echo -e "$GREEN==> Installing dependencies$reset\n"
-        sudo dnf install i3 rofi dmenu kitty herbstluftwm spectrwm xmonad xmobar i3blocks dunst xterm qutebrowser bspwm vim neovim emacs
+        sudo dnf install i3 rofi dmenu kitty herbstluftwm spectrwm xmonad xmobar dunst xterm qutebrowser bspwm vim neovim emacs
         echo -e ""
         echo -e "$GREEN_BOLD==> Done$reset"
     ;;
