@@ -7,6 +7,6 @@ case $SONG in
         echo "Nothing playing"
     ;;
     *)
-        echo $SONG
+        echo " $SONG"
     ;;
 esac

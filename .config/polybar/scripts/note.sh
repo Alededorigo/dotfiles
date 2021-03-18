@@ -7,6 +7,6 @@ case $NOTE in
         echo "All done!"
     ;;
     *)
-        echo "Todo: $NOTE"
+        echo "Todo ~ $NOTE"
     ;;
 esac
