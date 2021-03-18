@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Fira Code:pixelsize=13:antialias=true:autohint=true";
-static int borderpx = 15;
+static char *font = "Iosevka:style=Medium Extended:pixelsize=14:antialias=true:autohint=true";
+static int borderpx = 12;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -16,7 +16,7 @@ static int borderpx = 15;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/bash";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -95,24 +95,25 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
+	/* black - red - green - yellow - blue - magenta - cyan */
 	/* 8 normal colors */
-	"#111217",
-	"#ba8991",
-	"#80bf7a",
-	"#e0c84e",
-	"#79a6a8",
-	"#9c96bc",
-	"#3a5059",
-	"#d0d0dc",
+	"#0e0e0e",
+	"#e881a3",
+	"#83efc8",
+	"#ecf76f",
+	"#8ab4fc",
+	"#b088fc",
+	"#6fd5e2",
+	"#ffffff",
 
 	/* 8 bright colors */
-	"#44475a",
-	"#ba8991",
-	"#79aa7a",
-	"#f4ea58",
-	"#7ba5b5",
-	"#9c96bc",
-	"#91b8ba",
+	"#353847",
+	"#dd96ae",
+	"#99ddc4",
+	"#e5ed8e",
+	"#a3beed",
+	"#cfb8f9",
+	"#95d3db",
 	"#ffffff",
 
 	[255] = 0,
@@ -137,7 +138,6 @@ static unsigned int defaultrcs = 257;
  * 2: Block ("█")
  * 4: Underline ("_")
  * 6: Bar ("|")
- * 7: Snowman ("☃")
  */
 static unsigned int cursorshape = 6;
 
