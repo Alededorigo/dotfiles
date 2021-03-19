@@ -1,0 +1,53 @@
+@import "~/.config/rofi/themes/colors.rasi"
+
+* {
+  background-color: @background;
+  border-color: @background-alt;
+  text-color: #8ca0aa;
+  spacing: 0;
+  width: 512px;
+}
+
+#window {
+  //x-offset: -692px;
+  //y-offset: -303px;
+  border: 3px;
+  border-color: @background-alt;
+}
+
+inputbar {
+  //border-radius: 0 0 0 7px;
+  children: [prompt,entry];
+}
+
+prompt {
+  padding: 10px;
+  //border-radius: 10px;
+  background: @background-alt;
+  color: @blue;
+}
+
+textbox {
+  background-color: #2e343f;
+  padding: 8px 16px;
+}
+
+entry {
+  padding: 10px;
+}
+
+listview {
+  cycle: false;
+  margin: 0 0 -1px 0;
+  scrollbar: false;
+  padding: 20px 0;
+}
+
+element {
+  padding: 15px 10px;
+}
+
+element selected {
+  text-decoration: none;
+  color: @red;
+}

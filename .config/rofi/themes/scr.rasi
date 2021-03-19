@@ -1,12 +1,12 @@
 // ~/.config/rofi/themes/scr.rasi
 
 * {
-  font: "Comfortaa 23";
+  font: "mplus Nerd Font Mono 35";
 }
 
 #window {
-  width: 205px;
-  height: 87px;
+  width: 271px;
+  height: 117px;
   border: 4px;
   border-color: #20242a;
   location: center;

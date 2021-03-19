@@ -58,10 +58,13 @@ alias lum="xrandr --output eDP-1 --brightness"
 alias note="cd ~/notes/ && exa -lah"
 alias or="bash ~/.scripts/or"
 alias rc="ranger $HOME"
-alias yt="ytfzf -t"
 
 # Replacements
 alias cat="bat"
+
+# Pacman
+alias pacsyu="sudo pacman -Syu ; notify-send \"Update finished\" \"You should reboot the system\""
+alias pac="sudo pacman"
 
 # Typing errors
 alias dc="cd"

@@ -1,0 +1,49 @@
+@import "~/.config/rofi/themes/colors.rasi"
+
+* {
+    background-color:      @background;
+    border-color:          @background-alt;
+    text-color:            @foreground;
+    font:                  "Iosevka Medium Extended 13";
+}
+
+window {
+    anchor:     north;
+    location:   north;
+    width:      1898px;
+    height:     41px;
+    border:     3px;
+    y-offset:   10px;
+    border-color: @background-alt;
+    padding:    6px;
+    children:   [ horibox ];
+}
+
+horibox {
+    orientation: horizontal;
+    children:   [ prompt, entry, listview ];
+}
+
+prompt {
+    margin: 0 20px 0 10px;
+    color: @blue;
+}
+
+listview {
+    layout:     horizontal;
+    lines:      100;
+}
+
+entry {
+    color:      #989898;
+    expand:     false;
+    width:      10em;
+}
+
+element {
+    margin: 0 20px;
+    color:      #989898;
+}
+element selected {
+    color: @foreground;
+}

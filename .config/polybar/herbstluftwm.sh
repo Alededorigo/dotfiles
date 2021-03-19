@@ -9,7 +9,7 @@ herbstclient --idle "tag_*" 2>/dev/null | {
                 case ${i:0:1} in
                     '#')
                             # Focus
-			    echo "%{F#ffffff}%{B#20242a} "
+			    echo "%{F#ffffff}%{B#232328} "
                         ;;
                     ':')
                             # Not empty
@@ -28,7 +28,7 @@ herbstclient --idle "tag_*" 2>/dev/null | {
                         echo "%{F#ffffff} "
                         ;;
                 esac
-                
+
                 echo " ${i:1} %{A -u -o F- B-}"
             done
 

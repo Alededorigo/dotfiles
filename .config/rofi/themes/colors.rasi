@@ -1,0 +1,10 @@
+* {
+  background:       #0e0e0e;
+  background-alt:   #232328;
+  foreground:       #ffffff;
+  red:              #e881a3;
+  red-alt:          #dd96ae;
+  blue:             #6fd5e2;
+  green:            #83efc8;
+  font:             "Iosevka Medium Extended 13";
+}
