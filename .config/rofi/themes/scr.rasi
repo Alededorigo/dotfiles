@@ -1,3 +1,5 @@
+@import "~/.config/rofi/themes/colors.rasi"
+
 // ~/.config/rofi/themes/scr.rasi
 
 * {
@@ -8,15 +10,15 @@
   width: 271px;
   height: 117px;
   border: 4px;
-  border-color: #20242a;
+  border-color: @background-alt;
   location: center;
 
   children: [ horibox ];
 }
 
 * {
-  background-color: #111217;
-  text-color: #ffffff;
+  background-color: @background;
+  text-color: @foreground;
 }
 
 #horibox {
@@ -29,11 +31,11 @@
 }
 
 #element {
-  background-color: #111217;
+  background-color: @background;
   padding: 21px 19px 22px 21px;
 }
 
 #element.selected {
-  background-color: #20242a;
+  background-color: @background-alt;
   color: #ba8991;
 }

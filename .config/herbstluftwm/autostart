@@ -140,8 +140,8 @@ hc attr theme.background_color $bg
 # Launch: battery script, polybar and some other programs.
 # If a program does not start, run whereis <program>
 ~/.config/polybar/launch.sh
-# /usr/bin/nitrogen --restore &
-/usr/bin/xsetroot -solid '#0e0e0e'
+/usr/bin/nitrogen --restore &
+# /usr/bin/xsetroot -solid '#0e0e0e'
 ~/.scripts/while.sh &
 /usr/bin/unclutter &
 /usr/bin/setxkbmap -layout us &
@@ -149,6 +149,10 @@ hc attr theme.background_color $bg
 /usr/bin/dunst &
 /usr/bin/xsetroot -cursor_name left_ptr
 
+# Start picom only if it is not running
+if ! pgrep picom; then
+    picom -b
+fi
 
 # --- RULES --- #
 hc unrule -F
