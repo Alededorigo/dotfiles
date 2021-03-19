@@ -13,9 +13,9 @@ In every file there is its path.
 
 * Shell: Bash
 
-* Window Manager: Bspwm
+* Window Manager: Herbstluftwm
 
-* Display Manager: SLiM
+* Display Manager: ???
 
 * Browser: Firefox with [Minimal-functional-fox theme](https://github.com/mut-ex/minimal-functional-fox) (and some customizations)
 
