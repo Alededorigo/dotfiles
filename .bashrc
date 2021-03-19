@@ -14,7 +14,7 @@
 # 7 - white
 
 # Theme
-PS1="\[\e[1;36m\]\w\[\e[1;32m\] -> \[\e[m\]"
+PS1="\[\e[1;36m\]\w\[\e[1;32m\] 五 \[\e[m\]"
 
 # Extract alias
 ex ()

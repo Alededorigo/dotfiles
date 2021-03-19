@@ -1,10 +1,10 @@
 * {
   background:       #0e0e0e;
   background-alt:   #232328;
-  foreground:       #ffffff;
-  red:              #e881a3;
-  red-alt:          #dd96ae;
-  blue:             #6fd5e2;
-  green:            #83efc8;
-  font:             "Iosevka Medium Extended 13";
+  foreground:       #f1f1f1;
+  red:              #ad8789;
+  red-alt:          #b79c9d;
+  blue:             #7e7eb5;
+  green:            #85aa86;
+  font:             "Roboto Mono 13";
 }

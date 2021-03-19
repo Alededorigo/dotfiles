@@ -11,7 +11,7 @@ hc keyunbind --all
 
 # - Variables for theming etc.
 bg="#0e0e0e"
-ac="#ba8991"
+ac="#ad8789"
 
 # - Super as mod key
 Mod=Mod4
