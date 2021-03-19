@@ -1,6 +1,6 @@
 background           = black     black
 frame                = black     black
-window_title         = red       black
+window_title         = white     black     underline
 directory            = white     black
 selected_directory   = green     black     bold
 playlist             = white     black
