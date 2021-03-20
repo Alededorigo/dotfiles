@@ -74,7 +74,7 @@ alias gti="git"
 alias grep='grep --color=auto'
 
 # Git
-alias gitc="~/.scripts/git"
+alias gitc="~/dotfiles.sh"
 
 # Curl web apps
 alias weather="curl http://wttr.in/your-city-here"
