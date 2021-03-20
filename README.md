@@ -41,6 +41,15 @@ This script will install dependencies and fonts.
 bash -c "$(wget -qO - https://raw.githubusercontent.com/Alededorigo/dotfiles/main/setup.sh)"
 ```
 
+or
+
+```bash
+git clone https://github.com/alededorigo/dotfiles
+cd dotfiles
+chmod +x setup.sh
+./setup.sh
+```
+
 ### With `rsync`
 <blockquote> This will copy ALL the files in this repo to your home. 
 
