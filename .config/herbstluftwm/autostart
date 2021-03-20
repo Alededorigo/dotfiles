@@ -125,11 +125,11 @@ hc set snap_gap 11
 hc attr theme.active.color $bg
 hc attr theme.normal.color $bg
 hc attr theme.urgent.color $bg
-hc attr theme.inner_width 3
+hc attr theme.inner_width 4
 hc attr theme.inner_color '#232328'
 hc attr theme.border_width 11
 hc attr theme.floating.border_width 11
-hc attr theme.floating.inner_width 3
+hc attr theme.floating.inner_width 4
 hc attr theme.active.inner_color $ac
 hc attr theme.floating.outer_color '#232328'
 hc attr theme.floating.active.color $bg
@@ -150,9 +150,9 @@ hc attr theme.background_color $bg
 /usr/bin/xsetroot -cursor_name left_ptr
 
 # Start picom only if it is not running
-if ! pgrep picom; then
-    picom -b
-fi
+# if ! pgrep picom; then
+#     picom -b
+# fi
 
 # --- RULES --- #
 hc unrule -F

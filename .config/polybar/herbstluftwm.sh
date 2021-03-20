@@ -9,23 +9,23 @@ herbstclient --idle "tag_*" 2>/dev/null | {
                 case ${i:0:1} in
                     '#')
                             # Focus
-			    echo "%{F#ffffff}%{B#232328} "
+			    echo "%{F#f1f1f1}%{B#232328} "
                         ;;
                     ':')
                             # Not empty
-			    echo "%{F#ffffff} "
+			    echo "%{F#f1f1f1} "
                         ;;
                     '!')
                             # Urgent
-			    echo "%{F#ffffff} "
+			    echo "%{F#f1f1f1} "
                         ;;
                     '-')
                             # Focus on another monitor
-			    echo "%{F#ffffff} "
+			    echo "%{F#f1f1f1} "
                         ;;
                     *)
                         # Empty
-                        echo "%{F#ffffff} "
+                        echo "%{F#f1f1f1} "
                         ;;
                 esac
 
