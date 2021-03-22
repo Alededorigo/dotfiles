@@ -1,0 +1,42 @@
+*{
+    font-size: 13px;	
+	font-family: Cantarell;
+	font-weight: bold;
+}
+
+window#waybar{
+	background: rgba(0,0,0,0.4);
+}
+
+#custom-lock{
+	margin: 0 20px;
+}
+
+#battery,
+#network{
+	margin: 0 10px;
+}
+
+#workspaces button{
+	background: transparent;
+	color: #555;
+	transition: none;
+	border: none;
+	margin: 0 -5px;
+}
+
+#workspaces button.focused{
+	background: transparent;
+	color: #fefefe;
+}
+
+#workspaces button:hover {
+	background: transparent;
+    box-shadow: none;
+    border: none;
+    color: #555;
+}
+
+#workspaces button.focused:hover{
+	color: #ffffff;
+}

@@ -1,0 +1,53 @@
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 35, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["custom/lock", "sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["battery", "network", "backlight"],
+    // Modules configuration
+    "sway/workspaces": {
+            "disable-scroll": false,
+            "all-outputs": true,
+            "format": "{name}"
+    },
+    "clock": {
+        "timezone": "Europe/Rome",
+    	"format": "{:%a %m %b   %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+    "network": {
+		"interface": "wlan0",
+		"format": "{ifname}",
+		"format-wifi": "󰖩",
+		"format-ethernet": "{ifname} ",
+		"format-disconnected": "󰖪",
+		"tooltip-format": "{ifname}",
+		"tooltip-format-wifi": "Connected to {essid}, with signal at {signalStrength}%",
+		"tooltip-format-ethernet": "{ifname} ",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 50
+	},
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁽", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "custom/lock": {
+        "format": "󰌾",
+        "on-click": "gnome-session-quit"
+    },
+    "backlight": {
+		"device": "intel_backlight",
+		"format": "{percent}% {icon}",
+		"format-icons": ["", ""]
+	}
+}
