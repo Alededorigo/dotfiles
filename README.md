@@ -232,8 +232,18 @@ dconf dump /org/gnome/terminal/legacy/profiles:/
 To restore my color scheme, etc., run:
 
 ```bash
+cd ~/Downloads/
+wget https://raw.githubusercontent.com/Alededorigo/dotfiles/main/gterminal-profile.dconf
+
 dconf load /org/gnome/terminal/legacy/profiles:/:your-profile-code-here/ < gterminal-profile.dconf
+
+# Optional
+# rm ~/Downloads/gterminal-profile.dconf
 ```
+
+<blockquote>
+If you have already cloned the repository you can use the backup in the root of the repo.
+</blockquote>
 
 #### DuckDuckGo
 
