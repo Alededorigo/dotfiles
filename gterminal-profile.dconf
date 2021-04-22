@@ -1,0 +1,15 @@
+[/]
+cursor-blink-mode='on'
+cursor-shape='underline'
+exit-action='hold'
+font='SF Mono Ligatures 10'
+login-shell=false
+palette=['rgb(0,0,0)', 'rgb(247,81,157)', 'rgb(46,198,130)', 'rgb(250,195,110)', 'rgb(80,152,215)', 'rgb(208,135,234)', 'rgb(88,178,207)', 'rgb(250,235,215)', 'rgb(64,64,64)', 'rgb(244,105,169)', 'rgb(62,217,146)', 'rgb(250,198,135)', 'rgb(108,176,224)', 'rgb(205,156,228)', 'rgb(128,188,228)', 'rgb(255,255,255)']
+preserve-working-directory='never'
+scrollback-lines=9000
+scrollback-unlimited=false
+scrollbar-policy='never'
+use-custom-command=false
+use-system-font=false
+use-theme-colors=true
+visible-name='ad'
