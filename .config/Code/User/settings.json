@@ -1,0 +1,152 @@
+// ~/.config/Code/User/settings.json
+
+{
+    "workbench.startupEditor": "none",
+    "editor.renderIndentGuides": false,
+
+    // Use SF Mono Ligatures as main font
+    // See line #102
+    "editor.fontFamily": "SF Mono Ligatures",
+    "debug.console.fontFamily": "SF Mono Ligatures",
+    "terminal.integrated.fontFamily": "Source Code Pro",
+    "editor.mouseWheelZoom": true,
+    "workbench.tree.renderIndentGuides": "none",
+    "editor.wordWrapColumn": 100,
+    "editor.hover.delay": 200,
+    "explorer.compactFolders": false,
+    "editor.smoothScrolling": true,
+    "editor.tabCompletion": "on",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorBlinking": "expand",
+    "editor.cursorWidth": 3,
+    "editor.minimap.size": "fit",
+    "editor.minimap.enabled": false,
+    "files.maxMemoryForLargeFilesMB": 8096,
+    "workbench.enableExperiments": false,
+    "workbench.list.smoothScrolling": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "window.dialogStyle": "custom",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "debug.openDebug": "neverOpen",
+    "extensions.ignoreRecommendations": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorWidth": 3,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.sideBar.location": "right",
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        ".idea": true,
+        "**/*.pyc": true,
+        "venv": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+    },
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "~/.local/bin/black",
+    "python.sortImports.args": [
+        "-rc",
+        "-sp isort.cfg"
+    ],
+    "python.formatting.blackArgs": [
+        "--line-length=99",
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "[django-html]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": true,
+            "strings": true
+        },
+        "editor.tabSize": 4,
+    },
+    "[html]": {
+        "editor.tabSize": 4,
+    },
+    "[css]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.tabSize": 4,
+    },
+    "timeline.pageOnScroll": true,
+    "timeline.pageSize": 10,
+    "files.associations": {
+        "**/*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "**/templates/**/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "python.languageServer": "Jedi",
+    "django.showContributeNotification": false,
+    "python.pythonPath": "/usr/bin/python",
+    "workbench.statusBar.visible": true,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontSize": 15,
+    "helium-icon-theme.folders.theme": "specific",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "editor.formatOnSave": true,
+    "mesonbuild.configureOnOpen": true,
+    "editor.linkedEditing": true,
+    "tabnine.experimentalAutoImports": true,
+    "git.enableSmartCommit": true,
+    "window.menuBarVisibility": "hidden",
+    "editor.lineNumbers": "relative",
+    "editor.renderLineHighlight": "all",
+    "editor.renderLineHighlightOnlyWhenFocus": true,
+    "terminal.integrated.tabs.enabled": true,
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.suggest.snippetsPreventQuickSuggestions": false
+    },
+    "workbench.colorTheme": "One Monokai",
+
+    // VSCode-Vim extension
+    "vim.cursorStylePerMode.insert": "line-thin",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.replace": "underline",
+    "vim.cursorStylePerMode.visual": "block-outline",
+
+    "vim.enableNeovim": true,
+    "vim.neovimConfigPath": "~/.config/nvim/init.vim",
+    "vim.vimrc.path": "~/.vimrc",
+    "vim.highlightedyank.enable": true,
+    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.neovimUseConfigFile": true,
+    "vim.scroll": 1,
+    "vim.searchHighlightColor": "#e94169",
+    "vim.searchHighlightTextColor": "#ffffff",
+    "vim.showMarksInGutter": true,
+    "vim.smartRelativeLine": true,
+    "vim.startInInsertMode": true,
+}
