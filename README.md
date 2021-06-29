@@ -4,33 +4,6 @@
 
 <br>
 
-These are configuration files for every software i use.
-In every file there is its path.
-
-<br>
-
-- OS: [Artix](https://artixlinux.org/)
-
-- Shell: Bash
-
-- Window Manager: Herbstluftwm
-
-- Display Manager: ???
-
-- Browser: Firefox with [Minimal-functional-fox theme](https://github.com/mut-ex/minimal-functional-fox) (and some customizations)
-
-- File manager: Ranger
-
-- Terminal emulator: [st](https://st.suckless.org/)
-
-- Text editor: (n)vim
-
-- Launcher: Rofi
-
-- Notification daemon: Dunst
-
-<br>
-
 ### <h1 align="left">Installing</h1>
 
 ### Using the minimal script:
